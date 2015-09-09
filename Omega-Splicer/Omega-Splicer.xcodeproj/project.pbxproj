@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F58CDF7CE1F266EFAE9FAFC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7BB6A9055AEC2557B7A65A /* libPods.a */; };
 		56BDEF691BA055200049A6FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF681BA055200049A6FE /* main.m */; };
 		56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6B1BA055200049A6FE /* AppDelegate.m */; };
 		56BDEF6F1BA055200049A6FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6E1BA055200049A6FE /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F7BB6A9055AEC2557B7A65A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BDEF631BA055200049A6FE /* Omega-Splicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Omega-Splicer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BDEF671BA055200049A6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BDEF681BA055200049A6FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		56DA4B711BA0843500F44DC5 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		56DA4B731BA0844100F44DC5 /* PairViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairViewController.h; sourceTree = "<group>"; };
 		56DA4B741BA0844100F44DC5 /* PairViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PairViewController.m; sourceTree = "<group>"; };
+		C45E8CDB5B2170ECC7546D6C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EAF317BB5E5441FDF2E04882 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F58CDF7CE1F266EFAE9FAFC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,12 +76,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E8091B3DA90FB4E87759D28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C45E8CDB5B2170ECC7546D6C /* Pods.debug.xcconfig */,
+				EAF317BB5E5441FDF2E04882 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		56BDEF5A1BA055200049A6FE = {
 			isa = PBXGroup;
 			children = (
 				56BDEF651BA055200049A6FE /* Omega-Splicer */,
 				56BDEF7F1BA055200049A6FE /* Omega-SplicerTests */,
 				56BDEF641BA055200049A6FE /* Products */,
+				0E8091B3DA90FB4E87759D28 /* Pods */,
+				82D1F2D59BF693969A7D1AFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +152,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		82D1F2D59BF693969A7D1AFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F7BB6A9055AEC2557B7A65A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56BDEF861BA055200049A6FE /* Build configuration list for PBXNativeTarget "Omega-Splicer" */;
 			buildPhases = (
+				176F79C804ABEB73C0A1AB16 /* Check Pods Manifest.lock */,
 				56BDEF5F1BA055200049A6FE /* Sources */,
 				56BDEF601BA055200049A6FE /* Frameworks */,
 				56BDEF611BA055200049A6FE /* Resources */,
+				3FB34D608BA458CA3E377F14 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +256,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		176F79C804ABEB73C0A1AB16 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3FB34D608BA458CA3E377F14 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56BDEF5F1BA055200049A6FE /* Sources */ = {
@@ -369,6 +428,7 @@
 		};
 		56BDEF871BA055200049A6FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C45E8CDB5B2170ECC7546D6C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Omega-Splicer/Info.plist";
@@ -379,6 +439,7 @@
 		};
 		56BDEF881BA055200049A6FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF317BB5E5441FDF2E04882 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Omega-Splicer/Info.plist";
