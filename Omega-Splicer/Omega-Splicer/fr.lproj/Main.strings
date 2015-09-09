@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Pairer"; ObjectID = "8xe-X4-fSd"; */
+"8xe-X4-fSd.text" = "Pairer";
+
+/* Class = "UISegmentedControl"; I78-25-uBp.segmentTitles[0] = "km/h"; ObjectID = "I78-25-uBp"; */
+"I78-25-uBp.segmentTitles[0]" = "km/h";
+
+/* Class = "UISegmentedControl"; I78-25-uBp.segmentTitles[1] = "m/s"; ObjectID = "I78-25-uBp"; */
+"I78-25-uBp.segmentTitles[1]" = "m/s";
+
+/* Class = "UISegmentedControl"; I78-25-uBp.segmentTitles[2] = "mph"; ObjectID = "I78-25-uBp"; */
+"I78-25-uBp.segmentTitles[2]" = "mph";
+
+/* Class = "UILabel"; text = "Unité de vitesse :"; ObjectID = "R5J-Ig-wqA"; */
+"R5J-Ig-wqA.text" = "Unité de vitesse :";
+
+/* Class = "UIViewController"; title = "Paramètres"; ObjectID = "YT6-IW-WlR"; */
+"YT6-IW-WlR.title" = "Paramètres";
+
+/* Class = "UIButton"; normalTitle = "Voler"; ObjectID = "bpa-3V-5IM"; */
+"bpa-3V-5IM.normalTitle" = "Voler";
+
+/* Class = "UILabel"; text = "Contrôles :"; ObjectID = "dxD-Py-w66"; */
+"dxD-Py-w66.text" = "Contrôles :";
+
+/* Class = "UIButton"; normalTitle = "Pairer"; ObjectID = "wil-2z-SxS"; */
+"wil-2z-SxS.normalTitle" = "Pairer";
+
+/* Class = "UISegmentedControl"; xaN-ut-dho.segmentTitles[0] = "Boutons"; ObjectID = "xaN-ut-dho"; */
+"xaN-ut-dho.segmentTitles[0]" = "Boutons";
+
+/* Class = "UISegmentedControl"; xaN-ut-dho.segmentTitles[1] = "Gyroscope"; ObjectID = "xaN-ut-dho"; */
+"xaN-ut-dho.segmentTitles[1]" = "Gyroscope";
+
+/* Class = "UIButton"; normalTitle = "Paramètres"; ObjectID = "xi2-ug-sV5"; */
+"xi2-ug-sV5.normalTitle" = "Paramètres";

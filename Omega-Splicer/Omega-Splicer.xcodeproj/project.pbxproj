@@ -14,6 +14,9 @@
 		56BDEF741BA055200049A6FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF731BA055200049A6FE /* Images.xcassets */; };
 		56BDEF771BA055200049A6FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF751BA055200049A6FE /* LaunchScreen.xib */; };
 		56BDEF831BA055200049A6FE /* Omega_SplicerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */; };
+		56DA4B6E1BA0842300F44DC5 /* FlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B6D1BA0842300F44DC5 /* FlyViewController.m */; };
+		56DA4B721BA0843500F44DC5 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B711BA0843500F44DC5 /* SettingsViewController.m */; };
+		56DA4B751BA0844100F44DC5 /* PairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B741BA0844100F44DC5 /* PairViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,14 @@
 		56BDEF7C1BA055200049A6FE /* Omega-SplicerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Omega-SplicerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BDEF811BA055200049A6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Omega_SplicerTests.m; sourceTree = "<group>"; };
+		56DA4B671BA07FA600F44DC5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		56DA4B6B1BA0816600F44DC5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		56DA4B6C1BA0842300F44DC5 /* FlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyViewController.h; sourceTree = "<group>"; };
+		56DA4B6D1BA0842300F44DC5 /* FlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyViewController.m; sourceTree = "<group>"; };
+		56DA4B701BA0843500F44DC5 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		56DA4B711BA0843500F44DC5 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		56DA4B731BA0844100F44DC5 /* PairViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairViewController.h; sourceTree = "<group>"; };
+		56DA4B741BA0844100F44DC5 /* PairViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PairViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +96,12 @@
 				56BDEF6B1BA055200049A6FE /* AppDelegate.m */,
 				56BDEF6D1BA055200049A6FE /* ViewController.h */,
 				56BDEF6E1BA055200049A6FE /* ViewController.m */,
+				56DA4B6C1BA0842300F44DC5 /* FlyViewController.h */,
+				56DA4B6D1BA0842300F44DC5 /* FlyViewController.m */,
+				56DA4B701BA0843500F44DC5 /* SettingsViewController.h */,
+				56DA4B711BA0843500F44DC5 /* SettingsViewController.m */,
+				56DA4B731BA0844100F44DC5 /* PairViewController.h */,
+				56DA4B741BA0844100F44DC5 /* PairViewController.m */,
 				56BDEF701BA055200049A6FE /* Main.storyboard */,
 				56BDEF731BA055200049A6FE /* Images.xcassets */,
 				56BDEF751BA055200049A6FE /* LaunchScreen.xib */,
@@ -219,7 +236,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56DA4B751BA0844100F44DC5 /* PairViewController.m in Sources */,
+				56DA4B6E1BA0842300F44DC5 /* FlyViewController.m in Sources */,
 				56BDEF6F1BA055200049A6FE /* ViewController.m in Sources */,
+				56DA4B721BA0843500F44DC5 /* SettingsViewController.m in Sources */,
 				56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */,
 				56BDEF691BA055200049A6FE /* main.m in Sources */,
 			);
@@ -248,6 +268,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				56BDEF711BA055200049A6FE /* Base */,
+				56DA4B6B1BA0816600F44DC5 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -256,6 +277,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				56BDEF761BA055200049A6FE /* Base */,
+				56DA4B671BA07FA600F44DC5 /* fr */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -418,6 +440,7 @@
 				56BDEF881BA055200049A6FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56BDEF891BA055200049A6FE /* Build configuration list for PBXNativeTarget "Omega-SplicerTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +449,7 @@
 				56BDEF8B1BA055200049A6FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

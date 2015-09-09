@@ -35,8 +35,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wil-2z-SxS">
-                                <rect key="frame" x="280" y="285" width="40" height="30"/>
-                                <state key="normal" title="Pairer">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <state key="normal" title="Pair">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -44,17 +44,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi2-ug-sV5">
-                                <rect key="frame" x="261" y="402" width="79" height="30"/>
-                                <state key="normal" title="Paramètres">
+                                <rect key="frame" x="272" y="402" width="57" height="30"/>
+                                <state key="normal" title="Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="YT6-IW-WlR" kind="show" id="CgX-D2-eGX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpa-3V-5IM">
-                                <rect key="frame" x="283" y="168" width="35" height="30"/>
-                                <state key="normal" title="Voler">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpa-3V-5IM">
+                                <rect key="frame" x="286" y="168" width="30" height="30"/>
+                                <state key="normal" title="Fly">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -78,40 +78,30 @@
             </objects>
             <point key="canvasLocation" x="-75" y="125"/>
         </scene>
-        <!--View Controller-->
+        <!--Fly-->
         <scene sceneID="th3-9b-D4t">
             <objects>
-                <viewController id="vek-6y-Gpg" sceneMemberID="viewController">
+                <viewController title="Fly" id="vek-6y-Gpg" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J98-KW-smQ"/>
                         <viewControllerLayoutGuide type="bottom" id="sOh-Tz-OqV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Cc-0o-ENv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voler" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyB-uU-aCl">
-                                <rect key="frame" x="281" y="289" width="39" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="OyB-uU-aCl" secondAttribute="centerX" id="90e-M8-fzF"/>
-                            <constraint firstAttribute="centerY" secondItem="OyB-uU-aCl" secondAttribute="centerY" constant="0.5" id="iu3-sk-GwU"/>
-                        </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lb8-UW-qwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="-527"/>
+            <point key="canvasLocation" x="743" y="-514"/>
         </scene>
-        <!--View Controller-->
+        <!--Pair-->
         <scene sceneID="SGp-HW-nd6">
             <objects>
-                <viewController id="Dgn-NI-C92" sceneMemberID="viewController">
+                <viewController title="Pair" id="Dgn-NI-C92" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u6p-Ch-OLN"/>
                         <viewControllerLayoutGuide type="bottom" id="NvX-EI-bzJ"/>
@@ -138,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="759" y="125"/>
         </scene>
-        <!--Paramètres-->
+        <!--Settings-->
         <scene sceneID="ckH-7U-IC6">
             <objects>
-                <viewController title="Paramètres" id="YT6-IW-WlR" sceneMemberID="viewController">
+                <viewController title="Settings" id="YT6-IW-WlR" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mxS-1C-alp"/>
                         <viewControllerLayoutGuide type="bottom" id="Y8h-XB-yCT"/>
@@ -150,29 +140,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unité de vitesse :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-Ig-wqA">
-                                <rect key="frame" x="16" y="289" width="133" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed unit :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-Ig-wqA">
+                                <rect key="frame" x="16" y="289" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xaN-ut-dho">
-                                <rect key="frame" x="218" y="111" width="366" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="xaN-ut-dho" secondAttribute="height" multiplier="75:7" id="5Nd-l9-Oxv"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Boutons"/>
-                                    <segment title="Gyroscope"/>
-                                </segments>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="5Nd-l9-Oxv"/>
-                                    </mask>
-                                </variation>
-                            </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I78-25-uBp">
-                                <rect key="frame" x="218" y="286" width="366" height="29"/>
+                                <rect key="frame" x="178" y="286" width="406" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="I78-25-uBp" secondAttribute="height" multiplier="75:7" id="w3b-Gf-49O"/>
                                 </constraints>
@@ -187,12 +162,27 @@
                                     </mask>
                                 </variation>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contrôles :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxD-Py-w66">
-                                <rect key="frame" x="16" y="114" width="84" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Controls :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxD-Py-w66">
+                                <rect key="frame" x="16" y="114" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xaN-ut-dho">
+                                <rect key="frame" x="209" y="111" width="375" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xaN-ut-dho" secondAttribute="height" multiplier="75:7" id="5Nd-l9-Oxv"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Buttons"/>
+                                    <segment title="Gyroscope"/>
+                                </segments>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5Nd-l9-Oxv"/>
+                                    </mask>
+                                </variation>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -200,7 +190,7 @@
                             <constraint firstItem="R5J-Ig-wqA" firstAttribute="width" secondItem="I78-25-uBp" secondAttribute="height" multiplier="19:4" id="4YF-bW-Syv"/>
                             <constraint firstItem="dxD-Py-w66" firstAttribute="leading" secondItem="qtb-sK-dT5" secondAttribute="leadingMargin" constant="27" id="4dp-Uo-noY"/>
                             <constraint firstItem="I78-25-uBp" firstAttribute="trailing" secondItem="qtb-sK-dT5" secondAttribute="trailingMargin" id="4if-8B-DIU"/>
-                            <constraint firstItem="dxD-Py-w66" firstAttribute="centerY" secondItem="xaN-ut-dho" secondAttribute="centerY" constant="-0.5" id="77d-pa-nnM"/>
+                            <constraint firstItem="dxD-Py-w66" firstAttribute="centerY" secondItem="xaN-ut-dho" secondAttribute="centerY" id="77d-pa-nnM"/>
                             <constraint firstItem="xaN-ut-dho" firstAttribute="width" secondItem="R5J-Ig-wqA" secondAttribute="height" multiplier="100:7" id="7I4-yK-Ytt"/>
                             <constraint firstAttribute="width" secondItem="xaN-ut-dho" secondAttribute="height" multiplier="150:7" id="7go-LX-hlC"/>
                             <constraint firstItem="dxD-Py-w66" firstAttribute="top" secondItem="mxS-1C-alp" secondAttribute="bottom" constant="50" id="8ls-7Y-aRb"/>
@@ -241,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9OE-KF-NoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="787"/>
+            <point key="canvasLocation" x="759" y="845"/>
         </scene>
     </scenes>
 </document>
