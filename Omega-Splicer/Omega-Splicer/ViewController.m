@@ -24,4 +24,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSLog(@"Controls settings : %ld", (long)[userDefaults integerForKey:@"controlsKey"]);
+    NSLog(@"Speed unit settings : %ld", (long)[userDefaults integerForKey:@"speedUnitKey"]);
+}
+
 @end
