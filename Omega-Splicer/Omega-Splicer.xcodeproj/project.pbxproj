@@ -10,7 +10,7 @@
 		4F58CDF7CE1F266EFAE9FAFC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7BB6A9055AEC2557B7A65A /* libPods.a */; };
 		56BDEF691BA055200049A6FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF681BA055200049A6FE /* main.m */; };
 		56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6B1BA055200049A6FE /* AppDelegate.m */; };
-		56BDEF6F1BA055200049A6FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6E1BA055200049A6FE /* ViewController.m */; };
+		56BDEF6F1BA055200049A6FE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6E1BA055200049A6FE /* HomeViewController.m */; };
 		56BDEF721BA055200049A6FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF701BA055200049A6FE /* Main.storyboard */; };
 		56BDEF741BA055200049A6FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF731BA055200049A6FE /* Images.xcassets */; };
 		56BDEF771BA055200049A6FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF751BA055200049A6FE /* LaunchScreen.xib */; };
@@ -38,8 +38,8 @@
 		56BDEF681BA055200049A6FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56BDEF6A1BA055200049A6FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56BDEF6B1BA055200049A6FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		56BDEF6D1BA055200049A6FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		56BDEF6E1BA055200049A6FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		56BDEF6D1BA055200049A6FE /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		56BDEF6E1BA055200049A6FE /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		56BDEF711BA055200049A6FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56BDEF731BA055200049A6FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		56BDEF761BA055200049A6FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -110,8 +110,8 @@
 			children = (
 				56BDEF6A1BA055200049A6FE /* AppDelegate.h */,
 				56BDEF6B1BA055200049A6FE /* AppDelegate.m */,
-				56BDEF6D1BA055200049A6FE /* ViewController.h */,
-				56BDEF6E1BA055200049A6FE /* ViewController.m */,
+				56BDEF6D1BA055200049A6FE /* HomeViewController.h */,
+				56BDEF6E1BA055200049A6FE /* HomeViewController.m */,
 				56DA4B6C1BA0842300F44DC5 /* FlyViewController.h */,
 				56DA4B6D1BA0842300F44DC5 /* FlyViewController.m */,
 				56DA4B731BA0844100F44DC5 /* PairViewController.h */,
@@ -206,7 +206,7 @@
 		56BDEF5B1BA055200049A6FE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Charles-Adrien Fournier";
 				TargetAttributes = {
 					56BDEF621BA055200049A6FE = {
@@ -297,7 +297,7 @@
 			files = (
 				56DA4B751BA0844100F44DC5 /* PairViewController.m in Sources */,
 				56DA4B6E1BA0842300F44DC5 /* FlyViewController.m in Sources */,
-				56BDEF6F1BA055200049A6FE /* ViewController.m in Sources */,
+				56BDEF6F1BA055200049A6FE /* HomeViewController.m in Sources */,
 				56DA4B721BA0843500F44DC5 /* SettingsViewController.m in Sources */,
 				56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */,
 				56BDEF691BA055200049A6FE /* main.m in Sources */,
@@ -365,6 +365,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -433,6 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Omega-Splicer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesadrienfournier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -444,6 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Omega-Splicer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesadrienfournier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -462,6 +465,7 @@
 				);
 				INFOPLIST_FILE = "Omega-SplicerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesadrienfournier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Omega-Splicer.app/Omega-Splicer";
 			};
@@ -477,6 +481,7 @@
 				);
 				INFOPLIST_FILE = "Omega-SplicerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesadrienfournier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Omega-Splicer.app/Omega-Splicer";
 			};
