@@ -32,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		1F7BB6A9055AEC2557B7A65A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		563C53A91BA18AD300EA07DA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		56BDEF631BA055200049A6FE /* Omega-Splicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Omega-Splicer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BDEF671BA055200049A6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BDEF681BA055200049A6FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		56BDEF811BA055200049A6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Omega_SplicerTests.m; sourceTree = "<group>"; };
 		56DA4B671BA07FA600F44DC5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		56DA4B6B1BA0816600F44DC5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		56DA4B6C1BA0842300F44DC5 /* FlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyViewController.h; sourceTree = "<group>"; };
 		56DA4B6D1BA0842300F44DC5 /* FlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyViewController.m; sourceTree = "<group>"; };
 		56DA4B701BA0843500F44DC5 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -327,7 +327,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				56BDEF711BA055200049A6FE /* Base */,
-				56DA4B6B1BA0816600F44DC5 /* fr */,
+				563C53A91BA18AD300EA07DA /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
