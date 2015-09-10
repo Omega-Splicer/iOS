@@ -20,20 +20,20 @@ See LICENSE.
 ## Todo
 
 ### Ecran principal
-• Localization
-• Design
+• Localization  
+• Design  
 
 ### Ecran de vol
-• Gestion du gyroscope
-• Gestion du joystick
-• Formatage des commandes
-• Localization
-• Design
+• Gestion du gyroscope  
+• Gestion du joystick  
+• Formatage des commandes  
+• Localization  
+• Design  
 
 ### Ecran de pair
-• Definir les besoins
-• Localization
-• Design
+• Definir les besoins  
+• Localization  
+• Design  
 
 ### Ecran de paramètres
-• Design
+• Design  
