@@ -14,18 +14,6 @@
 
 @property (nonatomic) BOOL joystickControls;
 
-@property (nonatomic) double currentMaxAccelX;
-
-@property (nonatomic) double currentMaxAccelY;
-
-@property (nonatomic) double currentMaxAccelZ;
-
-@property (nonatomic) double currentMaxRotX;
-
-@property (nonatomic) double currentMaxRotY;
-
-@property (nonatomic) double currentMaxRotZ;
-
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
 @property (weak, nonatomic) IBOutlet UILabel *accelerationLabel;
@@ -44,27 +32,22 @@
         self.joystickControls = YES;
     else
         self.joystickControls = NO;
-
-    [self setupMotionManager];
+    
+    if (!self.joystickControls)
+        [self setupMotionManager];
+    
 }
 
 - (void)setupMotionManager {
-
-    self.currentMaxAccelX = 0;
-    self.currentMaxAccelY = 0;
-    self.currentMaxAccelZ = 0;
-    
-    self.currentMaxRotX = 0;
-    self.currentMaxRotY = 0;
-    self.currentMaxRotZ = 0;
-    
     self.motionManager = [[CMMotionManager alloc] init];
     self.motionManager.accelerometerUpdateInterval = .2;
     self.motionManager.gyroUpdateInterval = .2;
+}
 
+- (void)startMotionManager {
     [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
         [self outputAccelerationData:accelerometerData.acceleration];
-       if (error) {
+        if (error) {
             NSLog(@"%@", error);
         }
     }];
@@ -75,6 +58,11 @@
             NSLog(@"%@", error);
         }
     }];
+}
+
+- (void)stopMotionManager {
+    [self.motionManager stopAccelerometerUpdates];
+    [self.motionManager stopGyroUpdates];
 }
 
 - (void)outputAccelerationData:(CMAcceleration)acceleration {
@@ -94,13 +82,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
