@@ -49,7 +49,7 @@
 
 /* Begin PBXFileReference section */
 		1F7BB6A9055AEC2557B7A65A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		563C53A91BA18AD300EA07DA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		563C53A91BA18AD300EA07DA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56BDEF631BA055200049A6FE /* Omega-Splicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Omega-Splicer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BDEF671BA055200049A6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BDEF681BA055200049A6FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		56BDEF7C1BA055200049A6FE /* Omega-SplicerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Omega-SplicerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BDEF811BA055200049A6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Omega_SplicerTests.m; sourceTree = "<group>"; };
-		56DA4B671BA07FA600F44DC5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		56DA4B671BA07FA600F44DC5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		56DA4B6C1BA0842300F44DC5 /* OSFlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSFlyViewController.h; sourceTree = "<group>"; };
 		56DA4B6D1BA0842300F44DC5 /* OSFlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFlyViewController.m; sourceTree = "<group>"; };
 		56DA4B701BA0843500F44DC5 /* OSSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSettingsViewController.h; sourceTree = "<group>"; };
@@ -110,11 +110,11 @@
 		56BDEF5A1BA055200049A6FE = {
 			isa = PBXGroup;
 			children = (
+				82D1F2D59BF693969A7D1AFE /* Frameworks */,
 				56BDEF651BA055200049A6FE /* Omega-Splicer */,
 				56BDEF7F1BA055200049A6FE /* Omega-SplicerTests */,
-				56BDEF641BA055200049A6FE /* Products */,
 				0E8091B3DA90FB4E87759D28 /* Pods */,
-				82D1F2D59BF693969A7D1AFE /* Frameworks */,
+				56BDEF641BA055200049A6FE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,15 +130,15 @@
 		56BDEF651BA055200049A6FE /* Omega-Splicer */ = {
 			isa = PBXGroup;
 			children = (
+				56FF29841BA380AE0093A31E /* Components */,
+				56FF29831BA380850093A31E /* Controller */,
 				56FF29851BA382880093A31E /* Images */,
+				56BDEF661BA055200049A6FE /* Supporting Files */,
 				56BDEF6A1BA055200049A6FE /* AppDelegate.h */,
 				56BDEF6B1BA055200049A6FE /* AppDelegate.m */,
-				56FF29831BA380850093A31E /* Controller */,
-				56FF29841BA380AE0093A31E /* Components */,
-				56BDEF701BA055200049A6FE /* Main.storyboard */,
 				56BDEF731BA055200049A6FE /* Images.xcassets */,
 				56BDEF751BA055200049A6FE /* LaunchScreen.xib */,
-				56BDEF661BA055200049A6FE /* Supporting Files */,
+				56BDEF701BA055200049A6FE /* Main.storyboard */,
 			);
 			path = "Omega-Splicer";
 			sourceTree = "<group>";
@@ -149,14 +149,14 @@
 				56BDEF671BA055200049A6FE /* Info.plist */,
 				56BDEF681BA055200049A6FE /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		56BDEF7F1BA055200049A6FE /* Omega-SplicerTests */ = {
 			isa = PBXGroup;
 			children = (
-				56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */,
 				56BDEF801BA055200049A6FE /* Supporting Files */,
+				56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */,
 			);
 			path = "Omega-SplicerTests";
 			sourceTree = "<group>";
@@ -166,22 +166,22 @@
 			children = (
 				56BDEF811BA055200049A6FE /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		56FF29831BA380850093A31E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				56BDEF6D1BA055200049A6FE /* OSHomeViewController.h */,
-				56BDEF6E1BA055200049A6FE /* OSHomeViewController.m */,
 				56DA4B6C1BA0842300F44DC5 /* OSFlyViewController.h */,
 				56DA4B6D1BA0842300F44DC5 /* OSFlyViewController.m */,
+				56BDEF6D1BA055200049A6FE /* OSHomeViewController.h */,
+				56BDEF6E1BA055200049A6FE /* OSHomeViewController.m */,
 				56DA4B731BA0844100F44DC5 /* OSPairViewController.h */,
 				56DA4B741BA0844100F44DC5 /* OSPairViewController.m */,
 				56DA4B701BA0843500F44DC5 /* OSSettingsViewController.h */,
 				56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		56FF29841BA380AE0093A31E /* Components */ = {
@@ -190,7 +190,7 @@
 				56FF29801BA379820093A31E /* OSJoystick.h */,
 				56FF29811BA379820093A31E /* OSJoystick.m */,
 			);
-			name = Components;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		56FF29851BA382880093A31E /* Images */ = {
@@ -200,7 +200,7 @@
 				56FF29871BA382930093A31E /* joy_thumb@2x.png */,
 				56FF29881BA382930093A31E /* stick_base.png */,
 			);
-			name = Images;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		82D1F2D59BF693969A7D1AFE /* Frameworks */ = {
@@ -386,6 +386,7 @@
 				563C53A91BA18AD300EA07DA /* fr */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		56BDEF751BA055200049A6FE /* LaunchScreen.xib */ = {
@@ -395,6 +396,7 @@
 				56DA4B671BA07FA600F44DC5 /* fr */,
 			);
 			name = LaunchScreen.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -488,7 +490,7 @@
 			baseConfigurationReference = C45E8CDB5B2170ECC7546D6C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Omega-Splicer/Info.plist";
+				INFOPLIST_FILE = "Omega-Splicer/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesadrienfournier.$(PRODUCT_NAME:rfc1034identifier)";
@@ -501,7 +503,7 @@
 			baseConfigurationReference = EAF317BB5E5441FDF2E04882 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Omega-Splicer/Info.plist";
+				INFOPLIST_FILE = "Omega-Splicer/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesadrienfournier.$(PRODUCT_NAME:rfc1034identifier)";
@@ -521,7 +523,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Omega-SplicerTests/Info.plist";
+				INFOPLIST_FILE = "Omega-SplicerTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesadrienfournier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -537,7 +539,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Omega-SplicerTests/Info.plist";
+				INFOPLIST_FILE = "Omega-SplicerTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesadrienfournier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
