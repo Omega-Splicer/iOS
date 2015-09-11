@@ -7,6 +7,7 @@
 //
 
 #import <Masonry/Masonry.h>
+#import <CoreMotion/CoreMotion.h>
 #import "FlyViewController.h"
 
 @interface FlyViewController ()
@@ -14,6 +15,20 @@
 @property (nonatomic, strong) UISlider *powerSlider;
 
 @property (nonatomic) BOOL joystickControls;
+
+@property (nonatomic) double currentMaxAccelX;
+
+@property (nonatomic) double currentMaxAccelY;
+
+@property (nonatomic) double currentMaxAccelZ;
+
+@property (nonatomic) double currentMaxRotX;
+
+@property (nonatomic) double currentMaxRotY;
+
+@property (nonatomic) double currentMaxRotZ;
+
+@property (strong, nonatomic) CMMotionManager *motionManager;
 
 @end
 
@@ -29,6 +44,46 @@
         self.joystickControls = NO;
 
     [self defaultInterface];
+    
+    [[UIAccelerometer sharedAccelerometer]setDelegate:self];
+    
+}
+
+- (void)setupMotionManager {
+
+    self.currentMaxAccelX = 0;
+    self.currentMaxAccelY = 0;
+    self.currentMaxAccelZ = 0;
+    
+    self.currentMaxRotX = 0;
+    self.currentMaxRotY = 0;
+    self.currentMaxRotZ = 0;
+    
+    self.motionManager = [[CMMotionManager alloc] init];
+    self.motionManager.accelerometerUpdateInterval = .2;
+    self.motionManager.gyroUpdateInterval = .2;
+
+    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
+        [self outputAccelerationData:accelerometerData.acceleration];
+       if (error) {
+            NSLog(@"%@", error);
+        }
+    }];
+    
+    [self.motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
+        [self outputRotationData:gyroData.rotationRate];
+        if (error) {
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
+- (void)outputAccelerationData:(CMAcceleration)acceleration {
+    
+}
+
+- (void)outputRotationData:(CMRotationRate)rotation {
+    
 }
 
 - (void)defaultInterface {
