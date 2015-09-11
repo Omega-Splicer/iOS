@@ -19,6 +19,9 @@
 		56DA4B721BA0843500F44DC5 /* OSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */; };
 		56DA4B751BA0844100F44DC5 /* OSPairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B741BA0844100F44DC5 /* OSPairViewController.m */; };
 		56FF29821BA379820093A31E /* OSJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FF29811BA379820093A31E /* OSJoystick.m */; settings = {ASSET_TAGS = (); }; };
+		56FF29891BA382930093A31E /* joy_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 56FF29861BA382930093A31E /* joy_thumb.png */; settings = {ASSET_TAGS = (); }; };
+		56FF298A1BA382930093A31E /* joy_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56FF29871BA382930093A31E /* joy_thumb@2x.png */; settings = {ASSET_TAGS = (); }; };
+		56FF298B1BA382930093A31E /* stick_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 56FF29881BA382930093A31E /* stick_base.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		56DA4B741BA0844100F44DC5 /* OSPairViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPairViewController.m; sourceTree = "<group>"; };
 		56FF29801BA379820093A31E /* OSJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSJoystick.h; sourceTree = "<group>"; };
 		56FF29811BA379820093A31E /* OSJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSJoystick.m; sourceTree = "<group>"; };
+		56FF29861BA382930093A31E /* joy_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joy_thumb.png; sourceTree = "<group>"; };
+		56FF29871BA382930093A31E /* joy_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joy_thumb@2x.png"; sourceTree = "<group>"; };
+		56FF29881BA382930093A31E /* stick_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick_base.png; sourceTree = "<group>"; };
 		C45E8CDB5B2170ECC7546D6C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EAF317BB5E5441FDF2E04882 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +130,7 @@
 		56BDEF651BA055200049A6FE /* Omega-Splicer */ = {
 			isa = PBXGroup;
 			children = (
+				56FF29851BA382880093A31E /* Images */,
 				56BDEF6A1BA055200049A6FE /* AppDelegate.h */,
 				56BDEF6B1BA055200049A6FE /* AppDelegate.m */,
 				56FF29831BA380850093A31E /* Controller */,
@@ -184,6 +191,16 @@
 				56FF29811BA379820093A31E /* OSJoystick.m */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		56FF29851BA382880093A31E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				56FF29861BA382930093A31E /* joy_thumb.png */,
+				56FF29871BA382930093A31E /* joy_thumb@2x.png */,
+				56FF29881BA382930093A31E /* stick_base.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		82D1F2D59BF693969A7D1AFE /* Frameworks */ = {
@@ -278,8 +295,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BDEF721BA055200049A6FE /* Main.storyboard in Resources */,
+				56FF298A1BA382930093A31E /* joy_thumb@2x.png in Resources */,
+				56FF29891BA382930093A31E /* joy_thumb.png in Resources */,
 				56BDEF771BA055200049A6FE /* LaunchScreen.xib in Resources */,
 				56BDEF741BA055200049A6FE /* Images.xcassets in Resources */,
+				56FF298B1BA382930093A31E /* stick_base.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
