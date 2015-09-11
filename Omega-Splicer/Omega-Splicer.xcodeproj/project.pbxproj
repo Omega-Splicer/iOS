@@ -18,6 +18,7 @@
 		56DA4B6E1BA0842300F44DC5 /* FlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B6D1BA0842300F44DC5 /* FlyViewController.m */; };
 		56DA4B721BA0843500F44DC5 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B711BA0843500F44DC5 /* SettingsViewController.m */; };
 		56DA4B751BA0844100F44DC5 /* PairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B741BA0844100F44DC5 /* PairViewController.m */; };
+		56FF29821BA379820093A31E /* OSJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FF29811BA379820093A31E /* OSJoystick.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		56DA4B711BA0843500F44DC5 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		56DA4B731BA0844100F44DC5 /* PairViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairViewController.h; sourceTree = "<group>"; };
 		56DA4B741BA0844100F44DC5 /* PairViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PairViewController.m; sourceTree = "<group>"; };
+		56FF29801BA379820093A31E /* OSJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSJoystick.h; sourceTree = "<group>"; };
+		56FF29811BA379820093A31E /* OSJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSJoystick.m; sourceTree = "<group>"; };
 		C45E8CDB5B2170ECC7546D6C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EAF317BB5E5441FDF2E04882 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +134,8 @@
 				56DA4B741BA0844100F44DC5 /* PairViewController.m */,
 				56DA4B701BA0843500F44DC5 /* SettingsViewController.h */,
 				56DA4B711BA0843500F44DC5 /* SettingsViewController.m */,
+				56FF29801BA379820093A31E /* OSJoystick.h */,
+				56FF29811BA379820093A31E /* OSJoystick.m */,
 				56BDEF701BA055200049A6FE /* Main.storyboard */,
 				56BDEF731BA055200049A6FE /* Images.xcassets */,
 				56BDEF751BA055200049A6FE /* LaunchScreen.xib */,
@@ -311,6 +316,7 @@
 			files = (
 				56DA4B751BA0844100F44DC5 /* PairViewController.m in Sources */,
 				56DA4B6E1BA0842300F44DC5 /* FlyViewController.m in Sources */,
+				56FF29821BA379820093A31E /* OSJoystick.m in Sources */,
 				56BDEF6F1BA055200049A6FE /* HomeViewController.m in Sources */,
 				56DA4B721BA0843500F44DC5 /* SettingsViewController.m in Sources */,
 				56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */,
