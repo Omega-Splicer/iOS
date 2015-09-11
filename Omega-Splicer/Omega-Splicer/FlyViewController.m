@@ -24,6 +24,17 @@
 
 @implementation FlyViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    if (self.joystickControls)
+        [self stopMotionManager];
+    else
+        [self startMotionManager];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self stopMotionManager];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -33,8 +44,7 @@
     else
         self.joystickControls = NO;
     
-    if (!self.joystickControls)
-        [self setupMotionManager];
+    [self setupMotionManager];
     
 }
 
