@@ -20,7 +20,6 @@
 		56C9ED121BA210DE00570BCC /* Omega-Splicer WatchKit 1 App.app in Resources */ = {isa = PBXBuildFile; fileRef = 56C9ED111BA210DE00570BCC /* Omega-Splicer WatchKit 1 App.app */; };
 		56C9ED181BA210DE00570BCC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56C9ED161BA210DE00570BCC /* Interface.storyboard */; };
 		56C9ED1A1BA210DE00570BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C9ED191BA210DE00570BCC /* Assets.xcassets */; };
-		56C9ED1E1BA210DE00570BCC /* Omega-Splicer WatchKit 1 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 56C9ED071BA210DE00570BCC /* Omega-Splicer WatchKit 1 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		56DA4B6E1BA0842300F44DC5 /* FlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B6D1BA0842300F44DC5 /* FlyViewController.m */; };
 		56DA4B721BA0843500F44DC5 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B711BA0843500F44DC5 /* SettingsViewController.m */; };
 		56DA4B751BA0844100F44DC5 /* PairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B741BA0844100F44DC5 /* PairViewController.m */; };
@@ -41,13 +40,6 @@
 			remoteGlobalIDString = 56C9ED101BA210DE00570BCC;
 			remoteInfo = "Omega-Splicer WatchKit 1 App";
 		};
-		56C9ED1C1BA210DE00570BCC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 56BDEF5B1BA055200049A6FE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 56C9ED061BA210DE00570BCC;
-			remoteInfo = "Omega-Splicer WatchKit 1 Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,7 +49,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				56C9ED1E1BA210DE00570BCC /* Omega-Splicer WatchKit 1 Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +243,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				56C9ED1D1BA210DE00570BCC /* PBXTargetDependency */,
 			);
 			name = "Omega-Splicer";
 			productName = "Omega-Splicer";
@@ -469,11 +459,6 @@
 			target = 56C9ED101BA210DE00570BCC /* Omega-Splicer WatchKit 1 App */;
 			targetProxy = 56C9ED131BA210DE00570BCC /* PBXContainerItemProxy */;
 		};
-		56C9ED1D1BA210DE00570BCC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 56C9ED061BA210DE00570BCC /* Omega-Splicer WatchKit 1 Extension */;
-			targetProxy = 56C9ED1C1BA210DE00570BCC /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -595,6 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Omega-Splicer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesadrienfournier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -607,6 +593,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Omega-Splicer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesadrienfournier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -742,6 +729,7 @@
 				56C9ED221BA210DE00570BCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56C9ED241BA210DE00570BCC /* Build configuration list for PBXNativeTarget "Omega-Splicer WatchKit 1 Extension" */ = {
 			isa = XCConfigurationList;
@@ -750,6 +738,7 @@
 				56C9ED201BA210DE00570BCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

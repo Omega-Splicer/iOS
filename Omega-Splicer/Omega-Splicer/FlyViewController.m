@@ -12,8 +12,6 @@
 
 @interface FlyViewController ()
 
-@property (nonatomic, strong) UISlider *powerSlider;
-
 @property (nonatomic) BOOL joystickControls;
 
 @property (nonatomic) double currentMaxAccelX;
@@ -30,6 +28,10 @@
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
+@property (weak, nonatomic) IBOutlet UILabel *accelerationLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *rotationLabel;
+
 @end
 
 @implementation FlyViewController
@@ -43,10 +45,7 @@
     else
         self.joystickControls = NO;
 
-    [self defaultInterface];
-    
-    [[UIAccelerometer sharedAccelerometer]setDelegate:self];
-    
+    [self setupMotionManager];
 }
 
 - (void)setupMotionManager {
@@ -79,22 +78,11 @@
 }
 
 - (void)outputAccelerationData:(CMAcceleration)acceleration {
-    
+    self.accelerationLabel.text = [NSString stringWithFormat:@"Acceleration : %.1f/%.1f/%.1f", acceleration.x, acceleration.y, acceleration.z];
 }
 
 - (void)outputRotationData:(CMRotationRate)rotation {
-    
-}
-
-- (void)defaultInterface {
-    [self.view addSubview:self.powerSlider];
-    [self.powerSlider mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.mas_equalTo(self.view);
-        
-//        make.left.mas_equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 50, 0, 0));
-        make.width.mas_equalTo(@300);
-    }];
-    NSLog(@"Interface successfully build");
+    self.rotationLabel.text = [NSString stringWithFormat:@"Rotation : %.1f/%.1f/%.1f", rotation.x, rotation.y, rotation.z];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,28 +90,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskLandscape;
-}
 
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-    return UIInterfaceOrientationLandscapeRight;
-}
 
-#pragma mark - Slider
-
-- (UISlider *)powerSlider {
-    if (!_powerSlider) {
-        _powerSlider = [[UISlider alloc] init];
-        _powerSlider.minimumValue = 0;
-        _powerSlider.maximumValue = 100;
-        _powerSlider.value = 30;
-        
-        CGAffineTransform trans = CGAffineTransformMakeRotation(-M_PI_2);
-        _powerSlider.transform = trans;
-    }
-    return _powerSlider;
-}
 
 /*
 #pragma mark - Navigation
