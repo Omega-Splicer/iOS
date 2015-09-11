@@ -1,5 +1,5 @@
 //
-//  PairViewController.h
+//  FlyViewController.h
 //  Omega-Splicer
 //
 //  Created by Charles-Adrien Fournier on 09/09/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PairViewController : UIViewController
+@interface OSFlyViewController : UIViewController
 
 @end

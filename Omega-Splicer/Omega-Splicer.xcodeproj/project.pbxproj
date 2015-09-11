@@ -10,14 +10,14 @@
 		4F58CDF7CE1F266EFAE9FAFC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7BB6A9055AEC2557B7A65A /* libPods.a */; };
 		56BDEF691BA055200049A6FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF681BA055200049A6FE /* main.m */; };
 		56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6B1BA055200049A6FE /* AppDelegate.m */; };
-		56BDEF6F1BA055200049A6FE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6E1BA055200049A6FE /* HomeViewController.m */; };
+		56BDEF6F1BA055200049A6FE /* OSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6E1BA055200049A6FE /* OSHomeViewController.m */; };
 		56BDEF721BA055200049A6FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF701BA055200049A6FE /* Main.storyboard */; };
 		56BDEF741BA055200049A6FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF731BA055200049A6FE /* Images.xcassets */; };
 		56BDEF771BA055200049A6FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF751BA055200049A6FE /* LaunchScreen.xib */; };
 		56BDEF831BA055200049A6FE /* Omega_SplicerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */; };
-		56DA4B6E1BA0842300F44DC5 /* FlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B6D1BA0842300F44DC5 /* FlyViewController.m */; };
-		56DA4B721BA0843500F44DC5 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B711BA0843500F44DC5 /* SettingsViewController.m */; };
-		56DA4B751BA0844100F44DC5 /* PairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B741BA0844100F44DC5 /* PairViewController.m */; };
+		56DA4B6E1BA0842300F44DC5 /* OSFlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B6D1BA0842300F44DC5 /* OSFlyViewController.m */; };
+		56DA4B721BA0843500F44DC5 /* OSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */; };
+		56DA4B751BA0844100F44DC5 /* OSPairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B741BA0844100F44DC5 /* OSPairViewController.m */; };
 		56FF29821BA379820093A31E /* OSJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FF29811BA379820093A31E /* OSJoystick.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -52,8 +52,8 @@
 		56BDEF681BA055200049A6FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56BDEF6A1BA055200049A6FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56BDEF6B1BA055200049A6FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		56BDEF6D1BA055200049A6FE /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		56BDEF6E1BA055200049A6FE /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		56BDEF6D1BA055200049A6FE /* OSHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSHomeViewController.h; sourceTree = "<group>"; };
+		56BDEF6E1BA055200049A6FE /* OSHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSHomeViewController.m; sourceTree = "<group>"; };
 		56BDEF711BA055200049A6FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56BDEF731BA055200049A6FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		56BDEF761BA055200049A6FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -61,12 +61,12 @@
 		56BDEF811BA055200049A6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Omega_SplicerTests.m; sourceTree = "<group>"; };
 		56DA4B671BA07FA600F44DC5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		56DA4B6C1BA0842300F44DC5 /* FlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyViewController.h; sourceTree = "<group>"; };
-		56DA4B6D1BA0842300F44DC5 /* FlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyViewController.m; sourceTree = "<group>"; };
-		56DA4B701BA0843500F44DC5 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		56DA4B711BA0843500F44DC5 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		56DA4B731BA0844100F44DC5 /* PairViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairViewController.h; sourceTree = "<group>"; };
-		56DA4B741BA0844100F44DC5 /* PairViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PairViewController.m; sourceTree = "<group>"; };
+		56DA4B6C1BA0842300F44DC5 /* OSFlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSFlyViewController.h; sourceTree = "<group>"; };
+		56DA4B6D1BA0842300F44DC5 /* OSFlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFlyViewController.m; sourceTree = "<group>"; };
+		56DA4B701BA0843500F44DC5 /* OSSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSettingsViewController.h; sourceTree = "<group>"; };
+		56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSettingsViewController.m; sourceTree = "<group>"; };
+		56DA4B731BA0844100F44DC5 /* OSPairViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPairViewController.h; sourceTree = "<group>"; };
+		56DA4B741BA0844100F44DC5 /* OSPairViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPairViewController.m; sourceTree = "<group>"; };
 		56FF29801BA379820093A31E /* OSJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSJoystick.h; sourceTree = "<group>"; };
 		56FF29811BA379820093A31E /* OSJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSJoystick.m; sourceTree = "<group>"; };
 		C45E8CDB5B2170ECC7546D6C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,16 +126,8 @@
 			children = (
 				56BDEF6A1BA055200049A6FE /* AppDelegate.h */,
 				56BDEF6B1BA055200049A6FE /* AppDelegate.m */,
-				56BDEF6D1BA055200049A6FE /* HomeViewController.h */,
-				56BDEF6E1BA055200049A6FE /* HomeViewController.m */,
-				56DA4B6C1BA0842300F44DC5 /* FlyViewController.h */,
-				56DA4B6D1BA0842300F44DC5 /* FlyViewController.m */,
-				56DA4B731BA0844100F44DC5 /* PairViewController.h */,
-				56DA4B741BA0844100F44DC5 /* PairViewController.m */,
-				56DA4B701BA0843500F44DC5 /* SettingsViewController.h */,
-				56DA4B711BA0843500F44DC5 /* SettingsViewController.m */,
-				56FF29801BA379820093A31E /* OSJoystick.h */,
-				56FF29811BA379820093A31E /* OSJoystick.m */,
+				56FF29831BA380850093A31E /* Controller */,
+				56FF29841BA380AE0093A31E /* Components */,
 				56BDEF701BA055200049A6FE /* Main.storyboard */,
 				56BDEF731BA055200049A6FE /* Images.xcassets */,
 				56BDEF751BA055200049A6FE /* LaunchScreen.xib */,
@@ -168,6 +160,30 @@
 				56BDEF811BA055200049A6FE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56FF29831BA380850093A31E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				56BDEF6D1BA055200049A6FE /* OSHomeViewController.h */,
+				56BDEF6E1BA055200049A6FE /* OSHomeViewController.m */,
+				56DA4B6C1BA0842300F44DC5 /* OSFlyViewController.h */,
+				56DA4B6D1BA0842300F44DC5 /* OSFlyViewController.m */,
+				56DA4B731BA0844100F44DC5 /* OSPairViewController.h */,
+				56DA4B741BA0844100F44DC5 /* OSPairViewController.m */,
+				56DA4B701BA0843500F44DC5 /* OSSettingsViewController.h */,
+				56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		56FF29841BA380AE0093A31E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				56FF29801BA379820093A31E /* OSJoystick.h */,
+				56FF29811BA379820093A31E /* OSJoystick.m */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 		82D1F2D59BF693969A7D1AFE /* Frameworks */ = {
@@ -314,11 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56DA4B751BA0844100F44DC5 /* PairViewController.m in Sources */,
-				56DA4B6E1BA0842300F44DC5 /* FlyViewController.m in Sources */,
+				56DA4B751BA0844100F44DC5 /* OSPairViewController.m in Sources */,
+				56DA4B6E1BA0842300F44DC5 /* OSFlyViewController.m in Sources */,
 				56FF29821BA379820093A31E /* OSJoystick.m in Sources */,
-				56BDEF6F1BA055200049A6FE /* HomeViewController.m in Sources */,
-				56DA4B721BA0843500F44DC5 /* SettingsViewController.m in Sources */,
+				56BDEF6F1BA055200049A6FE /* OSHomeViewController.m in Sources */,
+				56DA4B721BA0843500F44DC5 /* OSSettingsViewController.m in Sources */,
 				56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */,
 				56BDEF691BA055200049A6FE /* main.m in Sources */,
 			);

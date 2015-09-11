@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PairViewController.h
 //  Omega-Splicer
 //
 //  Created by Charles-Adrien Fournier on 09/09/15.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface OSPairViewController : UIViewController
 
 @end
-

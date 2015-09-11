@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Charles-Adrien Fournier. All rights reserved.
 //
 
-#import "SettingsViewController.h"
+#import "OSSettingsViewController.h"
 
-@interface SettingsViewController ()
+@interface OSSettingsViewController ()
 
 @property (nonatomic) NSInteger controlsType;
 
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation SettingsViewController
+@implementation OSSettingsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

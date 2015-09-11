@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.h
+//  ViewController.h
 //  Omega-Splicer
 //
 //  Created by Charles-Adrien Fournier on 09/09/15.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
-
-
+@interface OSHomeViewController : UIViewController
 
 @end
+

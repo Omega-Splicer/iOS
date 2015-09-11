@@ -8,9 +8,9 @@
 
 #import <Masonry/Masonry.h>
 #import <CoreMotion/CoreMotion.h>
-#import "FlyViewController.h"
+#import "OSFlyViewController.h"
 
-@interface FlyViewController ()
+@interface OSFlyViewController ()
 
 @property (nonatomic) BOOL joystickControls;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation FlyViewController
+@implementation OSFlyViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     if (self.joystickControls)

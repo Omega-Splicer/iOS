@@ -1,5 +1,5 @@
 //
-//  FlyViewController.h
+//  SettingsViewController.h
 //  Omega-Splicer
 //
 //  Created by Charles-Adrien Fournier on 09/09/15.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FlyViewController : UIViewController
+@interface OSSettingsViewController : UIViewController
+
+
 
 @end

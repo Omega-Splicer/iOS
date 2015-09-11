@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Charles-Adrien Fournier. All rights reserved.
 //
 
-#import "PairViewController.h"
+#import "OSPairViewController.h"
 
-@interface PairViewController ()
+@interface OSPairViewController ()
 
 @end
 
-@implementation PairViewController
+@implementation OSPairViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

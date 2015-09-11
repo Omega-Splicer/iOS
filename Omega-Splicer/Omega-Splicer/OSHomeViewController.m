@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Charles-Adrien Fournier. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "OSHomeViewController.h"
 
-@interface HomeViewController ()
+@interface OSHomeViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation OSHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
