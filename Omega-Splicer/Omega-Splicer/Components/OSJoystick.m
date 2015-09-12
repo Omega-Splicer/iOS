@@ -8,7 +8,7 @@
 
 #import "OSJoystick.h"
 
-@interface OSJoystick()
+@interface OSJoystick ()
 
 @property BOOL isTouching;
 
@@ -24,9 +24,10 @@
 
 @implementation OSJoystick
 
-- (id)initWithFrame:(CGRect)frame {
+- (id)initWithFrame:(CGRect)frame
+{
     self = [super initWithFrame:frame];
-
+    
     if (self) {
         [self sharedInit];
     }
@@ -34,21 +35,24 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
     self = [super initWithCoder:aDecoder];
     
     if (self) {
         [self sharedInit];
     }
-
+    
     return self;
 }
 
-- (void)sharedInit {
+- (void)sharedInit
+{
     [self setDefaultValues];
     [self roundView:self toDiameter:self.bounds.size.width];
     
-    _bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+    _bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width,
+                                                                 self.bounds.size.height)];
     [self roundView:_bgImageView toDiameter:_bgImageView.bounds.size.width];
     [self addSubview:_bgImageView];
     
@@ -141,8 +145,8 @@
         //move the handle back to the default position
         CGFloat newX = self.handle.center.x;
         CGFloat newY = self.handle.center.y;
-        CGFloat dx = fabs(newX - self.defaultPoint.x);
-        CGFloat dy = fabs(newY - self.defaultPoint.y);
+        CGFloat dx = fabsf(newX - self.defaultPoint.x);
+        CGFloat dy = fabsf(newY - self.defaultPoint.y);
         
         if (self.handle.center.x > self.defaultPoint.x)
         {
@@ -157,8 +161,8 @@
             newY = self.handle.center.y + dy/self.moveViscosity;
         }
         
-        if (fabs(dx/self.moveViscosity) < self.smallestPossible &&
-            fabs(dy/self.moveViscosity) < self.smallestPossible)
+        if (fabsf(dx/self.moveViscosity) < self.smallestPossible &&
+            fabsf(dy/self.moveViscosity) < self.smallestPossible)
         {
             newX = self.defaultPoint.x;
             newY = self.defaultPoint.y;
@@ -218,7 +222,7 @@ CGFloat DistanceBetweenTwoPoints(CGPoint point1,CGPoint point2)
 {
     CGFloat dx = point2.x - point1.x;
     CGFloat dy = point2.y - point1.y;
-//    CGFloat distance = sqrt(dx*dx + dy*dy);
+    CGFloat distance = sqrt(dx*dx + dy*dy);
     
     return sqrt(dx*dx + dy*dy);
 };

@@ -9,12 +9,15 @@
 #import <Masonry/Masonry.h>
 #import <CoreMotion/CoreMotion.h>
 #import "OSFlyViewController.h"
+#import "OSJoystick.h"
 
-@interface OSFlyViewController ()
+@interface OSFlyViewController () <JoystickDelegate>
 
 @property (nonatomic) BOOL joystickControls;
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
+
+@property (strong, nonatomic) OSJoystick *joystick;
 
 @property (weak, nonatomic) IBOutlet UILabel *accelerationLabel;
 
@@ -25,10 +28,13 @@
 @implementation OSFlyViewController
 
 - (void)viewWillAppear:(BOOL)animated {
-    if (self.joystickControls)
+    if (self.joystickControls) {
+        [self displayJoystick];
         [self stopMotionManager];
-    else
+    } else {
         [self startMotionManager];
+        [self removeJoystick];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -45,6 +51,7 @@
         self.joystickControls = NO;
     
     [self setupMotionManager];
+    [self setupJoystick];
     
 }
 
@@ -75,6 +82,20 @@
     [self.motionManager stopGyroUpdates];
 }
 
+- (void)setupJoystick {
+    self.joystick = [[OSJoystick alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 100, self.view.frame.size.height / 2 - 100, 200, 200)];
+    [self.joystick setThumbImage:[UIImage imageNamed:@"joy_thumb"] andBGImage:[UIImage imageNamed:@"stick_base"]];
+}
+
+- (void)displayJoystick {
+    [self.view addSubview:self.joystick];
+    self.joystick.delegate = self;
+}
+
+- (void)removeJoystick {
+    [self.joystick removeFromSuperview];
+}
+
 - (void)outputAccelerationData:(CMAcceleration)acceleration {
     self.accelerationLabel.text = [NSString stringWithFormat:@"Acceleration : %.1f/%.1f/%.1f", acceleration.x, acceleration.y, acceleration.z];
 }
@@ -86,6 +107,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - OSJoystick delegate
+
+- (void)joystick:(OSJoystick *)aJoysick didUpdate:(CGPoint)movement {
+    
 }
 
 /*
