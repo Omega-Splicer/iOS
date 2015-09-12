@@ -145,8 +145,8 @@
         //move the handle back to the default position
         CGFloat newX = self.handle.center.x;
         CGFloat newY = self.handle.center.y;
-        CGFloat dx = fabsf(newX - self.defaultPoint.x);
-        CGFloat dy = fabsf(newY - self.defaultPoint.y);
+        CGFloat dx = fabs(newX - self.defaultPoint.x);
+        CGFloat dy = fabs(newY - self.defaultPoint.y);
         
         if (self.handle.center.x > self.defaultPoint.x)
         {
@@ -161,8 +161,8 @@
             newY = self.handle.center.y + dy/self.moveViscosity;
         }
         
-        if (fabsf(dx/self.moveViscosity) < self.smallestPossible &&
-            fabsf(dy/self.moveViscosity) < self.smallestPossible)
+        if (fabs(dx/self.moveViscosity) < self.smallestPossible &&
+            fabs(dy/self.moveViscosity) < self.smallestPossible)
         {
             newX = self.defaultPoint.x;
             newY = self.defaultPoint.y;
@@ -222,7 +222,7 @@ CGFloat DistanceBetweenTwoPoints(CGPoint point1,CGPoint point2)
 {
     CGFloat dx = point2.x - point1.x;
     CGFloat dy = point2.y - point1.y;
-    CGFloat distance = sqrt(dx*dx + dy*dy);
+//    CGFloat distance = sqrt(dx*dx + dy*dy);
     
     return sqrt(dx*dx + dy*dy);
 };
