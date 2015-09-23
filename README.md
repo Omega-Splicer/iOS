@@ -24,8 +24,6 @@ See LICENSE.
 • Design  
 
 ### Ecran de vol
-• Gestion du gyroscope  
-• Gestion du joystick  
 • Formatage des commandes  
 • Localization  
 • Design  
