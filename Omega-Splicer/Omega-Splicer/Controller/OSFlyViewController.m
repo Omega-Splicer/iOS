@@ -23,6 +23,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *rotationLabel;
 
+@property (nonatomic) CGPoint lastMovement;
+
+
 @end
 
 @implementation OSFlyViewController
@@ -113,16 +116,10 @@
 
 - (void)joystick:(OSJoystick *)aJoysick didUpdate:(CGPoint)movement {
     
+    if (!CGPointEqualToPoint(self.lastMovement, movement)) {
+        self.lastMovement = movement;
+        NSLog(@"Joystick movement : %f - %f", movement.x, movement.y);
+    }
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
