@@ -41,7 +41,6 @@
     }
 }
 
-
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     if ([central state] == CBCentralManagerStatePoweredOff) {
         NSLog(@"CoreBluetooth BLE hardware is powered off");
