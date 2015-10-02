@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F58CDF7CE1F266EFAE9FAFC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7BB6A9055AEC2557B7A65A /* libPods.a */; };
+		56770FA61BBECC3900BAB4C2 /* BluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */; settings = {ASSET_TAGS = (); }; };
 		56BDEF691BA055200049A6FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF681BA055200049A6FE /* main.m */; };
 		56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6B1BA055200049A6FE /* AppDelegate.m */; };
 		56BDEF6F1BA055200049A6FE /* OSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6E1BA055200049A6FE /* OSHomeViewController.m */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		1F7BB6A9055AEC2557B7A65A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		563C53A91BA18AD300EA07DA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.storyboard; sourceTree = "<group>"; };
+		56770FA41BBECC3900BAB4C2 /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BluetoothManager.h; path = Manager/BluetoothManager.h; sourceTree = "<group>"; };
+		56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BluetoothManager.m; path = Manager/BluetoothManager.m; sourceTree = "<group>"; };
 		56BDEF631BA055200049A6FE /* Omega-Splicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Omega-Splicer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BDEF671BA055200049A6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BDEF681BA055200049A6FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -107,6 +110,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		56770FA31BBECC1400BAB4C2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				56770FA41BBECC3900BAB4C2 /* BluetoothManager.h */,
+				56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		56BDEF5A1BA055200049A6FE = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +142,7 @@
 		56BDEF651BA055200049A6FE /* Omega-Splicer */ = {
 			isa = PBXGroup;
 			children = (
+				56770FA31BBECC1400BAB4C2 /* Manager */,
 				56FF29841BA380AE0093A31E /* Components */,
 				56FF29831BA380850093A31E /* Controller */,
 				56FF29851BA382880093A31E /* Images */,
@@ -356,6 +369,7 @@
 				56BDEF6F1BA055200049A6FE /* OSHomeViewController.m in Sources */,
 				56DA4B721BA0843500F44DC5 /* OSSettingsViewController.m in Sources */,
 				56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */,
+				56770FA61BBECC3900BAB4C2 /* BluetoothManager.m in Sources */,
 				56BDEF691BA055200049A6FE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
