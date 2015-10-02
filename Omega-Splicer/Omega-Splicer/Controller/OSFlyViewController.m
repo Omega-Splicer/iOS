@@ -115,7 +115,6 @@
 #pragma mark - OSJoystick delegate
 
 - (void)joystick:(OSJoystick *)aJoysick didUpdate:(CGPoint)movement {
-    
     if (!CGPointEqualToPoint(self.lastMovement, movement)) {
         self.lastMovement = movement;
         NSLog(@"Joystick movement : %f - %f", movement.x, movement.y);
