@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
+/*
+    Bluetooth Services : https://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx
+    Bluetooth Characteristics : https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicsHome.aspx
+ */
+
 @interface BluetoothManager : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate>
 
 /**
