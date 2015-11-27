@@ -67,19 +67,19 @@
 }
 
 - (void)startMotionManager {
-    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
-        [self outputAccelerationData:accelerometerData.acceleration];
-        if (error) {
-            NSLog(@"%@", error);
-        }
-    }];
-    
-    [self.motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
-        [self outputRotationData:gyroData.rotationRate];
-        if (error) {
-            NSLog(@"%@", error);
-        }
-    }];
+//    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
+//        [self outputAccelerationData:accelerometerData.acceleration];
+//        if (error) {
+//            NSLog(@"%@", error);
+//        }
+//    }];
+//    
+//    [self.motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
+//        [self outputRotationData:gyroData.rotationRate];
+//        if (error) {
+//            NSLog(@"%@", error);
+//        }
+//    }];
 }
 
 - (void)stopMotionManager {
