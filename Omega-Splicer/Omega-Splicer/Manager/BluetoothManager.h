@@ -14,7 +14,9 @@
     Bluetooth Characteristics : https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicsHome.aspx
  */
 
-@interface BluetoothManager : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate>
+@interface BluetoothManager : NSObject
+
+//<CBCentralManagerDelegate, CBPeripheralDelegate>
 
 /**
  *  The central manager used to discover and connect to new bluetooth devices

@@ -30,18 +30,20 @@
 
 #pragma mark - CBCentralManagerDelagate
 
-- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
-    
-}
+//- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
+//    
+//}
 
-- (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI {
+//- (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI {
 //    NSString *localName = [advertisementData objectForKey:CBAdvertisementDataLocalNameKey];
 //    if ([localName length] > 0) {
 //        NSLog(@"Found : %@", localName);
 //    }
-}
+//}
 
-- (void)centralManagerDidUpdateState:(CBCentralManager *)central {
+
+
+//- (void)centralManagerDidUpdateState:(CBCentralManager *)central {
 //    if ([central state] == CBCentralManagerStatePoweredOff) {
 //        NSLog(@"CoreBluetooth BLE hardware is powered off");
 //    }
@@ -57,7 +59,7 @@
 //    else if ([central state] == CBCentralManagerStateUnsupported) {
 //        NSLog(@"CoreBluetooth BLE hardware is unsupported on this platform");
 //    }
-}
+//}
 
 #pragma mark - CBPeripheralDelegate
 
