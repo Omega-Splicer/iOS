@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Charles-Adrien Fournier. All rights reserved.
 //
 
-#import <Masonry/Masonry.h>
 #import <CoreMotion/CoreMotion.h>
 #import "OSFlyViewController.h"
 #import "OSJoystick.h"
