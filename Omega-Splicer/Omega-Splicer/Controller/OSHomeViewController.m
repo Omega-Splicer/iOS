@@ -35,8 +35,8 @@
     self.navigationController.navigationBarHidden = YES;
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskLandscape | UIInterfaceOrientationMaskPortrait;
-}
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+//    return UIInterfaceOrientationMaskLandscape | UIInterfaceOrientationMaskPortrait;
+//}
 
 @end
