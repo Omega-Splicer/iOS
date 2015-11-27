@@ -31,6 +31,8 @@
     NSLog(@"Controls settings : %ld", (long)[userDefaults integerForKey:@"controlsKey"]);
     NSLog(@"Speed unit settings : %ld", (long)[userDefaults integerForKey:@"speedUnitKey"]);
     NSLog(@"Debug messages : %ld", (long)[userDefaults integerForKey:@"debugMessagesKey"]);
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {

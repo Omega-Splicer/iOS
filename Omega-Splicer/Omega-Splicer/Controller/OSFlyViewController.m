@@ -38,6 +38,8 @@
         [self startMotionManager];
         [self removeJoystick];
     }
+    
+    self.navigationController.navigationBarHidden = FALSE;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
