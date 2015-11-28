@@ -37,49 +37,141 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wil-2z-SxS">
-                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <rect key="frame" x="100" y="365" width="400" height="50"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Wt6-4v-MQ6"/>
+                                </constraints>
                                 <state key="normal" title="Pair">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="Dgn-NI-C92" kind="show" id="U7j-RO-RnP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi2-ug-sV5">
-                                <rect key="frame" x="272" y="402" width="57" height="30"/>
+                                <rect key="frame" x="100" y="455" width="400" height="50"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Dtj-FX-rt0"/>
+                                    <constraint firstAttribute="width" constant="400" id="asL-Wa-9AZ"/>
+                                </constraints>
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="asL-Wa-9AZ"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="YT6-IW-WlR" kind="show" id="CgX-D2-eGX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpa-3V-5IM">
-                                <rect key="frame" x="285" y="168" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpa-3V-5IM">
+                                <rect key="frame" x="100" y="275" width="400" height="50"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="o3e-0M-5sp"/>
+                                </constraints>
                                 <state key="normal" title="Fly">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="vek-6y-Gpg" kind="show" id="6Ri-DW-Ni6"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Omega-Splicer-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="VTD-TZ-pSx">
+                                <rect key="frame" x="220" y="124" width="161" height="105"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="UHv-FY-dbd"/>
+                                    <constraint firstAttribute="height" constant="105" id="V14-Oh-sJa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="bpa-3V-5IM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0G6-nF-Olt"/>
+                            <constraint firstItem="bpa-3V-5IM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="2fs-MG-jeJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bpa-3V-5IM" secondAttribute="trailing" constant="80" id="39m-Cs-Js0"/>
+                            <constraint firstItem="wil-2z-SxS" firstAttribute="top" secondItem="bpa-3V-5IM" secondAttribute="bottom" constant="40" id="3GK-qe-P3l"/>
+                            <constraint firstItem="bpa-3V-5IM" firstAttribute="top" secondItem="VTD-TZ-pSx" secondAttribute="bottom" constant="80.5" id="4mp-4X-gIR"/>
+                            <constraint firstItem="wil-2z-SxS" firstAttribute="top" secondItem="bpa-3V-5IM" secondAttribute="bottom" constant="70" id="52r-j2-R81"/>
+                            <constraint firstItem="bpa-3V-5IM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="53u-EH-Gau"/>
                             <constraint firstAttribute="centerX" secondItem="wil-2z-SxS" secondAttribute="centerX" id="5mx-ds-kfb"/>
+                            <constraint firstItem="wil-2z-SxS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="6Mi-Tj-dGJ"/>
+                            <constraint firstItem="xi2-ug-sV5" firstAttribute="top" secondItem="wil-2z-SxS" secondAttribute="bottom" constant="40" id="8Yw-f9-YpS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xi2-ug-sV5" secondAttribute="trailing" constant="80" id="98z-dn-icW"/>
                             <constraint firstItem="wil-2z-SxS" firstAttribute="top" secondItem="bpa-3V-5IM" secondAttribute="bottom" constant="87" id="Ac9-7E-hDQ"/>
                             <constraint firstAttribute="centerX" secondItem="bpa-3V-5IM" secondAttribute="centerX" id="GOx-SQ-Tgv"/>
+                            <constraint firstItem="wil-2z-SxS" firstAttribute="top" secondItem="bpa-3V-5IM" secondAttribute="bottom" constant="70" id="Gdx-Ob-M2r"/>
+                            <constraint firstItem="xi2-ug-sV5" firstAttribute="top" secondItem="wil-2z-SxS" secondAttribute="bottom" constant="70" id="Gw6-o2-kPM"/>
                             <constraint firstAttribute="centerY" secondItem="wil-2z-SxS" secondAttribute="centerY" id="IDg-nH-oLP"/>
                             <constraint firstItem="xi2-ug-sV5" firstAttribute="top" secondItem="wil-2z-SxS" secondAttribute="bottom" constant="87" id="QGs-0Q-pVd"/>
+                            <constraint firstItem="wil-2z-SxS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="Qyw-YM-Xbi"/>
+                            <constraint firstItem="xi2-ug-sV5" firstAttribute="top" secondItem="wil-2z-SxS" secondAttribute="bottom" constant="70" id="R8d-PK-uRN"/>
+                            <constraint firstItem="xi2-ug-sV5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="RpQ-Gh-Nis"/>
+                            <constraint firstItem="bpa-3V-5IM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Stw-ZW-IAo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bpa-3V-5IM" secondAttribute="trailing" constant="80" id="Ufl-sg-Thu"/>
+                            <constraint firstItem="bpa-3V-5IM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="aAi-9k-zDu"/>
+                            <constraint firstItem="VTD-TZ-pSx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b2g-Ra-Iao"/>
+                            <constraint firstItem="xi2-ug-sV5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="dEu-3k-Qdl"/>
+                            <constraint firstItem="VTD-TZ-pSx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="eoW-PQ-2xa"/>
                             <constraint firstAttribute="centerX" secondItem="xi2-ug-sV5" secondAttribute="centerX" id="gJQ-Lk-S7P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wil-2z-SxS" secondAttribute="trailing" constant="80" id="pYp-e2-tgj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wil-2z-SxS" secondAttribute="trailing" constant="80" id="uYc-JR-XCH"/>
+                            <constraint firstItem="bpa-3V-5IM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w1r-ws-h91"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xi2-ug-sV5" secondAttribute="trailing" constant="80" id="ycG-UR-EyY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bpa-3V-5IM" secondAttribute="trailing" constant="80" id="z7e-c1-U4w"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0G6-nF-Olt"/>
+                                <exclude reference="39m-Cs-Js0"/>
+                                <exclude reference="4mp-4X-gIR"/>
+                                <exclude reference="53u-EH-Gau"/>
+                                <exclude reference="GOx-SQ-Tgv"/>
+                                <exclude reference="Ufl-sg-Thu"/>
+                                <exclude reference="aAi-9k-zDu"/>
+                                <exclude reference="w1r-ws-h91"/>
+                                <exclude reference="52r-j2-R81"/>
+                                <exclude reference="5mx-ds-kfb"/>
+                                <exclude reference="Ac9-7E-hDQ"/>
+                                <exclude reference="Gdx-Ob-M2r"/>
+                                <exclude reference="IDg-nH-oLP"/>
+                                <exclude reference="Qyw-YM-Xbi"/>
+                                <exclude reference="pYp-e2-tgj"/>
+                                <exclude reference="98z-dn-icW"/>
+                                <exclude reference="Gw6-o2-kPM"/>
+                                <exclude reference="QGs-0Q-pVd"/>
+                                <exclude reference="R8d-PK-uRN"/>
+                                <exclude reference="RpQ-Gh-Nis"/>
+                                <exclude reference="gJQ-Lk-S7P"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="7Cu-zP-A6e"/>
                 </viewController>
@@ -334,4 +426,7 @@
             <point key="canvasLocation" x="759" y="845"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Omega-Splicer-Logo.png" width="2423" height="1577"/>
+    </resources>
 </document>
