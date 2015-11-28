@@ -4,6 +4,8 @@
 )](https://developer.apple.com/iphone/index.action)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
+[![Build Status](https://travis-ci.org/Omega-Splicer/iOS.svg?branch=master
+)](https://travis-ci.org/Omega-Splicer/iOS)
 
 # Omega-Splicer for iOS
 
