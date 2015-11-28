@@ -56,6 +56,10 @@
 
 #pragma mark - Actions
 
+- (IBAction)dismissSettingsViewController:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (IBAction)controlsChanged:(id)sender {
     self.controlsType = self.controlsSegmentedControl.selectedSegmentIndex;
 }

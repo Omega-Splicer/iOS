@@ -8,7 +8,7 @@
 
 #import "OSHomeViewController.h"
 
-@interface OSHomeViewController () <UINavigationControllerDelegate>
+@interface OSHomeViewController ()
 
 @end
 
@@ -31,17 +31,10 @@
     NSLog(@"Controls settings : %ld", (long)[userDefaults integerForKey:@"controlsKey"]);
     NSLog(@"Speed unit settings : %ld", (long)[userDefaults integerForKey:@"speedUnitKey"]);
     NSLog(@"Debug messages : %ld", (long)[userDefaults integerForKey:@"debugMessagesKey"]);
-    
-    self.navigationController.navigationBarHidden = YES;
-    self.navigationController.delegate = self;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
-}
-
-- (UIInterfaceOrientationMask)navigationControllerSupportedInterfaceOrientations:(UINavigationController *)navigationController {
-    return self.navigationController.topViewController.supportedInterfaceOrientations;
 }
 
 @end

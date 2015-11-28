@@ -14,6 +14,11 @@
 
 @implementation OSPairViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = FALSE;
+    NSLog(@"toto pair");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -22,6 +27,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)dismissPairViewController:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

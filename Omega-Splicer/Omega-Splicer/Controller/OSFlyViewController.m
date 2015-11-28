@@ -16,7 +16,7 @@
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
-@property (strong, nonatomic) OSJoystick *joystick;
+//@property (strong, nonatomic) OSJoystick *joystick;
 
 @property (weak, nonatomic) IBOutlet UILabel *accelerationLabel;
 
@@ -37,8 +37,10 @@
         [self startMotionManager];
         [self removeJoystick];
     }
-    
-    self.navigationController.navigationBarHidden = FALSE;
+}
+
+- (IBAction)dismissFlyViewController:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -87,17 +89,17 @@
 }
 
 - (void)setupJoystick {
-    self.joystick = [[OSJoystick alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 100, self.view.frame.size.height / 2 - 100, 200, 200)];
-    [self.joystick setThumbImage:[UIImage imageNamed:@"joy_thumb"] andBGImage:[UIImage imageNamed:@"stick_base"]];
+//    self.joystick = [[OSJoystick alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 100, self.view.frame.size.height / 2 - 100, 200, 200)];
+//    [self.joystick setThumbImage:[UIImage imageNamed:@"joy_thumb"] andBGImage:[UIImage imageNamed:@"stick_base"]];
 }
 
 - (void)displayJoystick {
-    [self.view addSubview:self.joystick];
-    self.joystick.delegate = self;
+//    [self.view addSubview:self.joystick];
+//    self.joystick.delegate = self;
 }
 
 - (void)removeJoystick {
-    [self.joystick removeFromSuperview];
+//    [self.joystick removeFromSuperview];
 }
 
 - (void)outputAccelerationData:(CMAcceleration)acceleration {
@@ -111,6 +113,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 #pragma mark - OSJoystick delegate
