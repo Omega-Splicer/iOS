@@ -30,6 +30,10 @@
     XCTAssert(YES, @"Pass");
 }
 
+- (void)testBad {
+    XCTAssert(NO, @"DON'T PASS");
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
