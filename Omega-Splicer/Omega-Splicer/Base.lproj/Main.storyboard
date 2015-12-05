@@ -82,11 +82,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="vek-6y-Gpg" kind="show" id="j11-GA-Tvx"/>
+                                    <action selector="FlyButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oqs-B6-TCW"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Omega-Splicer-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="VTD-TZ-pSx">
-                                <rect key="frame" x="220" y="124" width="161" height="105"/>
+                                <rect key="frame" x="220" y="80" width="161" height="105"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="161" id="UHv-FY-dbd"/>
@@ -162,34 +162,79 @@
             </objects>
             <point key="canvasLocation" x="-75" y="125"/>
         </scene>
+        <!--Fly Portrait View Controller-->
+        <scene sceneID="fQF-zG-SCe">
+            <objects>
+                <viewController storyboardIdentifier="flyPortrait" id="cuf-x2-gj9" customClass="OSFlyPortraitViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UcG-rg-Pff"/>
+                        <viewControllerLayoutGuide type="bottom" id="9j1-oh-q8r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I5U-fj-hGr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oV-Ws-8dQ">
+                                <rect key="frame" x="20" y="20" width="39" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonClicked:" destination="cuf-x2-gj9" eventType="touchUpInside" id="871-bf-26u"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lc-me-3Xy" customClass="CFSliderView">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nxo-ug-DN4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3lc-me-3Xy" secondAttribute="trailing" constant="-20" id="EuJ-Ep-jAV"/>
+                            <constraint firstItem="9j1-oh-q8r" firstAttribute="top" secondItem="3lc-me-3Xy" secondAttribute="bottom" id="Isy-vM-eVi"/>
+                            <constraint firstItem="3lc-me-3Xy" firstAttribute="leading" secondItem="I5U-fj-hGr" secondAttribute="leadingMargin" constant="-20" id="NX2-20-y80"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sliderView" destination="3lc-me-3Xy" id="zWd-Iu-7TR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yp-fG-Ugu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="-1253"/>
+        </scene>
         <!--Fly-->
         <scene sceneID="th3-9b-D4t">
             <objects>
-                <viewController title="Fly" id="vek-6y-Gpg" customClass="OSFlyViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="flyLandscape" title="Fly" id="vek-6y-Gpg" customClass="OSFlyLandscapeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J98-KW-smQ"/>
                         <viewControllerLayoutGuide type="bottom" id="sOh-Tz-OqV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Cc-0o-ENv">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="X : 0.0 / Y : 0.0 / Z : 0.0" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahn-j9-0Hd">
-                                <rect key="frame" x="246" y="72" width="174" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X : 0.0 / Y : 0.0 / Z : 0.0" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahn-j9-0Hd">
+                                <rect key="frame" x="213" y="28" width="174" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="X : 0.0 / Y : 0.0 / Z : 0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nac-mq-VR9">
-                                <rect key="frame" x="246" y="100" width="174" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X : 0.0 / Y : 0.0 / Z : 0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nac-mq-VR9">
+                                <rect key="frame" x="213" y="56" width="174" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkM-CI-4zB" customClass="OSJoystick">
-                                <rect key="frame" x="50" y="197" width="128" height="128"/>
+                                <rect key="frame" x="50" y="422" width="128" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -198,7 +243,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqO-xM-wKJ" customClass="OSJoystick">
-                                <rect key="frame" x="489" y="197" width="128" height="128"/>
+                                <rect key="frame" x="422" y="422" width="128" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -231,7 +276,6 @@
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="accelerationLabel" destination="ahn-j9-0Hd" id="SIP-yg-URn"/>
                         <outlet property="rotationLabel" destination="nac-mq-VR9" id="VMW-Dr-h3s"/>
