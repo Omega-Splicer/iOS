@@ -7,6 +7,7 @@
 //
 
 #import "OSHomeViewController.h"
+#import "OSFlyLandscapeViewController.h"
 
 @interface OSHomeViewController ()
 
@@ -35,6 +36,13 @@
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
+}
+
+- (IBAction)FlyButtonClicked:(id)sender {
+    NSLog(@"Fly button clicked");
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyPortrait"];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end
