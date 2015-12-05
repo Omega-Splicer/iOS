@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		56770FA61BBECC3900BAB4C2 /* BluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */; };
+		5698FAF61C12BA1700A9942D /* OSFlyPortraitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5698FAF51C12BA1700A9942D /* OSFlyPortraitViewController.m */; };
+		5698FAF91C12BA8200A9942D /* CFSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5698FAF81C12BA8200A9942D /* CFSliderView.m */; };
 		56BDEF691BA055200049A6FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF681BA055200049A6FE /* main.m */; };
 		56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6B1BA055200049A6FE /* AppDelegate.m */; };
 		56BDEF6F1BA055200049A6FE /* OSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6E1BA055200049A6FE /* OSHomeViewController.m */; };
@@ -16,7 +18,7 @@
 		56BDEF771BA055200049A6FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF751BA055200049A6FE /* LaunchScreen.xib */; };
 		56BDEF831BA055200049A6FE /* Omega_SplicerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */; };
 		56C653DA1C093CBA00271639 /* Omega-Splicer-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C653D91C093CBA00271639 /* Omega-Splicer-Logo.png */; };
-		56DA4B6E1BA0842300F44DC5 /* OSFlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B6D1BA0842300F44DC5 /* OSFlyViewController.m */; };
+		56DA4B6E1BA0842300F44DC5 /* OSFlyLandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B6D1BA0842300F44DC5 /* OSFlyLandscapeViewController.m */; };
 		56DA4B721BA0843500F44DC5 /* OSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */; };
 		56DA4B751BA0844100F44DC5 /* OSPairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B741BA0844100F44DC5 /* OSPairViewController.m */; };
 		56FF29821BA379820093A31E /* OSJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FF29811BA379820093A31E /* OSJoystick.m */; };
@@ -52,6 +54,10 @@
 		563C53A91BA18AD300EA07DA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56770FA41BBECC3900BAB4C2 /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BluetoothManager.h; path = Manager/BluetoothManager.h; sourceTree = "<group>"; };
 		56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BluetoothManager.m; path = Manager/BluetoothManager.m; sourceTree = "<group>"; };
+		5698FAF41C12BA1700A9942D /* OSFlyPortraitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSFlyPortraitViewController.h; sourceTree = "<group>"; };
+		5698FAF51C12BA1700A9942D /* OSFlyPortraitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFlyPortraitViewController.m; sourceTree = "<group>"; };
+		5698FAF71C12BA8200A9942D /* CFSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSliderView.h; sourceTree = "<group>"; };
+		5698FAF81C12BA8200A9942D /* CFSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSliderView.m; sourceTree = "<group>"; };
 		56BDEF631BA055200049A6FE /* Omega-Splicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Omega-Splicer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BDEF671BA055200049A6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BDEF681BA055200049A6FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -67,8 +73,8 @@
 		56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Omega_SplicerTests.m; sourceTree = "<group>"; };
 		56C653D91C093CBA00271639 /* Omega-Splicer-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Omega-Splicer-Logo.png"; sourceTree = "<group>"; };
 		56DA4B671BA07FA600F44DC5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		56DA4B6C1BA0842300F44DC5 /* OSFlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSFlyViewController.h; sourceTree = "<group>"; };
-		56DA4B6D1BA0842300F44DC5 /* OSFlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFlyViewController.m; sourceTree = "<group>"; };
+		56DA4B6C1BA0842300F44DC5 /* OSFlyLandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSFlyLandscapeViewController.h; sourceTree = "<group>"; };
+		56DA4B6D1BA0842300F44DC5 /* OSFlyLandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFlyLandscapeViewController.m; sourceTree = "<group>"; };
 		56DA4B701BA0843500F44DC5 /* OSSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSettingsViewController.h; sourceTree = "<group>"; };
 		56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSettingsViewController.m; sourceTree = "<group>"; };
 		56DA4B731BA0844100F44DC5 /* OSPairViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPairViewController.h; sourceTree = "<group>"; };
@@ -172,14 +178,16 @@
 		56FF29831BA380850093A31E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				56DA4B6C1BA0842300F44DC5 /* OSFlyViewController.h */,
-				56DA4B6D1BA0842300F44DC5 /* OSFlyViewController.m */,
 				56BDEF6D1BA055200049A6FE /* OSHomeViewController.h */,
 				56BDEF6E1BA055200049A6FE /* OSHomeViewController.m */,
 				56DA4B731BA0844100F44DC5 /* OSPairViewController.h */,
 				56DA4B741BA0844100F44DC5 /* OSPairViewController.m */,
 				56DA4B701BA0843500F44DC5 /* OSSettingsViewController.h */,
 				56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */,
+				56DA4B6C1BA0842300F44DC5 /* OSFlyLandscapeViewController.h */,
+				56DA4B6D1BA0842300F44DC5 /* OSFlyLandscapeViewController.m */,
+				5698FAF41C12BA1700A9942D /* OSFlyPortraitViewController.h */,
+				5698FAF51C12BA1700A9942D /* OSFlyPortraitViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -187,6 +195,8 @@
 		56FF29841BA380AE0093A31E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5698FAF71C12BA8200A9942D /* CFSliderView.h */,
+				5698FAF81C12BA8200A9942D /* CFSliderView.m */,
 				56FF29801BA379820093A31E /* OSJoystick.h */,
 				56FF29811BA379820093A31E /* OSJoystick.m */,
 			);
@@ -317,10 +327,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				56DA4B751BA0844100F44DC5 /* OSPairViewController.m in Sources */,
-				56DA4B6E1BA0842300F44DC5 /* OSFlyViewController.m in Sources */,
+				56DA4B6E1BA0842300F44DC5 /* OSFlyLandscapeViewController.m in Sources */,
+				5698FAF91C12BA8200A9942D /* CFSliderView.m in Sources */,
 				56FF29821BA379820093A31E /* OSJoystick.m in Sources */,
 				56BDEF6F1BA055200049A6FE /* OSHomeViewController.m in Sources */,
 				56DA4B721BA0843500F44DC5 /* OSSettingsViewController.m in Sources */,
+				5698FAF61C12BA1700A9942D /* OSFlyPortraitViewController.m in Sources */,
 				56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */,
 				56770FA61BBECC3900BAB4C2 /* BluetoothManager.m in Sources */,
 				56BDEF691BA055200049A6FE /* main.m in Sources */,
