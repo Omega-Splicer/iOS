@@ -85,7 +85,7 @@
                                     <action selector="FlyButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oqs-B6-TCW"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Omega-Splicer-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="VTD-TZ-pSx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="VTD-TZ-pSx">
                                 <rect key="frame" x="220" y="80" width="161" height="105"/>
                                 <animations/>
                                 <constraints>
@@ -190,14 +190,56 @@
                                     <constraint firstAttribute="height" constant="50" id="nxo-ug-DN4"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Big Plane" translatesAutoresizingMaskIntoConstraints="NO" id="Dzf-th-58G">
+                                <rect key="frame" x="208" y="220" width="184" height="230"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Dzf-th-58G" secondAttribute="height" multiplier="4:5" id="941-B3-da3"/>
+                                    <constraint firstAttribute="width" secondItem="Dzf-th-58G" secondAttribute="height" multiplier="4:5" id="PKA-xM-Onj"/>
+                                    <constraint firstAttribute="width" constant="240" id="PcT-fi-3f3"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="941-B3-da3"/>
+                                        <exclude reference="PcT-fi-3f3"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="qKN-ZJ-tzM">
+                                <rect key="frame" x="257" y="28" width="87" height="63"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="YRe-4j-IyU"/>
+                                    <constraint firstAttribute="width" constant="87" id="v12-qQ-jhQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="3lc-me-3Xy" secondAttribute="trailing" constant="-20" id="EuJ-Ep-jAV"/>
+                            <constraint firstItem="qKN-ZJ-tzM" firstAttribute="centerX" secondItem="I5U-fj-hGr" secondAttribute="centerX" id="FJS-4K-98y"/>
                             <constraint firstItem="9j1-oh-q8r" firstAttribute="top" secondItem="3lc-me-3Xy" secondAttribute="bottom" id="Isy-vM-eVi"/>
                             <constraint firstItem="3lc-me-3Xy" firstAttribute="leading" secondItem="I5U-fj-hGr" secondAttribute="leadingMargin" constant="-20" id="NX2-20-y80"/>
+                            <constraint firstItem="Dzf-th-58G" firstAttribute="top" secondItem="UcG-rg-Pff" secondAttribute="bottom" constant="200" id="O2p-dU-1fl"/>
+                            <constraint firstItem="Dzf-th-58G" firstAttribute="centerX" secondItem="I5U-fj-hGr" secondAttribute="centerX" id="X71-31-G0e"/>
+                            <constraint firstItem="Dzf-th-58G" firstAttribute="centerY" secondItem="I5U-fj-hGr" secondAttribute="centerY" id="Xtx-vU-ABo"/>
+                            <constraint firstItem="qKN-ZJ-tzM" firstAttribute="top" secondItem="UcG-rg-Pff" secondAttribute="bottom" constant="8" id="dtk-KD-mPW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dzf-th-58G" secondAttribute="trailing" constant="144" id="lcb-9G-Y3d"/>
+                            <constraint firstItem="Dzf-th-58G" firstAttribute="leading" secondItem="I5U-fj-hGr" secondAttribute="leadingMargin" constant="144" id="nAd-LR-HlS"/>
+                            <constraint firstItem="Dzf-th-58G" firstAttribute="centerX" secondItem="I5U-fj-hGr" secondAttribute="centerX" id="oGH-aD-4xb"/>
+                            <constraint firstItem="qKN-ZJ-tzM" firstAttribute="top" secondItem="UcG-rg-Pff" secondAttribute="bottom" constant="-17" id="qH4-IF-lmp"/>
+                            <constraint firstItem="3lc-me-3Xy" firstAttribute="top" secondItem="Dzf-th-58G" secondAttribute="bottom" constant="100" id="xlg-Sr-g5B"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qH4-IF-lmp"/>
+                                <exclude reference="X71-31-G0e"/>
+                                <exclude reference="Xtx-vU-ABo"/>
+                                <exclude reference="lcb-9G-Y3d"/>
+                                <exclude reference="nAd-LR-HlS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="sliderView" destination="3lc-me-3Xy" id="zWd-Iu-7TR"/>
@@ -514,6 +556,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Omega-Splicer-Logo.png" width="2423" height="1577"/>
+        <image name="Big Plane" width="566" height="704"/>
+        <image name="Logo" width="287" height="189"/>
     </resources>
 </document>
