@@ -17,13 +17,15 @@
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
 //@property (strong, nonatomic) OSJoystick *joystick;
+@property (weak, nonatomic) IBOutlet OSJoystick *rightJoystick;
+
+@property (weak, nonatomic) IBOutlet OSJoystick *leftJoystick;
 
 @property (weak, nonatomic) IBOutlet UILabel *accelerationLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *rotationLabel;
 
 @property (nonatomic) CGPoint lastMovement;
-
 
 @end
 
@@ -89,17 +91,20 @@
 }
 
 - (void)setupJoystick {
-//    self.joystick = [[OSJoystick alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 100, self.view.frame.size.height / 2 - 100, 200, 200)];
-//    [self.joystick setThumbImage:[UIImage imageNamed:@"joy_thumb"] andBGImage:[UIImage imageNamed:@"stick_base"]];
+    [self.leftJoystick setThumbImage:[UIImage imageNamed:@"joy_thumb"] andBGImage:[UIImage imageNamed:@"stick_base"]];
+    [self.rightJoystick setThumbImage:[UIImage imageNamed:@"joy_thumb"] andBGImage:[UIImage imageNamed:@"stick_base"]];
+    self.rightJoystick.backgroundColor = [UIColor clearColor];
+    self.leftJoystick.backgroundColor = [UIColor clearColor];
 }
 
 - (void)displayJoystick {
-//    [self.view addSubview:self.joystick];
-//    self.joystick.delegate = self;
+    [self.view addSubview:self.leftJoystick];
+    [self.view addSubview:self.rightJoystick];
 }
 
 - (void)removeJoystick {
-//    [self.joystick removeFromSuperview];
+    [self.leftJoystick removeFromSuperview];
+    [self.rightJoystick removeFromSuperview];
 }
 
 - (void)outputAccelerationData:(CMAcceleration)acceleration {
