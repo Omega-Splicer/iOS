@@ -24,13 +24,14 @@
     
     
     self.settingsButton.tintColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1];
-
-}
+    self.settingsButton.hidden = YES;
+    }
 
 - (void)viewDidAppear:(BOOL)animated {
     [self.sliderView buildSlider];
+    [self.sliderView updateConstraintsIfNeeded];
     [self.sliderView setTextColor:[UIColor whiteColor]];
-    [self.sliderView setSliderColor:[UIColor colorWithRed:0.08 green:0.2 blue:0.35 alpha:1]];
+    [self.sliderView setSliderColor:[UIColor colorWithRed:0.05 green:0.12 blue:0.21 alpha:1]];
     [self.sliderView setBackgroundColor:[UIColor colorWithRed:0.08 green:0.2 blue:0.35 alpha:0.7]];
 }
 
