@@ -37,7 +37,7 @@
     
     self.textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     self.textLabel.textAlignment = NSTextAlignmentCenter;
-    self.textLabel.text = [NSString stringWithFormat:@"%ld%%", self.value];
+    self.textLabel.text = [NSString stringWithFormat:@"%ld%%", (long)self.value];
     self.textLabel.font = [self.textLabel.font fontWithSize:25];
     [self addSubview:self.textLabel];
 }
