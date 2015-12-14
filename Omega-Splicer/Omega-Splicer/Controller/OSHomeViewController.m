@@ -29,6 +29,7 @@
 
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
+    NSLog(@"Fly mode settings : %ld", (long)[userDefaults integerForKey:@"flyModeKey"]);
     NSLog(@"Controls settings : %ld", (long)[userDefaults integerForKey:@"controlsKey"]);
     NSLog(@"Speed unit settings : %ld", (long)[userDefaults integerForKey:@"speedUnitKey"]);
     NSLog(@"Debug messages : %ld", (long)[userDefaults integerForKey:@"debugMessagesKey"]);
@@ -41,8 +42,19 @@
 - (IBAction)FlyButtonClicked:(id)sender {
     NSLog(@"Fly button clicked");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyPortrait"];
-    [self presentViewController:vc animated:YES completion:nil];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSInteger flyMode = [userDefaults integerForKey:@"flyModeKey"];
+    
+    if (flyMode == 0) {
+        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyPortrait"];
+        [self presentViewController:vc animated:YES completion:nil];
+    } else {
+        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyLandscape"];
+        [self presentViewController:vc animated:YES completion:nil];
+        
+    }
+    
+    
 }
 
 @end
