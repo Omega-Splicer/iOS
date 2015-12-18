@@ -14,6 +14,7 @@
     self.name = @"Empty plane";
     self.signal = 0;
     self.battery = 0;
+    self.motor = 0;
 }
 
 - (void)initPlaneWithName:(NSString *)name battery:(float)battery signal:(float)signal {
@@ -35,18 +36,21 @@
     self.name = @"First example plane";
     self.battery = 100;
     self.signal = 100;
+    self.motor = 100;
 }
 
 - (void)planeExample2 {
     self.name = @"Second example plane";
     self.battery = 50;
     self.signal = 50;
+    self.motor = 50;
 }
 
 - (void)planeExample3 {
     self.name = @"Third example plane";
     self.battery = 0;
     self.signal = 0;
+    self.motor = 0;
 }
 
 @end
