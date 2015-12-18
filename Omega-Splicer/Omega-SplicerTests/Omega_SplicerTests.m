@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+// Controller
 #import "OSHomeViewController.h"
 #import "OSPairViewController.h"
 #import "OSSettingsViewController.h"
 #import "OSFlyLandscapeViewController.h"
 #import "OSFlyPortraitViewController.h"
+
+// Model
+#import "OSPlane.h"
 
 @interface Omega_SplicerTests : XCTestCase
 
@@ -27,30 +31,31 @@
 
 @property (nonatomic, strong) OSFlyPortraitViewController *flyPortraitVC;
 
+@property (nonatomic, strong) OSPlane *plane;
+
 @end
 
 @implementation Omega_SplicerTests
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
     
+    // Controller set up
     self.homeVC = [[OSHomeViewController alloc] init];
     self.pairVC = [[OSPairViewController alloc] init];
     self.settingsVC = [[OSSettingsViewController alloc] init];
     self.flyLandscapeVC = [[OSFlyLandscapeViewController alloc] init];
     self.flyPortraitVC = [[OSFlyPortraitViewController alloc] init];
+
+    // Model set up
+    self.plane = [[OSPlane alloc] init];
+    [self.plane initEmptyPlane];
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
-
-//- (void)testExample {
-//    // This is an example of a functional test case.
-//    XCTAssert(YES, @"Pass");
-//}
 
 - (void)testHomeView {
     XCTAssertNotNil(self.homeVC, @"Home view controller not nil");
@@ -72,10 +77,12 @@
     XCTAssertNotNil(self.flyPortraitVC, @"Fly portrait view controller not nil");
 }
 
-
-//- (void)testBad {
-//    XCTAssert(NO, @"DON'T PASS");
-//}
+- (void)testPlaneModel {
+    XCTAssertEqualObjects([self.plane name], @"Empty plane");
+    XCTAssertEqual([self.plane battery], 0);
+    XCTAssertEqual([self.plane signal], 0);
+    XCTAssertEqual([self.plane motor], 0);
+}
 
 //- (void)testPerformanceExample {
 //    // This is an example of a performance test case.
