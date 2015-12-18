@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5638F0B61C249B73000E484D /* OSPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 5638F0B51C249B73000E484D /* OSPlane.m */; };
 		56770FA61BBECC3900BAB4C2 /* BluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */; };
 		5698FAF61C12BA1700A9942D /* OSFlyPortraitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5698FAF51C12BA1700A9942D /* OSFlyPortraitViewController.m */; };
 		5698FAF91C12BA8200A9942D /* CFSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5698FAF81C12BA8200A9942D /* CFSliderView.m */; };
@@ -50,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5638F0B41C249B73000E484D /* OSPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPlane.h; path = Model/OSPlane.h; sourceTree = "<group>"; };
+		5638F0B51C249B73000E484D /* OSPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPlane.m; path = Model/OSPlane.m; sourceTree = "<group>"; };
 		563C53A91BA18AD300EA07DA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56770FA41BBECC3900BAB4C2 /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BluetoothManager.h; path = Manager/BluetoothManager.h; sourceTree = "<group>"; };
 		56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BluetoothManager.m; path = Manager/BluetoothManager.m; sourceTree = "<group>"; };
@@ -102,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5638F0B31C249B4F000E484D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5638F0B41C249B73000E484D /* OSPlane.h */,
+				5638F0B51C249B73000E484D /* OSPlane.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		56770FA31BBECC1400BAB4C2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +145,7 @@
 		56BDEF651BA055200049A6FE /* Omega-Splicer */ = {
 			isa = PBXGroup;
 			children = (
+				5638F0B31C249B4F000E484D /* Model */,
 				56770FA31BBECC1400BAB4C2 /* Manager */,
 				56FF29841BA380AE0093A31E /* Components */,
 				56FF29831BA380850093A31E /* Controller */,
@@ -322,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5638F0B61C249B73000E484D /* OSPlane.m in Sources */,
 				56DA4B751BA0844100F44DC5 /* OSPairViewController.m in Sources */,
 				56DA4B6E1BA0842300F44DC5 /* OSFlyLandscapeViewController.m in Sources */,
 				5698FAF91C12BA8200A9942D /* CFSliderView.m in Sources */,
