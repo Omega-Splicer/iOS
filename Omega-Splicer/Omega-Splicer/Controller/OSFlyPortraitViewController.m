@@ -61,31 +61,20 @@
     }];
     
     [self.motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
-        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            [self outputRotationData:gyroData.rotationRate];
+        }
     }];
-    
-    
-    //    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
-    //        [self outputAccelerationData:accelerometerData.acceleration];
-    //        if (error) {
-    //            NSLog(@"%@", error);
-    //        }
-    //    }];
-    //
-    //    [self.motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
-    //        [self outputRotationData:gyroData.rotationRate];
-    //        if (error) {
-    //            NSLog(@"%@", error);
-    //        }
-    //    }];
 }
 
 - (void)outputAccelerationData:(CMAcceleration)acceleration {
-//    self.accelerationLabel.text = [NSString stringWithFormat:@"Acceleration : %.1f/%.1f/%.1f", acceleration.x, acceleration.y, acceleration.z];
+    NSLog(@"Acceleration : %.1f/%.1f/%.1f", acceleration.x, acceleration.y, acceleration.z);
 }
 
 - (void)outputRotationData:(CMRotationRate)rotation {
-//    self.rotationLabel.text = [NSString stringWithFormat:@"Rotation : %.1f/%.1f/%.1f", rotation.x, rotation.y, rotation.z];
+    NSLog(@"Rotation : %.1f/%.1f/%.1f", rotation.x, rotation.y, rotation.z);
 }
 
 - (void)stopMotionManager {
