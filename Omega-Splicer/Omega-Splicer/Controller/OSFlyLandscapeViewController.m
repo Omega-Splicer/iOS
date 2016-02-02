@@ -14,9 +14,8 @@
 
 @property (nonatomic) BOOL joystickControls;
 
-@property (strong, nonatomic) CMMotionManager *motionManager;
+//@property (strong, nonatomic) CMMotionManager *motionManager;
 
-//@property (strong, nonatomic) OSJoystick *joystick;
 @property (weak, nonatomic) IBOutlet OSJoystick *rightJoystick;
 
 @property (weak, nonatomic) IBOutlet OSJoystick *leftJoystick;
@@ -34,7 +33,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     if (self.joystickControls) {
         [self displayJoystick];
-        [self stopMotionManager];
+//        [self stopMotionManager];
     } else {
         [self startMotionManager];
         [self removeJoystick];
@@ -46,7 +45,7 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [self stopMotionManager];
+//    [self stopMotionManager];
 }
 
 - (void)viewDidLoad {
@@ -58,16 +57,16 @@
     else
         self.joystickControls = NO;
     
-    [self setupMotionManager];
+//    [self setupMotionManager];
     [self setupJoystick];
     
 }
-
-- (void)setupMotionManager {
-    self.motionManager = [[CMMotionManager alloc] init];
-    self.motionManager.accelerometerUpdateInterval = .2;
-    self.motionManager.gyroUpdateInterval = .2;
-}
+//
+//- (void)setupMotionManager {
+//    self.motionManager = [[CMMotionManager alloc] init];
+//    self.motionManager.accelerometerUpdateInterval = .2;
+//    self.motionManager.gyroUpdateInterval = .2;
+//}
 
 - (void)startMotionManager {
 //    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
@@ -85,10 +84,10 @@
 //    }];
 }
 
-- (void)stopMotionManager {
-    [self.motionManager stopAccelerometerUpdates];
-    [self.motionManager stopGyroUpdates];
-}
+//- (void)stopMotionManager {
+//    [self.motionManager stopAccelerometerUpdates];
+//    [self.motionManager stopGyroUpdates];
+//}
 
 - (void)setupJoystick {
     [self.leftJoystick setThumbImage:[UIImage imageNamed:@"joy_thumb"] andBGImage:[UIImage imageNamed:@"stick_base"]];

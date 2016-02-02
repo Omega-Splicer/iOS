@@ -6,6 +6,7 @@
 //  Copyright © 2015 Charles-Adrien Fournier. All rights reserved.
 //
 
+#import <CoreMotion/CoreMotion.h>
 #import "OSFlyPortraitViewController.h"
 #import "CFSliderView.h"
 
@@ -15,6 +16,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *settingsButton;
 
+@property (strong, nonatomic) CMMotionManager *motionManager;
+
 @end
 
 @implementation OSFlyPortraitViewController
@@ -22,10 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     self.settingsButton.tintColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1];
     self.settingsButton.hidden = YES;
-    }
+    [self setupMotionManager];
+}
 
 - (void)viewDidAppear:(BOOL)animated {
     [self.sliderView buildSlider];
@@ -33,6 +36,61 @@
     [self.sliderView setTextColor:[UIColor whiteColor]];
     [self.sliderView setSliderColor:[UIColor colorWithRed:0.05 green:0.12 blue:0.21 alpha:1]];
     [self.sliderView setBackgroundColor:[UIColor colorWithRed:0.08 green:0.2 blue:0.35 alpha:0.7]];
+    [self startMotionManager];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [self stopMotionManager];
+}
+
+- (void)setupMotionManager {
+    self.motionManager = [[CMMotionManager alloc] init];
+    self.motionManager.accelerometerUpdateInterval = .2;
+    self.motionManager.gyroUpdateInterval = .2;
+}
+
+- (void)startMotionManager {
+    NSLog(@"Start motion manager");
+    
+    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            [self outputAccelerationData:accelerometerData.acceleration];
+        }
+    }];
+    
+    [self.motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
+        
+    }];
+    
+    
+    //    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
+    //        [self outputAccelerationData:accelerometerData.acceleration];
+    //        if (error) {
+    //            NSLog(@"%@", error);
+    //        }
+    //    }];
+    //
+    //    [self.motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
+    //        [self outputRotationData:gyroData.rotationRate];
+    //        if (error) {
+    //            NSLog(@"%@", error);
+    //        }
+    //    }];
+}
+
+- (void)outputAccelerationData:(CMAcceleration)acceleration {
+//    self.accelerationLabel.text = [NSString stringWithFormat:@"Acceleration : %.1f/%.1f/%.1f", acceleration.x, acceleration.y, acceleration.z];
+}
+
+- (void)outputRotationData:(CMRotationRate)rotation {
+//    self.rotationLabel.text = [NSString stringWithFormat:@"Rotation : %.1f/%.1f/%.1f", rotation.x, rotation.y, rotation.z];
+}
+
+- (void)stopMotionManager {
+    [self.motionManager stopAccelerometerUpdates];
+    [self.motionManager stopGyroUpdates];
 }
 
 - (void)didReceiveMemoryWarning {

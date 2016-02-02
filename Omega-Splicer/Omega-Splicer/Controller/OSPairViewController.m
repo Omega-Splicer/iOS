@@ -33,6 +33,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 /*
 #pragma mark - Navigation
 
