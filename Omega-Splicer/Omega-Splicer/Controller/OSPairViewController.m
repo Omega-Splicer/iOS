@@ -7,8 +7,15 @@
 //
 
 #import "OSPairViewController.h"
+#import "BluetoothManager.h"
 
 @interface OSPairViewController ()
+
+@property (nonatomic) BOOL bluetoothSetup;
+
+@property (nonatomic) BOOL bluetoothScan;
+
+@property (strong, nonatomic) BluetoothManager *bluetoothManager;
 
 @end
 
@@ -17,6 +24,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBarHidden = FALSE;
     NSLog(@"toto pair");
+    self.bluetoothSetup = false;
+    self.bluetoothScan = false;
 }
 
 - (void)viewDidLoad {
@@ -35,6 +44,30 @@
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+
+    if (self.bluetoothSetup && self.bluetoothScan){
+        [self.bluetoothManager stopScan];
+        self.bluetoothScan = false;
+    }
+    
+    if (self.bluetoothSetup && !self.bluetoothScan) {
+        NSLog(@"titi");
+        self.bluetoothScan = true;
+        [self.bluetoothManager scanForDevice];
+    }
+
+    
+    if (!self.bluetoothSetup) {
+        self.bluetoothManager = [[BluetoothManager alloc] init];
+        [self.bluetoothManager setupBluetoothManager];
+        self.bluetoothSetup = true;
+        
+    }
+    
+    
 }
 
 /*
