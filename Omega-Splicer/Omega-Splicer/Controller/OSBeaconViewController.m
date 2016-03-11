@@ -6,7 +6,7 @@
 //  Copyright © 2016 Charles-Adrien Fournier. All rights reserved.
 //
 
-#import <EstimoteSDK/EstimoteSDK.h>
+//#import <EstimoteSDK/EstimoteSDK.h>
 #import "OSBeaconViewController.h"
 
 @implementation OSBeaconViewController
@@ -47,7 +47,6 @@
 //- (void)viewDidAppear:(BOOL)animated {
 //    [self.beaconManager requestAlwaysAuthorization];
 //    [self.beaconManager startMonitoringForRegion:[[CLBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:@"EstimoteSampleRegion"]];
-//
 //}
 //
 //- (void)didReceiveMemoryWarning {
