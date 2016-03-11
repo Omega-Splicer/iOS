@@ -9,33 +9,53 @@
 #import <EstimoteSDK/EstimoteSDK.h>
 #import "OSBeaconViewController.h"
 
-@interface OSBeaconViewController () <ESTBeaconManagerDelegate>
-
-@property (nonatomic) ESTBeaconManager *beaconManager;
-
-@end
-
 @implementation OSBeaconViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.beaconManager = [ESTBeaconManager new];
-    self.beaconManager.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [self.beaconManager requestAlwaysAuthorization];
-    [self.beaconManager startMonitoringForRegion:[[CLBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:@"EstimoteSampleRegion"]];
-
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)dismissBeaconView:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 @end
+
+
+//#import "OSBeaconViewController.h"
+
+//@interface OSBeaconViewController () <ESTBeaconManagerDelegate>
+//
+//@property (nonatomic) ESTBeaconManager *beaconManager;
+//
+//@end
+//
+//@implementation OSBeaconViewController
+//
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    
+//    self.beaconManager = [ESTBeaconManager new];
+//    self.beaconManager.delegate = self;
+//}
+//
+//- (void)viewDidAppear:(BOOL)animated {
+//    [self.beaconManager requestAlwaysAuthorization];
+//    [self.beaconManager startMonitoringForRegion:[[CLBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID identifier:@"EstimoteSampleRegion"]];
+//
+//}
+//
+//- (void)didReceiveMemoryWarning {
+//    [super didReceiveMemoryWarning];
+//}
+//
+//- (IBAction)dismissBeaconView:(id)sender {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
+
+//@end
