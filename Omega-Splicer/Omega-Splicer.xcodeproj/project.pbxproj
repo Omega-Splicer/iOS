@@ -11,7 +11,6 @@
 		56770FA61BBECC3900BAB4C2 /* BluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */; };
 		5698FAF61C12BA1700A9942D /* OSFlyPortraitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5698FAF51C12BA1700A9942D /* OSFlyPortraitViewController.m */; };
 		5698FAF91C12BA8200A9942D /* CFSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5698FAF81C12BA8200A9942D /* CFSliderView.m */; };
-		56A54F121C6116FA000557A0 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A54F111C6116FA000557A0 /* EstimoteSDK.framework */; };
 		56A54F151C611947000557A0 /* OSBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A54F141C611947000557A0 /* OSBeaconViewController.m */; };
 		56BDEF691BA055200049A6FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF681BA055200049A6FE /* main.m */; };
 		56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF6B1BA055200049A6FE /* AppDelegate.m */; };
@@ -62,7 +61,6 @@
 		5698FAF51C12BA1700A9942D /* OSFlyPortraitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFlyPortraitViewController.m; sourceTree = "<group>"; };
 		5698FAF71C12BA8200A9942D /* CFSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSliderView.h; sourceTree = "<group>"; };
 		5698FAF81C12BA8200A9942D /* CFSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSliderView.m; sourceTree = "<group>"; };
-		56A54F111C6116FA000557A0 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		56A54F131C611947000557A0 /* OSBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSBeaconViewController.h; sourceTree = "<group>"; };
 		56A54F141C611947000557A0 /* OSBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSBeaconViewController.m; sourceTree = "<group>"; };
 		56BDEF631BA055200049A6FE /* Omega-Splicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Omega-Splicer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56A54F121C6116FA000557A0 /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +232,6 @@
 		82D1F2D59BF693969A7D1AFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				56A54F111C6116FA000557A0 /* EstimoteSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
