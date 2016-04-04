@@ -18,7 +18,6 @@
 		56BDEF721BA055200049A6FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF701BA055200049A6FE /* Main.storyboard */; };
 		56BDEF741BA055200049A6FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF731BA055200049A6FE /* Images.xcassets */; };
 		56BDEF771BA055200049A6FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BDEF751BA055200049A6FE /* LaunchScreen.xib */; };
-		56BDEF831BA055200049A6FE /* Omega_SplicerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */; };
 		56C7AE6F1CB298370022F64E /* OSPlaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7AE6E1CB298370022F64E /* OSPlaneTests.m */; };
 		56C7AE711CB29D830022F64E /* CFSliderViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7AE701CB29D830022F64E /* CFSliderViewTests.m */; };
 		56C7AE731CB29EE00022F64E /* OSHomeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7AE721CB29EE00022F64E /* OSHomeViewControllerTests.m */; };
@@ -82,7 +81,6 @@
 		56BDEF761BA055200049A6FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		56BDEF7C1BA055200049A6FE /* Omega-SplicerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Omega-SplicerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BDEF811BA055200049A6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Omega_SplicerTests.m; sourceTree = "<group>"; };
 		56C7AE6E1CB298370022F64E /* OSPlaneTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPlaneTests.m; sourceTree = "<group>"; };
 		56C7AE701CB29D830022F64E /* CFSliderViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSliderViewTests.m; sourceTree = "<group>"; };
 		56C7AE721CB29EE00022F64E /* OSHomeViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSHomeViewControllerTests.m; sourceTree = "<group>"; };
@@ -189,15 +187,10 @@
 		56BDEF7F1BA055200049A6FE /* Omega-SplicerTests */ = {
 			isa = PBXGroup;
 			children = (
+				56C7AE7E1CB2AA7B0022F64E /* Model Tests */,
+				56C7AE801CB2AA950022F64E /* Component Tests */,
+				56C7AE7F1CB2AA870022F64E /* Controller Tests */,
 				56BDEF801BA055200049A6FE /* Supporting Files */,
-				56BDEF821BA055200049A6FE /* Omega_SplicerTests.m */,
-				56C7AE6E1CB298370022F64E /* OSPlaneTests.m */,
-				56C7AE701CB29D830022F64E /* CFSliderViewTests.m */,
-				56C7AE721CB29EE00022F64E /* OSHomeViewControllerTests.m */,
-				56C7AE761CB2A0D00022F64E /* OSPairViewControllerTests.m */,
-				56C7AE781CB2A1BF0022F64E /* OSSettingsViewControllerTests.m */,
-				56C7AE7A1CB2A2870022F64E /* OSFlyLandscapeViewControllerTests.m */,
-				56C7AE7C1CB2A3470022F64E /* OSFlyPortraitViewControllerTests.m */,
 			);
 			path = "Omega-SplicerTests";
 			sourceTree = "<group>";
@@ -208,6 +201,34 @@
 				56BDEF811BA055200049A6FE /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56C7AE7E1CB2AA7B0022F64E /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				56C7AE6E1CB298370022F64E /* OSPlaneTests.m */,
+			);
+			name = "Model Tests";
+			sourceTree = "<group>";
+		};
+		56C7AE7F1CB2AA870022F64E /* Controller Tests */ = {
+			isa = PBXGroup;
+			children = (
+				56C7AE721CB29EE00022F64E /* OSHomeViewControllerTests.m */,
+				56C7AE761CB2A0D00022F64E /* OSPairViewControllerTests.m */,
+				56C7AE781CB2A1BF0022F64E /* OSSettingsViewControllerTests.m */,
+				56C7AE7A1CB2A2870022F64E /* OSFlyLandscapeViewControllerTests.m */,
+				56C7AE7C1CB2A3470022F64E /* OSFlyPortraitViewControllerTests.m */,
+			);
+			name = "Controller Tests";
+			sourceTree = "<group>";
+		};
+		56C7AE801CB2AA950022F64E /* Component Tests */ = {
+			isa = PBXGroup;
+			children = (
+				56C7AE701CB29D830022F64E /* CFSliderViewTests.m */,
+			);
+			name = "Component Tests";
 			sourceTree = "<group>";
 		};
 		56FF29831BA380850093A31E /* Controller */ = {
@@ -387,7 +408,6 @@
 			files = (
 				56C7AE6F1CB298370022F64E /* OSPlaneTests.m in Sources */,
 				56C7AE7B1CB2A2870022F64E /* OSFlyLandscapeViewControllerTests.m in Sources */,
-				56BDEF831BA055200049A6FE /* Omega_SplicerTests.m in Sources */,
 				56C7AE711CB29D830022F64E /* CFSliderViewTests.m in Sources */,
 				56C7AE791CB2A1BF0022F64E /* OSSettingsViewControllerTests.m in Sources */,
 				56C7AE7D1CB2A3470022F64E /* OSFlyPortraitViewControllerTests.m in Sources */,
