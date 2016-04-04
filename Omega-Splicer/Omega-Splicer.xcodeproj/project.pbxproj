@@ -23,6 +23,9 @@
 		56C7AE711CB29D830022F64E /* CFSliderViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7AE701CB29D830022F64E /* CFSliderViewTests.m */; };
 		56C7AE731CB29EE00022F64E /* OSHomeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7AE721CB29EE00022F64E /* OSHomeViewControllerTests.m */; };
 		56C7AE771CB2A0D00022F64E /* OSPairViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7AE761CB2A0D00022F64E /* OSPairViewControllerTests.m */; };
+		56C7AE791CB2A1BF0022F64E /* OSSettingsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7AE781CB2A1BF0022F64E /* OSSettingsViewControllerTests.m */; };
+		56C7AE7B1CB2A2870022F64E /* OSFlyLandscapeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7AE7A1CB2A2870022F64E /* OSFlyLandscapeViewControllerTests.m */; };
+		56C7AE7D1CB2A3470022F64E /* OSFlyPortraitViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7AE7C1CB2A3470022F64E /* OSFlyPortraitViewControllerTests.m */; };
 		56DA4B6E1BA0842300F44DC5 /* OSFlyLandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B6D1BA0842300F44DC5 /* OSFlyLandscapeViewController.m */; };
 		56DA4B721BA0843500F44DC5 /* OSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */; };
 		56DA4B751BA0844100F44DC5 /* OSPairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B741BA0844100F44DC5 /* OSPairViewController.m */; };
@@ -84,6 +87,9 @@
 		56C7AE701CB29D830022F64E /* CFSliderViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSliderViewTests.m; sourceTree = "<group>"; };
 		56C7AE721CB29EE00022F64E /* OSHomeViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSHomeViewControllerTests.m; sourceTree = "<group>"; };
 		56C7AE761CB2A0D00022F64E /* OSPairViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPairViewControllerTests.m; sourceTree = "<group>"; };
+		56C7AE781CB2A1BF0022F64E /* OSSettingsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSettingsViewControllerTests.m; sourceTree = "<group>"; };
+		56C7AE7A1CB2A2870022F64E /* OSFlyLandscapeViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFlyLandscapeViewControllerTests.m; sourceTree = "<group>"; };
+		56C7AE7C1CB2A3470022F64E /* OSFlyPortraitViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFlyPortraitViewControllerTests.m; sourceTree = "<group>"; };
 		56DA4B671BA07FA600F44DC5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		56DA4B6C1BA0842300F44DC5 /* OSFlyLandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSFlyLandscapeViewController.h; sourceTree = "<group>"; };
 		56DA4B6D1BA0842300F44DC5 /* OSFlyLandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFlyLandscapeViewController.m; sourceTree = "<group>"; };
@@ -189,6 +195,9 @@
 				56C7AE701CB29D830022F64E /* CFSliderViewTests.m */,
 				56C7AE721CB29EE00022F64E /* OSHomeViewControllerTests.m */,
 				56C7AE761CB2A0D00022F64E /* OSPairViewControllerTests.m */,
+				56C7AE781CB2A1BF0022F64E /* OSSettingsViewControllerTests.m */,
+				56C7AE7A1CB2A2870022F64E /* OSFlyLandscapeViewControllerTests.m */,
+				56C7AE7C1CB2A3470022F64E /* OSFlyPortraitViewControllerTests.m */,
 			);
 			path = "Omega-SplicerTests";
 			sourceTree = "<group>";
@@ -377,8 +386,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				56C7AE6F1CB298370022F64E /* OSPlaneTests.m in Sources */,
+				56C7AE7B1CB2A2870022F64E /* OSFlyLandscapeViewControllerTests.m in Sources */,
 				56BDEF831BA055200049A6FE /* Omega_SplicerTests.m in Sources */,
 				56C7AE711CB29D830022F64E /* CFSliderViewTests.m in Sources */,
+				56C7AE791CB2A1BF0022F64E /* OSSettingsViewControllerTests.m in Sources */,
+				56C7AE7D1CB2A3470022F64E /* OSFlyPortraitViewControllerTests.m in Sources */,
 				56C7AE731CB29EE00022F64E /* OSHomeViewControllerTests.m in Sources */,
 				56C7AE771CB2A0D00022F64E /* OSPairViewControllerTests.m in Sources */,
 			);
