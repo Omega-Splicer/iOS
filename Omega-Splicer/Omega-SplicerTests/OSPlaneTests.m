@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "OSPlane.h"
 
-@interface OSPlaneTest : XCTestCase
+@interface OSPlaneTests : XCTestCase
 
 @property (strong, nonatomic) OSPlane *examplePlane;
 
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation OSPlaneTest
+@implementation OSPlaneTests
 
 - (void)setUp {
     [super setUp];

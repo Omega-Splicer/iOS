@@ -9,13 +9,13 @@
 #import <XCTest/XCTest.h>
 #import "CFSliderView.h"
 
-@interface CFSliderViewTest : XCTestCase
+@interface CFSliderViewTests : XCTestCase
 
 @property (strong, nonatomic) CFSliderView *sliderView;
 
 @end
 
-@implementation CFSliderViewTest
+@implementation CFSliderViewTests
 
 - (void)setUp {
     [super setUp];
