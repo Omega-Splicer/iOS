@@ -18,7 +18,7 @@
 /**
  *  Mehtod used to build the slider with selected value
  *
- *  @param expected value slider value
+ *  @param value expected slider value
  */
 - (void)buildSliderWithValue:(NSInteger) value;
 
