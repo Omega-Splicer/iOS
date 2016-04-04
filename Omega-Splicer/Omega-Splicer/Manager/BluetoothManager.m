@@ -8,9 +8,6 @@
 
 #import "BluetoothManager.h"
 
-#define DEVICE_INFO_SERVICE_UUID @"180A"
-#define DEVICE_BATTERY_CHARACTERISTICS_UUID @"2A19"
-
 @implementation BluetoothManager
 
 - (void)setupBluetoothManager {
