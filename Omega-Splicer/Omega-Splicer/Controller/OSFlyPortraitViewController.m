@@ -24,13 +24,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.settingsButton.tintColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1];
     self.settingsButton.hidden = YES;
     [self setupMotionManager];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self.sliderView buildSlider];
     [self.sliderView updateConstraintsIfNeeded];
     [self.sliderView setTextColor:[UIColor whiteColor]];
@@ -50,8 +50,6 @@
 }
 
 - (void)startMotionManager {
-    NSLog(@"Start motion manager");
-    
     [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
         if (error) {
             NSLog(@"%@", error);

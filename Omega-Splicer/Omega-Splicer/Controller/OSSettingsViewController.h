@@ -10,6 +10,4 @@
 
 @interface OSSettingsViewController : UIViewController
 
-
-
 @end

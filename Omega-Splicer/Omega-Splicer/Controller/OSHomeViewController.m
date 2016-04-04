@@ -10,25 +10,21 @@
 #import "OSFlyLandscapeViewController.h"
 
 @interface OSHomeViewController ()
-
 @end
 
 @implementation OSHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-
+    [super viewWillAppear:animated];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
     NSLog(@"Fly mode settings : %ld", (long)[userDefaults integerForKey:@"flyModeKey"]);
     NSLog(@"Controls settings : %ld", (long)[userDefaults integerForKey:@"controlsKey"]);
     NSLog(@"Speed unit settings : %ld", (long)[userDefaults integerForKey:@"speedUnitKey"]);
@@ -51,10 +47,7 @@
     } else {
         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyLandscape"];
         [self presentViewController:vc animated:YES completion:nil];
-        
     }
-    
-    
 }
 
 @end
