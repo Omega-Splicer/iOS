@@ -36,7 +36,6 @@
 }
 
 - (IBAction)FlyButtonClicked:(id)sender {
-    NSLog(@"Fly button clicked");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSInteger flyMode = [userDefaults integerForKey:@"flyModeKey"];
