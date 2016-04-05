@@ -16,15 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -36,9 +27,15 @@
     NSLog(@"Debug messages : %ld", (long)[userDefaults integerForKey:@"debugMessagesKey"]);
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }
+
+#pragma mark - Actions
 
 - (IBAction)FlyButtonClicked:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -52,6 +49,12 @@
         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyLandscape"];
         [self presentViewController:vc animated:YES completion:nil];
     }
+}
+
+#pragma mark - Manage memory
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 @end
