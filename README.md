@@ -23,14 +23,12 @@
 
 Omega-Splicer is a project from Epitech students as part of the EIP (Epitech Innovative Project).
 
-The primary goal of the iOS application is to control a paper plane with the Omega-Splicer module on it.
+The primary goal of the application is to control a paper plane with the Omega-Splicer module on it.
 The application is also available on [Android](https://github.com/Omega-Splicer/Android).
 
 ## Screenshot
 
-<p align="center">
 ![Screenshot](./Screens/screenshot.png)
-</p>
 
 ## Credits
 
