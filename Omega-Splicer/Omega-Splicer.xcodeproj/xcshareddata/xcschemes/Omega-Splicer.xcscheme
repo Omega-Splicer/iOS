@@ -40,7 +40,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -49,6 +50,16 @@
                BlueprintIdentifier = "56BDEF7B1BA055200049A6FE"
                BuildableName = "Omega-SplicerTests.xctest"
                BlueprintName = "Omega-SplicerTests"
+               ReferencedContainer = "container:Omega-Splicer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "565232F51CB3EABE00BBF012"
+               BuildableName = "Omega-SplicerUITests.xctest"
+               BlueprintName = "Omega-SplicerUITests"
                ReferencedContainer = "container:Omega-Splicer.xcodeproj">
             </BuildableReference>
          </TestableReference>
