@@ -30,4 +30,9 @@
     XCTAssertNotNil(self.settingsViewController, @"Setting view controller is nil");
 }
 
+- (void)testMemoryWarning {
+    [self.settingsViewController didReceiveMemoryWarning];
+}
+
+
 @end

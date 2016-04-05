@@ -30,4 +30,9 @@
     XCTAssertNotNil(self.flyPortraitViewController, @"Fly portrait view controller is nil");
 }
 
+- (void)testMemoryWarning {
+    [self.flyPortraitViewController didReceiveMemoryWarning];
+}
+
+
 @end

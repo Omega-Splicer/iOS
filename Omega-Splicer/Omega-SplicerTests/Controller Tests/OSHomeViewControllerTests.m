@@ -30,4 +30,8 @@
     XCTAssertNotNil(self.homeViewController, @"Home view controller is nil");
 }
 
+- (void)testMemoryWarning {
+    [self.homeViewController didReceiveMemoryWarning];
+}
+
 @end

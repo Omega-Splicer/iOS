@@ -731,6 +731,7 @@
 				565232FF1CB3EABE00BBF012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56BDEF5E1BA055200049A6FE /* Build configuration list for PBXProject "Omega-Splicer" */ = {
 			isa = XCConfigurationList;

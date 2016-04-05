@@ -30,4 +30,9 @@
     XCTAssertNotNil(self.pairViewController, @"Pair view controller is nil");
 }
 
+- (void)testMemoryWarning {
+    [self.pairViewController didReceiveMemoryWarning];
+}
+
+
 @end

@@ -30,4 +30,9 @@
     XCTAssertNotNil(self.flyLandscapeViewController, @"Fly landscape view controller is nil");
 }
 
+- (void)testMemoryWarning {
+    [self.flyLandscapeViewController didReceiveMemoryWarning];
+}
+
+
 @end
