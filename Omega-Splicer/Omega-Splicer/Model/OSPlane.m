@@ -10,26 +10,30 @@
 
 @implementation OSPlane
 
-- (void)initEmptyPlane {
-    self.name = @"Empty plane";
-    self.signal = 0;
-    self.battery = 0;
-    self.motor = 0;
-}
+- (void)updatePlaneWithName:(NSString *)name battery:(float)battery signal:(float)signal motor:(float)motor {
 
-- (void)initPlaneWithName:(NSString *)name battery:(float)battery signal:(float)signal {
     if (![name isEqualToString:@""])
         self.name = name;
     
-    if (self.battery >= 0)
+    self.battery = 0;
+    self.motor = 0;
+    self.signal = 0;
+    
+    if (battery >= 0)
         self.battery = battery;
-    else
-        self.battery = 0;
-
-    if (self.signal >= 0)
+    
+    if (signal >= 0)
         self.signal = signal;
-    else
-        self.signal = 0;
+    
+    if (motor >= 0)
+        self.motor = motor;
+}
+
+- (void)emptyPlane {
+    self.name = @"";
+    self.signal = 0;
+    self.battery = 0;
+    self.motor = 0;
 }
 
 - (void)planeExample1 {

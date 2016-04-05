@@ -30,19 +30,20 @@
  */
 @property (nonatomic) float motor;
 
-/**
- *  Initialize an empty plane
- */
-- (void)initEmptyPlane;
-
-/**
- *  Initialize a plane with specific name, battery and signal
+/*!
+ *  Update a OSPlane object with specific properties
  *
  *  @param name    expected name of the plane
- *  @param battery expected battery level of the plane
- *  @param signal  expected signal level of the plane
+ *  @param battery expected battery of the plane
+ *  @param signal  expected signal of the plane
+ *  @param motor   expected motor of the plane
  */
-- (void)initPlaneWithName:(NSString *)name battery:(float)battery signal:(float)signal;
+- (void)updatePlaneWithName:(NSString *)name battery:(float)battery signal:(float)signal motor:(float)motor;
+
+/**
+ *  Create an empty plane
+ */
+- (void)emptyPlane;
 
 /**
  *  Create example plane 1
