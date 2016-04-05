@@ -66,6 +66,10 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 #pragma mark - Actions
 
 - (IBAction)dismissSettingsViewController:(id)sender {

@@ -40,6 +40,11 @@
     }
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+
 - (IBAction)dismissFlyViewController:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

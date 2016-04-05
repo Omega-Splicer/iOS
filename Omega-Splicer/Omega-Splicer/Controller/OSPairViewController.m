@@ -36,6 +36,10 @@
     [super didReceiveMemoryWarning];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 - (IBAction)dismissPairViewController:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
