@@ -28,19 +28,55 @@
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testMainButton {
+- (void)testSettingsView {
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app.buttons[@"Fly"] tap];
-    XCUIElement *closeButton = app.buttons[@"Close"];
-    [closeButton tap];
-    [app.buttons[@"Pair"] tap];
-    [closeButton tap];
     [app.buttons[@"Settings"] tap];
-    [closeButton tap];
+    [app.segmentedControls.buttons[@"Landscape"] tap];
+    [app.segmentedControls.buttons[@"m/s"] tap];
+    [app.buttons[@"Close"] tap];
+    [app.buttons[@"Settings"] tap];
+    
+    XCTAssertTrue([app.segmentedControls.buttons[@"Landscape"] isSelected]);
+    XCTAssertFalse([app.segmentedControls.buttons[@"Portrait"] isSelected]);
+
+    XCTAssertTrue([app.segmentedControls.buttons[@"m/s"] isSelected]);
+    XCTAssertFalse([app.segmentedControls.buttons[@"km/h"] isSelected]);
+    XCTAssertFalse([app.segmentedControls.buttons[@"mph"] isSelected]);
+    
+    [app.buttons[@"Close"] tap];
+}
+
+- (void)testPairView {
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.buttons[@"Pair"] tap];
+    [app.buttons[@"Close"] tap];
+}
+
+- (void)testPortraitFlyView {
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+
+    [app.buttons[@"Settings"] tap];
+    [app.segmentedControls.buttons[@"Portrait"] tap];
+    [app.buttons[@"Close"] tap];
+    
+    [app.buttons[@"Fly"] tap];
+    
+    [app.buttons[@"Close"] tap];
+}
+
+- (void)testLandscapeFlyView {
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    
+    [app.buttons[@"Settings"] tap];
+    [app.segmentedControls.buttons[@"Landscape"] tap];
+    [app.buttons[@"Close"] tap];
+    
+    
+    [app.buttons[@"Fly"] tap];
+    [app.buttons[@"Close"] tap];
 }
 
 @end
