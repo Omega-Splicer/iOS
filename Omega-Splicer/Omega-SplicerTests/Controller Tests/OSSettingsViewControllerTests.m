@@ -34,5 +34,9 @@
     [self.settingsViewController didReceiveMemoryWarning];
 }
 
+- (void)testStatusBarStyle {
+    XCTAssertEqual([self.settingsViewController preferredStatusBarStyle], UIStatusBarStyleLightContent);
+}
+
 
 @end

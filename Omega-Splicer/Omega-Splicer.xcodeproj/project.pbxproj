@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		5630655E1CB4512900A27661 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5630655F1CB4512A00A27661 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				563065621CB4513700A27661 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		5638F0B61C249B73000E484D /* OSPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 5638F0B51C249B73000E484D /* OSPlane.m */; };
 		565232F91CB3EABE00BBF012 /* Omega_SplicerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 565232F81CB3EABE00BBF012 /* Omega_SplicerUITests.m */; };
@@ -385,6 +399,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Charles-Adrien Fournier";
 				TargetAttributes = {
+					5630655E1CB4512900A27661 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					565232F51CB3EABE00BBF012 = {
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = 56BDEF621BA055200049A6FE;
@@ -419,6 +436,7 @@
 				56BDEF621BA055200049A6FE /* Omega-Splicer */,
 				56BDEF7B1BA055200049A6FE /* Omega-SplicerTests */,
 				565232F51CB3EABE00BBF012 /* Omega-SplicerUITests */,
+				5630655E1CB4512900A27661 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -454,6 +472,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		563065621CB4513700A27661 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"ACME\";\ncompanyID=\"com.ACME\";\ncompanyURL=\"http://ACME.com\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"./Documentation\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}\"";
+		};
 		567AB3961CB2CE84002FCC90 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -549,6 +580,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		563065601CB4512A00A27661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		563065611CB4512A00A27661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		565232FE1CB3EABE00BBF012 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -724,6 +769,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5630655F1CB4512A00A27661 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				563065601CB4512A00A27661 /* Debug */,
+				563065611CB4512A00A27661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		565232FD1CB3EABE00BBF012 /* Build configuration list for PBXNativeTarget "Omega-SplicerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
