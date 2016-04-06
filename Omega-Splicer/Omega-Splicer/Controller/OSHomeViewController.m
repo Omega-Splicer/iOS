@@ -16,9 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self customizeNavigationBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSLog(@"Fly mode settings : %ld", (long)[userDefaults integerForKey:@"flyModeKey"]);
@@ -35,6 +37,14 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
+- (void)customizeNavigationBar {
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.05 green:0.12 blue:0.21 alpha:1]];
+    [self.navigationController.navigationBar setTranslucent:FALSE];
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+}
+
 #pragma mark - Actions
 
 - (IBAction)FlyButtonClicked:(id)sender {
@@ -44,10 +54,12 @@
     
     if (flyMode == 0) {
         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyPortrait"];
-        [self presentViewController:vc animated:YES completion:nil];
+        [self.navigationController pushViewController:vc animated:true];
+//        [self presentViewController:vc animated:YES completion:nil];
     } else {
         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyLandscape"];
-        [self presentViewController:vc animated:YES completion:nil];
+        [self.navigationController pushViewController:vc animated:true];
+//        [self presentViewController:vc animated:YES completion:nil];
     }
 }
 

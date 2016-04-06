@@ -25,8 +25,8 @@
 @implementation OSPairViewController
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:FALSE animated:animated];
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = FALSE;
     [self.deviceTableView reloadData];
     [self.activityIndicatorView startAnimating];
 }
@@ -37,9 +37,7 @@
     self.bluetoothManager.delegate = self;
     self.deviceArray = [[NSMutableArray alloc] init];
     [self.bluetoothManager setupBluetoothManager];
-    
     self.activityIndicatorView.numberOfCircles = 4;
-    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
