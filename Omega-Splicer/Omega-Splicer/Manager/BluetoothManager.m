@@ -35,6 +35,9 @@
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI {
     NSString *localName = [advertisementData objectForKey:CBAdvertisementDataLocalNameKey];
     if ([localName length] > 0) {
+        
+        if (self.delegate)
+            [self.delegate bluetoothManager:self didDiscoverPeripheral:localName];
         NSLog(@"Found : %@", localName);
     }
 }
@@ -48,6 +51,8 @@
     }
     else if ([central state] == CBCentralManagerStatePoweredOn) {
         NSLog(@"CoreBluetooth BLE hardware is powered on and ready");
+        if (self.delegate)
+            [self.delegate bluetoothManagerIsReadyToScan:self];
     }
     else if ([central state] == CBCentralManagerStateUnauthorized) {
         NSLog(@"CoreBluetooth BLE state is unauthorized");
