@@ -6,9 +6,9 @@
 //  Copyright © 2015 Charles-Adrien Fournier. All rights reserved.
 //
 
-#import "CFSliderView.h"
+#import "OSSliderView.h"
 
-@interface CFSliderView()
+@interface OSSliderView()
 
 @property (nonatomic, strong) UIView *overlay;
 
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation CFSliderView
+@implementation OSSliderView
 
 - (void)buildSlider {
     [self buildSliderWithValue:200];

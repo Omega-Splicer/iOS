@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "CFSliderView.h"
+#import "OSSliderView.h"
 
 @interface CFSliderViewTests : XCTestCase
 
-@property (strong, nonatomic) CFSliderView *sliderView;
+@property (strong, nonatomic) OSSliderView *sliderView;
 
 @end
 
@@ -20,7 +20,7 @@
 - (void)setUp {
     [super setUp];
  
-    self.sliderView = [[CFSliderView alloc] init];
+    self.sliderView = [[OSSliderView alloc] init];
     [self.sliderView buildSliderWithValue:69];
 }
 

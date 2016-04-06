@@ -8,11 +8,11 @@
 
 #import <CoreMotion/CoreMotion.h>
 #import "OSFlyPortraitViewController.h"
-#import "CFSliderView.h"
+#import "OSSliderView.h"
 
 @interface OSFlyPortraitViewController ()
 
-@property (weak, nonatomic) IBOutlet CFSliderView *sliderView;
+@property (weak, nonatomic) IBOutlet OSSliderView *sliderView;
 
 @property (weak, nonatomic) IBOutlet UIButton *settingsButton;
 

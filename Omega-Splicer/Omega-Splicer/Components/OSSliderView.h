@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CFSliderView : UIView
+@interface OSSliderView : UIView
 
 /**
  *  Method used to build the slider with default value
