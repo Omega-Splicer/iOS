@@ -92,7 +92,7 @@
     self.debugMessages = self.debugMessagesSegmentedControl.selectedSegmentIndex;
 }
 
-#pragma mark - Manage memory
+#pragma mark - Memory management
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

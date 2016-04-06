@@ -49,35 +49,34 @@
     return UIStatusBarStyleLightContent;
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+#pragma mark - Actions
+
 - (void)setupMotionManager {
     self.motionManager = [[CMMotionManager alloc] init];
     self.motionManager.deviceMotionUpdateInterval = 0.01f;
 }
 
 - (void)startMotionManager {
-    
     [self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
-//        double rotation = atan2(motion.rotationRate.x, motion.rotationRate.y);
-//        
-//        self.planeImageView.transform = CGAffineTransformMakeRotation(rotation);
     }];
 }
 
 - (void)stopMotionManager {
-    [self.motionManager stopAccelerometerUpdates];
-    [self.motionManager stopGyroUpdates];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+    [self.motionManager stopDeviceMotionUpdates];
 }
 
 - (IBAction)closeButtonClicked:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
+#pragma mark - Memory management
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 @end

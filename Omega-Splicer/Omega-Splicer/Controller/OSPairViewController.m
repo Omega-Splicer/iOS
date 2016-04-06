@@ -93,7 +93,7 @@
     return cell;
 }
 
-#pragma mark - Manage memory
+#pragma mark - Memory management
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
