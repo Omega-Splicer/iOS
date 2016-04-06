@@ -456,6 +456,14 @@
                                     <outlet property="delegate" destination="Dgn-NI-C92" id="S97-8C-sT0"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bz-vf-rYN" customClass="MONActivityIndicatorView">
+                                <rect key="frame" x="250" y="285" width="100" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bh2-H4-2Jv"/>
+                                    <constraint firstAttribute="width" constant="100" id="jzn-le-UhA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -467,6 +475,7 @@
                             <constraint firstItem="W3k-3f-vBf" firstAttribute="top" secondItem="stH-hb-GyR" secondAttribute="top" id="JQ8-VI-MGv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W3k-3f-vBf" secondAttribute="trailing" constant="-20" id="NTS-0Y-iM2"/>
                             <constraint firstItem="NvX-EI-bzJ" firstAttribute="top" secondItem="W3k-3f-vBf" secondAttribute="bottom" id="Ppn-dD-ti6"/>
+                            <constraint firstItem="1bz-vf-rYN" firstAttribute="centerX" secondItem="BIt-Wk-uIc" secondAttribute="centerX" id="ZoY-Gp-AZe"/>
                             <constraint firstItem="1Az-sm-Vim" firstAttribute="leading" secondItem="BIt-Wk-uIc" secondAttribute="leadingMargin" constant="4" id="cyY-0A-wd3"/>
                             <constraint firstItem="9KW-sJ-GNx" firstAttribute="leading" secondItem="BIt-Wk-uIc" secondAttribute="leadingMargin" constant="-20" id="eNQ-Zf-yEq"/>
                             <constraint firstItem="1Az-sm-Vim" firstAttribute="top" secondItem="u6p-Ch-OLN" secondAttribute="bottom" id="fGg-69-5cR"/>
@@ -475,6 +484,7 @@
                             <constraint firstItem="9KW-sJ-GNx" firstAttribute="top" secondItem="u6p-Ch-OLN" secondAttribute="bottom" constant="-20" id="j8t-uC-2q6"/>
                             <constraint firstItem="W3k-3f-vBf" firstAttribute="leading" secondItem="BIt-Wk-uIc" secondAttribute="leadingMargin" constant="-20" id="q5g-4T-WD8"/>
                             <constraint firstItem="NvX-EI-bzJ" firstAttribute="top" secondItem="9KW-sJ-GNx" secondAttribute="bottom" id="qmt-cU-VTw"/>
+                            <constraint firstItem="1bz-vf-rYN" firstAttribute="centerY" secondItem="BIt-Wk-uIc" secondAttribute="centerY" id="vtq-0V-NW6"/>
                             <constraint firstItem="W3k-3f-vBf" firstAttribute="top" secondItem="stH-hb-GyR" secondAttribute="bottom" id="ygP-tB-fdO"/>
                         </constraints>
                         <variation key="default">
@@ -485,6 +495,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="1bz-vf-rYN" id="2sk-0M-ma1"/>
                         <outlet property="deviceTableView" destination="W3k-3f-vBf" id="ijT-KV-Egd"/>
                     </connections>
                 </viewController>

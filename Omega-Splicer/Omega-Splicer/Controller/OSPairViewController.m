@@ -8,6 +8,7 @@
 
 #import "OSPairViewController.h"
 #import "BluetoothManager.h"
+#import "MONActivityIndicatorView.h"
 
 @interface OSPairViewController () <UITableViewDelegate, UITableViewDataSource, BluetoothManagerDelegate>
 
@@ -17,6 +18,8 @@
 
 @property (strong, nonatomic) NSMutableArray *deviceArray;
 
+@property (weak, nonatomic) IBOutlet MONActivityIndicatorView *activityIndicatorView;
+
 @end
 
 @implementation OSPairViewController
@@ -25,6 +28,7 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = FALSE;
     [self.deviceTableView reloadData];
+    [self.activityIndicatorView startAnimating];
 }
 
 - (void)viewDidLoad {
@@ -33,6 +37,9 @@
     self.bluetoothManager.delegate = self;
     self.deviceArray = [[NSMutableArray alloc] init];
     [self.bluetoothManager setupBluetoothManager];
+    
+    self.activityIndicatorView.numberOfCircles = 4;
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -59,7 +66,7 @@
 }
 
 - (void)bluetoothManager:(BluetoothManager *)bluetoothManager didDiscoverPeripheral:(NSString *)peripheralName {
-    
+    [self.activityIndicatorView stopAnimating];
     [self.deviceArray addObject:peripheralName];
     [self.deviceTableView reloadData];
 }
