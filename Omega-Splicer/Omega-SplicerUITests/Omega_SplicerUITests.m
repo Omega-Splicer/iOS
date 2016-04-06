@@ -52,6 +52,7 @@
 - (void)testPairView {
     XCUIApplication *app = [[XCUIApplication alloc] init];
     [app.buttons[@"Pair"] tap];
+    sleep(10);
     [app.buttons[@"Close"] tap];
 }
 

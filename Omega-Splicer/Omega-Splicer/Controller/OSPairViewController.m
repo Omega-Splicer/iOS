@@ -17,8 +17,6 @@
 
 @property (strong, nonatomic) NSMutableArray *deviceArray;
 
-@property (nonatomic) BOOL bluetoothManagerSetupAndReady;
-
 @end
 
 @implementation OSPairViewController
@@ -27,8 +25,6 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = FALSE;
     [self.deviceTableView reloadData];
-    if (self.bluetoothManagerSetupAndReady)
-        [self.bluetoothManager scanForDevice];
 }
 
 - (void)viewDidLoad {
@@ -37,7 +33,6 @@
     self.bluetoothManager.delegate = self;
     self.deviceArray = [[NSMutableArray alloc] init];
     [self.bluetoothManager setupBluetoothManager];
-    self.bluetoothManagerSetupAndReady = false;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -60,7 +55,6 @@
 #pragma mark - Bluetooth manager delegate
 
 - (void)bluetoothManagerIsReadyToScan:(BluetoothManager *)bluetoothManager {
-    self.bluetoothManagerSetupAndReady = true;
     [self.bluetoothManager scanForDevice];
 }
 
