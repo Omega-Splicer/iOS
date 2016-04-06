@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5608AED11CB55E4E000719E3 /* MONActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5608AED01CB55E4E000719E3 /* MONActivityIndicatorView.m */; };
 		5638F0B61C249B73000E484D /* OSPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 5638F0B51C249B73000E484D /* OSPlane.m */; };
 		565232F91CB3EABE00BBF012 /* Omega_SplicerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 565232F81CB3EABE00BBF012 /* Omega_SplicerUITests.m */; };
 		56770FA61BBECC3900BAB4C2 /* BluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */; };
@@ -79,6 +80,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5608AECF1CB55E4E000719E3 /* MONActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MONActivityIndicatorView.h; sourceTree = "<group>"; };
+		5608AED01CB55E4E000719E3 /* MONActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MONActivityIndicatorView.m; sourceTree = "<group>"; };
 		5638F0B41C249B73000E484D /* OSPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPlane.h; sourceTree = "<group>"; };
 		5638F0B51C249B73000E484D /* OSPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPlane.m; sourceTree = "<group>"; };
 		563C53A91BA18AD300EA07DA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -307,6 +310,8 @@
 		56FF29841BA380AE0093A31E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5608AECF1CB55E4E000719E3 /* MONActivityIndicatorView.h */,
+				5608AED01CB55E4E000719E3 /* MONActivityIndicatorView.m */,
 				5698FAF71C12BA8200A9942D /* CFSliderView.h */,
 				5698FAF81C12BA8200A9942D /* CFSliderView.m */,
 				56FF29801BA379820093A31E /* OSJoystick.h */,
@@ -514,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5608AED11CB55E4E000719E3 /* MONActivityIndicatorView.m in Sources */,
 				5638F0B61C249B73000E484D /* OSPlane.m in Sources */,
 				56DA4B751BA0844100F44DC5 /* OSPairViewController.m in Sources */,
 				56DA4B6E1BA0842300F44DC5 /* OSFlyLandscapeViewController.m in Sources */,
