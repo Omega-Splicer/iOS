@@ -7,12 +7,12 @@
 //
 
 #import "OSPairViewController.h"
-#import "BluetoothManager.h"
+#import "OSBluetoothManager.h"
 #import "MONActivityIndicatorView.h"
 
-@interface OSPairViewController () <UITableViewDelegate, UITableViewDataSource, BluetoothManagerDelegate>
+@interface OSPairViewController () <UITableViewDelegate, UITableViewDataSource, OSBluetoothManagerDelegate>
 
-@property (strong, nonatomic) BluetoothManager *bluetoothManager;
+@property (strong, nonatomic) OSBluetoothManager *bluetoothManager;
 
 @property (weak, nonatomic) IBOutlet UITableView *deviceTableView;
 
@@ -33,7 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.bluetoothManager = [[BluetoothManager alloc] init];
+    self.bluetoothManager = [[OSBluetoothManager alloc] init];
     self.bluetoothManager.delegate = self;
     self.deviceArray = [[NSMutableArray alloc] init];
     [self.bluetoothManager setupBluetoothManager];
@@ -61,11 +61,11 @@
 
 #pragma mark - Bluetooth manager delegate
 
-- (void)bluetoothManagerIsReadyToScan:(BluetoothManager *)bluetoothManager {
+- (void)bluetoothManagerIsReadyToScan:(OSBluetoothManager *)bluetoothManager {
     [self.bluetoothManager scanForDevice];
 }
 
-- (void)bluetoothManager:(BluetoothManager *)bluetoothManager didDiscoverPeripheral:(NSString *)peripheralName {
+- (void)bluetoothManager:(OSBluetoothManager *)bluetoothManager didDiscoverPeripheral:(NSString *)peripheralName {
     [self.activityIndicatorView stopAnimating];
     [self.deviceArray addObject:peripheralName];
     [self.deviceTableView reloadData];

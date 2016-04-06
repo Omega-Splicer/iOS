@@ -24,7 +24,7 @@
 		5608AED11CB55E4E000719E3 /* MONActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5608AED01CB55E4E000719E3 /* MONActivityIndicatorView.m */; };
 		5638F0B61C249B73000E484D /* OSPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 5638F0B51C249B73000E484D /* OSPlane.m */; };
 		565232F91CB3EABE00BBF012 /* Omega_SplicerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 565232F81CB3EABE00BBF012 /* Omega_SplicerUITests.m */; };
-		56770FA61BBECC3900BAB4C2 /* BluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */; };
+		56770FA61BBECC3900BAB4C2 /* OSBluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56770FA51BBECC3900BAB4C2 /* OSBluetoothManager.m */; };
 		5698FAF61C12BA1700A9942D /* OSFlyPortraitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5698FAF51C12BA1700A9942D /* OSFlyPortraitViewController.m */; };
 		5698FAF91C12BA8200A9942D /* CFSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5698FAF81C12BA8200A9942D /* CFSliderView.m */; };
 		56BDEF691BA055200049A6FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BDEF681BA055200049A6FE /* main.m */; };
@@ -88,8 +88,8 @@
 		565232F61CB3EABE00BBF012 /* Omega-SplicerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Omega-SplicerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		565232F81CB3EABE00BBF012 /* Omega_SplicerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Omega_SplicerUITests.m; sourceTree = "<group>"; };
 		565232FA1CB3EABE00BBF012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56770FA41BBECC3900BAB4C2 /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
-		56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothManager.m; sourceTree = "<group>"; };
+		56770FA41BBECC3900BAB4C2 /* OSBluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSBluetoothManager.h; sourceTree = "<group>"; };
+		56770FA51BBECC3900BAB4C2 /* OSBluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSBluetoothManager.m; sourceTree = "<group>"; };
 		5698FAF41C12BA1700A9942D /* OSFlyPortraitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSFlyPortraitViewController.h; sourceTree = "<group>"; };
 		5698FAF51C12BA1700A9942D /* OSFlyPortraitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFlyPortraitViewController.m; sourceTree = "<group>"; };
 		5698FAF71C12BA8200A9942D /* CFSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSliderView.h; sourceTree = "<group>"; };
@@ -173,8 +173,8 @@
 		56770FA31BBECC1400BAB4C2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				56770FA41BBECC3900BAB4C2 /* BluetoothManager.h */,
-				56770FA51BBECC3900BAB4C2 /* BluetoothManager.m */,
+				56770FA41BBECC3900BAB4C2 /* OSBluetoothManager.h */,
+				56770FA51BBECC3900BAB4C2 /* OSBluetoothManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -529,7 +529,7 @@
 				56DA4B721BA0843500F44DC5 /* OSSettingsViewController.m in Sources */,
 				5698FAF61C12BA1700A9942D /* OSFlyPortraitViewController.m in Sources */,
 				56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */,
-				56770FA61BBECC3900BAB4C2 /* BluetoothManager.m in Sources */,
+				56770FA61BBECC3900BAB4C2 /* OSBluetoothManager.m in Sources */,
 				56BDEF691BA055200049A6FE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

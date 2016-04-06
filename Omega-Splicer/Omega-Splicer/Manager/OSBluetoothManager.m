@@ -6,9 +6,15 @@
 //  Copyright © 2015 Charles-Adrien Fournier. All rights reserved.
 //
 
-#import "BluetoothManager.h"
+#import "OSBluetoothManager.h"
 
-@implementation BluetoothManager
+@interface OSBluetoothManager()
+
+@property (strong, nonatomic) CBCentralManager *centralManager;
+
+@end
+
+@implementation OSBluetoothManager
 
 - (void)setupBluetoothManager {
     

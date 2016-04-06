@@ -9,19 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@protocol BluetoothManagerDelegate;
+@protocol OSBluetoothManagerDelegate;
 
-@interface BluetoothManager : NSObject <CBCentralManagerDelegate>
-
-@property (weak) IBOutlet id<BluetoothManagerDelegate> delegate;
+@interface OSBluetoothManager : NSObject <CBCentralManagerDelegate>
 
 /**
- *  Bluetooth central manager
+ *  The delegate object
  */
-@property (strong, nonatomic) CBCentralManager *centralManager;
+@property (weak) IBOutlet id<OSBluetoothManagerDelegate> delegate;
 
 /**
- *  Setup the bluetooth manager
+ *  Setup the initial state for the bluetooth manager
  */
 - (void)setupBluetoothManager;
 
@@ -37,7 +35,7 @@
 
 @end
 
-@protocol BluetoothManagerDelegate <NSObject>
+@protocol OSBluetoothManagerDelegate <NSObject>
 
 /**
  *  Notify when the manager find a new peripheral
@@ -45,11 +43,11 @@
  *  @param bluetoothManager The bluetooth manager
  *  @param peripheralName   THe new peripheral name
  */
-- (void)bluetoothManager:(BluetoothManager *)bluetoothManager didDiscoverPeripheral:(NSString *)peripheralName;
+- (void)bluetoothManager:(OSBluetoothManager *)bluetoothManager didDiscoverPeripheral:(NSString *)peripheralName;
 
 /**
  *  Notify when the bluetooth manager is ready to scan
  */
-- (void)bluetoothManagerIsReadyToScan:(BluetoothManager *)bluetoothManager;
+- (void)bluetoothManagerIsReadyToScan:(OSBluetoothManager *)bluetoothManager;
 
 @end

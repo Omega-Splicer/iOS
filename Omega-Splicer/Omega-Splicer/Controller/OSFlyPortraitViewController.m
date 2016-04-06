@@ -18,6 +18,8 @@
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
+@property (weak, nonatomic) IBOutlet UIImageView *planeImageView;
+
 @end
 
 @implementation OSFlyPortraitViewController
@@ -49,34 +51,16 @@
 
 - (void)setupMotionManager {
     self.motionManager = [[CMMotionManager alloc] init];
-    self.motionManager.accelerometerUpdateInterval = .2;
-    self.motionManager.gyroUpdateInterval = .2;
+    self.motionManager.deviceMotionUpdateInterval = 0.01f;
 }
 
 - (void)startMotionManager {
-    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"%@", error);
-        } else {
-            [self outputAccelerationData:accelerometerData.acceleration];
-        }
-    }];
     
-    [self.motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"%@", error);
-        } else {
-            [self outputRotationData:gyroData.rotationRate];
-        }
+    [self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
+//        double rotation = atan2(motion.rotationRate.x, motion.rotationRate.y);
+//        
+//        self.planeImageView.transform = CGAffineTransformMakeRotation(rotation);
     }];
-}
-
-- (void)outputAccelerationData:(CMAcceleration)acceleration {
-    NSLog(@"Acceleration : %.1f/%.1f/%.1f", acceleration.x, acceleration.y, acceleration.z);
-}
-
-- (void)outputRotationData:(CMRotationRate)rotation {
-    NSLog(@"Rotation : %.1f/%.1f/%.1f", rotation.x, rotation.y, rotation.z);
 }
 
 - (void)stopMotionManager {

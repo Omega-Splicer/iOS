@@ -295,6 +295,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="planeImageView" destination="Dzf-th-58G" id="Bxp-TB-Gpy"/>
                         <outlet property="settingsButton" destination="ZhJ-25-zYu" id="EJh-X1-rm8"/>
                         <outlet property="sliderView" destination="3lc-me-3Xy" id="zWd-Iu-7TR"/>
                     </connections>
