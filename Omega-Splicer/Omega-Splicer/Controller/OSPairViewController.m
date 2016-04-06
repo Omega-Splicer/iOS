@@ -17,6 +17,8 @@
 
 @property (strong, nonatomic) NSMutableArray *deviceArray;
 
+@property (nonatomic) BOOL bluetoothManagerSetupAndReady;
+
 @end
 
 @implementation OSPairViewController
@@ -25,15 +27,22 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = FALSE;
     [self.deviceTableView reloadData];
-    [self.bluetoothManager setupBluetoothManager];
+    if (self.bluetoothManagerSetupAndReady)
+        [self.bluetoothManager scanForDevice];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.bluetoothManager = [[BluetoothManager alloc] init];
     self.bluetoothManager.delegate = self;
     self.deviceArray = [[NSMutableArray alloc] init];
+    [self.bluetoothManager setupBluetoothManager];
+    self.bluetoothManagerSetupAndReady = false;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.bluetoothManager stopScan];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -51,6 +60,7 @@
 #pragma mark - Bluetooth manager delegate
 
 - (void)bluetoothManagerIsReadyToScan:(BluetoothManager *)bluetoothManager {
+    self.bluetoothManagerSetupAndReady = true;
     [self.bluetoothManager scanForDevice];
 }
 
@@ -71,14 +81,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"bluetoothCell"];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"bluetoothCell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    
     cell.textLabel.text = [self.deviceArray objectAtIndex:indexPath.row];
     
     return cell;

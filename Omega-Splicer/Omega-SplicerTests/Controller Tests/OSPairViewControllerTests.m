@@ -30,6 +30,10 @@
     XCTAssertNotNil(self.pairViewController, @"Pair view controller is nil");
 }
 
+- (void)testStatusBarStyle {
+    XCTAssertEqual([self.pairViewController preferredStatusBarStyle], UIStatusBarStyleLightContent);
+}
+
 - (void)testMemoryWarning {
     [self.pairViewController didReceiveMemoryWarning];
 }
