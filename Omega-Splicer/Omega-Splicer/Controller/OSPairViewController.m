@@ -9,13 +9,13 @@
 #import "OSPairViewController.h"
 #import "BluetoothManager.h"
 
-@interface OSPairViewController ()
-
-@property (nonatomic) BOOL bluetoothSetup;
-
-@property (nonatomic) BOOL bluetoothScan;
+@interface OSPairViewController () <UITableViewDelegate, UITableViewDataSource, BluetoothManagerDelegate>
 
 @property (strong, nonatomic) BluetoothManager *bluetoothManager;
+
+@property (weak, nonatomic) IBOutlet UITableView *deviceTableView;
+
+@property (strong, nonatomic) NSMutableArray *deviceArray;
 
 @end
 
@@ -24,16 +24,16 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = FALSE;
-    self.bluetoothSetup = false;
-    self.bluetoothScan = false;
+    [self.deviceTableView reloadData];
+    [self.bluetoothManager setupBluetoothManager];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+    self.bluetoothManager = [[BluetoothManager alloc] init];
+    self.bluetoothManager.delegate = self;
+    self.deviceArray = [[NSMutableArray alloc] init];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -48,22 +48,47 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    if (self.bluetoothSetup && self.bluetoothScan){
-        [self.bluetoothManager stopScan];
-        self.bluetoothScan = false;
+#pragma mark - Bluetooth manager delegate
+
+- (void)bluetoothManagerIsReadyToScan:(BluetoothManager *)bluetoothManager {
+    [self.bluetoothManager scanForDevice];
+}
+
+- (void)bluetoothManager:(BluetoothManager *)bluetoothManager didDiscoverPeripheral:(NSString *)peripheralName {
+    
+    [self.deviceArray addObject:peripheralName];
+    [self.deviceTableView reloadData];
+}
+
+#pragma mark - Table View Delegate / Data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.deviceArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"bluetoothCell"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"bluetoothCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    if (self.bluetoothSetup && !self.bluetoothScan) {
-        self.bluetoothScan = true;
-        [self.bluetoothManager scanForDevice];
-    }
-
-    if (!self.bluetoothSetup) {
-        self.bluetoothManager = [[BluetoothManager alloc] init];
-        [self.bluetoothManager setupBluetoothManager];
-        self.bluetoothSetup = true;
-    }
+    cell.textLabel.text = [self.deviceArray objectAtIndex:indexPath.row];
+    
+    return cell;
 }
+
+#pragma mark - Manage memory
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
 
 @end

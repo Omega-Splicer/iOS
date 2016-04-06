@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -433,12 +432,6 @@
                                     <constraint firstAttribute="height" constant="70" id="6Ct-bw-lpw"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pairer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xe-X4-fSd">
-                                <rect key="frame" x="278" y="289" width="44.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-sm-Vim">
                                 <rect key="frame" x="24" y="28" width="39" height="30"/>
                                 <state key="normal" title="Close">
@@ -455,6 +448,14 @@
                                     <constraint firstAttribute="width" constant="69.5" id="Wm0-XD-UqM"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W3k-3f-vBf">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dgn-NI-C92" id="Oyq-FY-V2u"/>
+                                    <outlet property="delegate" destination="Dgn-NI-C92" id="S97-8C-sT0"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -463,22 +464,29 @@
                             <constraint firstAttribute="trailingMargin" secondItem="stH-hb-GyR" secondAttribute="trailing" constant="-20" id="Acj-Ou-VjF"/>
                             <constraint firstItem="stH-hb-GyR" firstAttribute="top" secondItem="u6p-Ch-OLN" secondAttribute="bottom" constant="-20" id="BIu-7b-7N1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9KW-sJ-GNx" secondAttribute="trailing" constant="-20" id="HS0-eo-AqF"/>
-                            <constraint firstAttribute="centerY" secondItem="8xe-X4-fSd" secondAttribute="centerY" id="YZ3-Iy-the"/>
+                            <constraint firstItem="W3k-3f-vBf" firstAttribute="top" secondItem="stH-hb-GyR" secondAttribute="top" id="JQ8-VI-MGv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W3k-3f-vBf" secondAttribute="trailing" constant="-20" id="NTS-0Y-iM2"/>
+                            <constraint firstItem="NvX-EI-bzJ" firstAttribute="top" secondItem="W3k-3f-vBf" secondAttribute="bottom" id="Ppn-dD-ti6"/>
                             <constraint firstItem="1Az-sm-Vim" firstAttribute="leading" secondItem="BIt-Wk-uIc" secondAttribute="leadingMargin" constant="4" id="cyY-0A-wd3"/>
                             <constraint firstItem="9KW-sJ-GNx" firstAttribute="leading" secondItem="BIt-Wk-uIc" secondAttribute="leadingMargin" constant="-20" id="eNQ-Zf-yEq"/>
                             <constraint firstItem="1Az-sm-Vim" firstAttribute="top" secondItem="u6p-Ch-OLN" secondAttribute="bottom" id="fGg-69-5cR"/>
                             <constraint firstItem="e4t-2S-kGM" firstAttribute="centerX" secondItem="BIt-Wk-uIc" secondAttribute="centerX" id="h0L-fV-AuV"/>
                             <constraint firstItem="1Az-sm-Vim" firstAttribute="top" secondItem="u6p-Ch-OLN" secondAttribute="bottom" constant="8" id="ht2-iI-vPE"/>
                             <constraint firstItem="9KW-sJ-GNx" firstAttribute="top" secondItem="u6p-Ch-OLN" secondAttribute="bottom" constant="-20" id="j8t-uC-2q6"/>
+                            <constraint firstItem="W3k-3f-vBf" firstAttribute="leading" secondItem="BIt-Wk-uIc" secondAttribute="leadingMargin" constant="-20" id="q5g-4T-WD8"/>
                             <constraint firstItem="NvX-EI-bzJ" firstAttribute="top" secondItem="9KW-sJ-GNx" secondAttribute="bottom" id="qmt-cU-VTw"/>
-                            <constraint firstAttribute="centerX" secondItem="8xe-X4-fSd" secondAttribute="centerX" id="vWT-Ow-o1n"/>
+                            <constraint firstItem="W3k-3f-vBf" firstAttribute="top" secondItem="stH-hb-GyR" secondAttribute="bottom" id="ygP-tB-fdO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="fGg-69-5cR"/>
+                                <exclude reference="JQ8-VI-MGv"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="deviceTableView" destination="W3k-3f-vBf" id="ijT-KV-Egd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssO-hE-hgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
