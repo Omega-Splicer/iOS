@@ -16,13 +16,9 @@
 
 @property (nonatomic) NSInteger speedUnit;
 
-@property (nonatomic) NSInteger debugMessages;
-
 @property (weak, nonatomic) IBOutlet UISegmentedControl *controlsSegmentedControl;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *speedUnitSegmentedControl;
-
-@property (weak, nonatomic) IBOutlet UISegmentedControl *debugMessagesSegmentedControl;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *flyModeSegmentedControl;
 
@@ -36,7 +32,6 @@
     self.flyMode = 0;
     self.controlsType = 0;
     self.speedUnit = 0;
-    self.debugMessages = 0;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -46,11 +41,9 @@
     self.flyMode = [userDefaults integerForKey:@"flyModeKey"];
     self.controlsType = [userDefaults integerForKey:@"controlsKey"];
     self.speedUnit = [userDefaults integerForKey:@"speedUnitKey"];
-    self.debugMessages = [userDefaults integerForKey:@"debugMessagesKey"];
     self.flyModeSegmentedControl.selectedSegmentIndex = self.flyMode;
     self.controlsSegmentedControl.selectedSegmentIndex = self.controlsType;
     self.speedUnitSegmentedControl.selectedSegmentIndex = self.speedUnit;
-    self.debugMessagesSegmentedControl.selectedSegmentIndex = self.debugMessages;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -59,7 +52,6 @@
     [userDefaults setInteger:self.flyMode forKey:@"flyModeKey"];
     [userDefaults setInteger:self.controlsType forKey:@"controlsKey"];
     [userDefaults setInteger:self.speedUnit forKey:@"speedUnitKey"];
-    [userDefaults setInteger:self.debugMessages forKey:@"debugMessagesKey"];
     [userDefaults synchronize];
 }
 
@@ -87,10 +79,6 @@
 
 - (IBAction)speedUnitChanged:(id)sender {
     self.speedUnit = self.speedUnitSegmentedControl.selectedSegmentIndex;
-}
-
-- (IBAction)debugMessagesChanged:(id)sender {
-    self.debugMessages = self.debugMessagesSegmentedControl.selectedSegmentIndex;
 }
 
 #pragma mark - Memory management
