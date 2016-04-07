@@ -23,10 +23,6 @@
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"Fly mode settings : %ld", (long)[userDefaults integerForKey:@"flyModeKey"]);
-    NSLog(@"Controls settings : %ld", (long)[userDefaults integerForKey:@"controlsKey"]);
-    NSLog(@"Speed unit settings : %ld", (long)[userDefaults integerForKey:@"speedUnitKey"]);
-    NSLog(@"Debug messages : %ld", (long)[userDefaults integerForKey:@"debugMessagesKey"]);
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -36,6 +32,8 @@
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }
+
+#pragma mark - Navigation Bar Customization
 
 - (void)customizeNavigationBar {
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.05 green:0.12 blue:0.21 alpha:1]];
