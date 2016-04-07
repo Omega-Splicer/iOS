@@ -16,12 +16,25 @@
 
 @property (nonatomic) NSInteger value;
 
+@property (nonatomic) BOOL isBuilded;
+
 @end
 
 @implementation OSSliderView
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.isBuilded = false;
+    }
+    return self;
+}
+
 - (void)buildSlider {
-    [self buildSliderWithValue:200];
+    if (!self.isBuilded) {
+        [self buildSliderWithValue:200];
+        self.isBuilded = true;
+    }
 }
 
 - (void)buildSliderWithValue:(NSInteger)value {
@@ -30,7 +43,7 @@
         self.value = 50;
     else
         self.value = value;
-        
+    
     self.overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width / 2, self.frame.size.height)];
     self.overlay.backgroundColor = [UIColor redColor];
     [self addSubview:self.overlay];
