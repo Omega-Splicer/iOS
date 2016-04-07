@@ -45,18 +45,6 @@
     [self.bluetoothManager stopScan];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
-- (IBAction)dismissPairViewController:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-
 #pragma mark - Bluetooth manager delegate
 
 - (void)bluetoothManagerIsReadyToScan:(OSBluetoothManager *)bluetoothManager {

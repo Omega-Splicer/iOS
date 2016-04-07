@@ -9,7 +9,7 @@
 #import "OSHomeViewController.h"
 #import "OSFlyLandscapeViewController.h"
 
-@interface OSHomeViewController ()
+@interface OSHomeViewController () <UINavigationControllerDelegate>
 @end
 
 @implementation OSHomeViewController
@@ -21,15 +21,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self.navigationController setDelegate:self];
+    NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
     [super viewWillAppear:animated];
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
 }
 
 #pragma mark - Navigation Bar Customization
@@ -56,6 +51,12 @@
         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyLandscape"];
         [self.navigationController pushViewController:vc animated:true];
     }
+}
+
+#pragma mark - Navigation Controller delegate
+
+- (UIInterfaceOrientationMask)navigationControllerSupportedInterfaceOrientations:(UINavigationController *)navigationController {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 #pragma mark - Memory management

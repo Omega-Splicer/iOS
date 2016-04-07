@@ -55,19 +55,7 @@
     [userDefaults synchronize];
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
 #pragma mark - Actions
-
-- (IBAction)dismissSettingsViewController:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 - (IBAction)flyModeChanged:(id)sender {
     self.flyMode = self.flyModeSegmentedControl.selectedSegmentIndex;

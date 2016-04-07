@@ -36,7 +36,7 @@
     [app.buttons[@"Settings"] tap];
     [app.segmentedControls.buttons[@"Landscape"] tap];
     [app.segmentedControls.buttons[@"m/s"] tap];
-    [app.buttons[@"Close"] tap];
+    [[[[app.navigationBars[@"Settings"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
     [app.buttons[@"Settings"] tap];
     
     XCTAssertTrue([app.segmentedControls.buttons[@"Landscape"] isSelected]);
@@ -46,14 +46,15 @@
     XCTAssertFalse([app.segmentedControls.buttons[@"km/h"] isSelected]);
     XCTAssertFalse([app.segmentedControls.buttons[@"mph"] isSelected]);
     
-    [app.buttons[@"Close"] tap];
+    [[[[app.navigationBars[@"Settings"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
 }
 
 - (void)testPairView {
     XCUIApplication *app = [[XCUIApplication alloc] init];
     [app.buttons[@"Pair"] tap];
-    sleep(10);
-    [app.buttons[@"Close"] tap];
+    sleep(5);
+    [[[[app.navigationBars[@"Pair"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
+    
 }
 
 - (void)testPortraitFlyView {
@@ -61,11 +62,11 @@
 
     [app.buttons[@"Settings"] tap];
     [app.segmentedControls.buttons[@"Portrait"] tap];
-    [app.buttons[@"Close"] tap];
+    [[[[app.navigationBars[@"Settings"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
     
     [app.buttons[@"Fly"] tap];
     
-    [app.buttons[@"Close"] tap];
+    [[[[app.navigationBars[@"Fly"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
 }
 
 - (void)testLandscapeFlyView {
@@ -73,11 +74,11 @@
     
     [app.buttons[@"Settings"] tap];
     [app.segmentedControls.buttons[@"Landscape"] tap];
-    [app.buttons[@"Close"] tap];
+    [[[[app.navigationBars[@"Settings"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
     
     
     [app.buttons[@"Fly"] tap];
-    [app.buttons[@"Close"] tap];
+    [[[[app.navigationBars[@"Fly"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
 }
 
 @end

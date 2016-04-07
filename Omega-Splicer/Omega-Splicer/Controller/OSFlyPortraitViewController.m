@@ -50,14 +50,6 @@
     [self stopMotionManager];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-
 #pragma mark - Actions
 
 - (void)setupMotionManager {
