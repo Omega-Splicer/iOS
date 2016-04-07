@@ -55,11 +55,9 @@
     if (flyMode == 0) {
         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyPortrait"];
         [self.navigationController pushViewController:vc animated:true];
-//        [self presentViewController:vc animated:YES completion:nil];
     } else {
         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyLandscape"];
         [self.navigationController pushViewController:vc animated:true];
-//        [self presentViewController:vc animated:YES completion:nil];
     }
 }
 
