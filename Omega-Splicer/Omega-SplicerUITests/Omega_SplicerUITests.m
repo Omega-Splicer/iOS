@@ -36,6 +36,7 @@
     [app.buttons[@"Settings"] tap];
     [app.segmentedControls.buttons[@"Landscape"] tap];
     [app.segmentedControls.buttons[@"m/s"] tap];
+    [app.segmentedControls.buttons[@"Gyroscope"] tap];
     [[[[app.navigationBars[@"Settings"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
     [app.buttons[@"Settings"] tap];
     
@@ -46,6 +47,11 @@
     XCTAssertFalse([app.segmentedControls.buttons[@"km/h"] isSelected]);
     XCTAssertFalse([app.segmentedControls.buttons[@"mph"] isSelected]);
     
+    XCTAssertTrue([app.segmentedControls.buttons[@"Gyroscope"] isSelected]);
+    XCTAssertFalse([app.segmentedControls.buttons[@"Joystick"] isSelected]);
+    
+    [app.segmentedControls.buttons[@"Joystick"] tap];
+    
     [[[[app.navigationBars[@"Settings"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
 }
 
@@ -54,7 +60,6 @@
     [app.buttons[@"Pair"] tap];
     sleep(5);
     [[[[app.navigationBars[@"Pair"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
-    
 }
 
 - (void)testPortraitFlyView {

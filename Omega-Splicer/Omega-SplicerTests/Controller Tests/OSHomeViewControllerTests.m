@@ -30,10 +30,6 @@
     XCTAssertNotNil(self.homeViewController, @"Home view controller is nil");
 }
 
-- (void)testStatusBarStyle {
-    XCTAssertEqual([self.homeViewController preferredStatusBarStyle], UIStatusBarStyleLightContent);
-}
-
 - (void)testMemoryWarning {
     [self.homeViewController didReceiveMemoryWarning];
 }
