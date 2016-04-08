@@ -51,6 +51,7 @@
     XCTAssertFalse([app.segmentedControls.buttons[@"Joystick"] isSelected]);
     
     [app.segmentedControls.buttons[@"Joystick"] tap];
+    [app.segmentedControls.buttons[@"km/h"] tap];
     
     [[[[app.navigationBars[@"Settings"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
 }
