@@ -1,13 +1,13 @@
 ![Baner](./Screens/banerOS.png)
 
 <p align="center">
-<b><a href="#Overview">Overview</a></b>
+<b><a href="#overview">Overview</a></b>
 |
-<b><a href="#Screenshot">Screenshot</a></b>
+<b><a href="#screenshot">Screenshot</a></b>
 |
-<b><a href="#Credits">Credits</a></b>
+<b><a href="#credits">Credits</a></b>
 |
-<b><a href="#License">License</a></b>
+<b><a href="#license">License</a></b>
 </p>
 
 [![Epitech](https://img.shields.io/badge/Epitech-EIP-blue.svg
