@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="1eQ-Zq-hqU">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wil-2z-SxS">
                                 <rect key="frame" x="100" y="365" width="400" height="50"/>
@@ -101,7 +101,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="VTD-TZ-pSx">
-                                <rect key="frame" x="221" y="80" width="159" height="115"/>
+                                <rect key="frame" x="221" y="124" width="159" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="159" id="UHv-FY-dbd"/>
                                     <constraint firstAttribute="height" constant="115" id="V14-Oh-sJa"/>
@@ -338,14 +338,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="9KW-sJ-GNx">
                                 <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bz-vf-rYN" customClass="MONActivityIndicatorView">
-                                <rect key="frame" x="250" y="285" width="100" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bh2-H4-2Jv"/>
-                                    <constraint firstAttribute="width" constant="100" id="jzn-le-UhA"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W3k-3f-vBf">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -354,6 +346,14 @@
                                     <outlet property="delegate" destination="Dgn-NI-C92" id="S97-8C-sT0"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bz-vf-rYN" customClass="MONActivityIndicatorView">
+                                <rect key="frame" x="250" y="285" width="100" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bh2-H4-2Jv"/>
+                                    <constraint firstAttribute="width" constant="100" id="jzn-le-UhA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

@@ -14,11 +14,11 @@
 
 @property (weak, nonatomic) IBOutlet OSSliderView *sliderView;
 
-@property (weak, nonatomic) IBOutlet UIButton *settingsButton;
-
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
 @property (weak, nonatomic) IBOutlet UIImageView *planeImageView;
+
+@property (nonatomic) CGFloat xGravity;
 
 @end
 
@@ -26,8 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.settingsButton.tintColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1];
-    self.settingsButton.hidden = YES;
     [self setupMotionManager];
 }
 
@@ -50,7 +48,7 @@
     [self stopMotionManager];
 }
 
-#pragma mark - Actions
+#pragma mark - Motion manager
 
 - (void)setupMotionManager {
     self.motionManager = [[CMMotionManager alloc] init];
@@ -59,15 +57,16 @@
 
 - (void)startMotionManager {
     [self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
+        [self updateMotionManagerData:motion];
     }];
+}
+
+- (void)updateMotionManagerData:(CMDeviceMotion *)motion {
+    self.xGravity = motion.gravity.x;
 }
 
 - (void)stopMotionManager {
     [self.motionManager stopDeviceMotionUpdates];
-}
-
-- (IBAction)closeButtonClicked:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Memory management

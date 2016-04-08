@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupJoystick];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
