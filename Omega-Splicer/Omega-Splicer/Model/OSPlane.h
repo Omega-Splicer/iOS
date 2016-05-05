@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  Model data
+ */
 @interface OSPlane : NSObject
 
 /**
