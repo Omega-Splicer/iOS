@@ -63,6 +63,17 @@
     [[[[app.navigationBars[@"Pair"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
 }
 
+- (void)testExample {
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.buttons[@"Fly"] tap];
+    [[[[[[[app.otherElements containingType:XCUIElementTypeNavigationBar identifier:@"Fly"] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:1].images[@"joy_thumb"] tap];
+    [[[[app.navigationBars[@"Fly"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
+    [app.buttons[@"Pair"] tap];
+    [[[[app.navigationBars[@"Pair"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
+    
+}
+
 - (void)testPortraitFlyView {
     XCUIApplication *app = [[XCUIApplication alloc] init];
 

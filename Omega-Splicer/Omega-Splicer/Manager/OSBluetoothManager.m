@@ -34,55 +34,64 @@
 
 #pragma mark - CBCentralManagerDelagate
 
-//- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
-//    
-//}
-
-- (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI {
-    NSString *localName = [advertisementData objectForKey:CBAdvertisementDataLocalNameKey];
-    if ([localName length] > 0) {
-        
-        if (self.delegate)
-            [self.delegate bluetoothManager:self didDiscoverPeripheral:localName];
-        NSLog(@"Found : %@", localName);
-    }
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
+    NSLog(@"Connected to %@ ", peripheral.name);
 }
 
+- (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    NSLog(@"Fail to conect to %@", peripheral.name);
+    NSLog(@"Error : %@", error);
+}
 
+- (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI {
+    OSBluetoothPeripheral *newPeripheral = [[OSBluetoothPeripheral alloc] initWithPeripheral:peripheral];
+    if (self.delegate)
+        [self.delegate bluetoothManager:self didDiscoverPeripheral:newPeripheral];
+}
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
-    NSLog(@"toto did update state");
     if ([central state] == CBCentralManagerStatePoweredOff) {
-        NSLog(@"CoreBluetooth BLE hardware is powered off");
+        if (self.delegate) {
+            OSError *error = [[OSError alloc] initWithErrorCode:OSErrorBluetoothPoweredOff];
+            [self.delegate bluetoothManager:self didFailToSetupWithError:error];
+        }
     }
     else if ([central state] == CBCentralManagerStatePoweredOn) {
-        NSLog(@"CoreBluetooth BLE hardware is powered on and ready");
         if (self.delegate)
             [self.delegate bluetoothManagerIsReadyToScan:self];
     }
     else if ([central state] == CBCentralManagerStateUnauthorized) {
-        NSLog(@"CoreBluetooth BLE state is unauthorized");
+        if (self.delegate) {
+            OSError *error = [[OSError alloc] initWithErrorCode:OSErrorBluetoothUnauthorized];
+            [self.delegate bluetoothManager:self didFailToSetupWithError:error];
+        }
     }
     else if ([central state] == CBCentralManagerStateUnknown) {
-        NSLog(@"CoreBluetooth BLE state is unknown");
+        if (self.delegate) {
+            OSError *error = [[OSError alloc] initWithErrorCode:OSErrorBluetoothUnknown];
+            [self.delegate bluetoothManager:self didFailToSetupWithError:error];
+        }
     }
     else if ([central state] == CBCentralManagerStateUnsupported) {
-        NSLog(@"CoreBluetooth BLE hardware is unsupported on this platform");
+        if (self.delegate) {
+            OSError *error = [[OSError alloc] initWithErrorCode:OSErrorBluetoothUnsupported];
+            [self.delegate bluetoothManager:self didFailToSetupWithError:error];
+        }
     }
 }
 
 #pragma mark - CBPeripheralDelegate
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
-    
+    NSLog(@"Discover peripheral service");
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
-    
+    NSLog(@"Discover peripheral characteritics for service");
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
-    
+    NSLog(@"Update value for characteritics");
 }
 
 @end

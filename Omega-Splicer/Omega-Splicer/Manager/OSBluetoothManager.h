@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "OSBluetoothPeripheral.h"
+#import "OSError.h"
 
 @protocol OSBluetoothManagerDelegate;
 
-@interface OSBluetoothManager : NSObject <CBCentralManagerDelegate>
+@interface OSBluetoothManager : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate>
 
 /**
  *  The delegate object
@@ -43,11 +45,16 @@
  *  @param bluetoothManager The bluetooth manager
  *  @param peripheralName   THe new peripheral name
  */
-- (void)bluetoothManager:(OSBluetoothManager *)bluetoothManager didDiscoverPeripheral:(NSString *)peripheralName;
+- (void)bluetoothManager:(OSBluetoothManager *)bluetoothManager didDiscoverPeripheral:(OSBluetoothPeripheral *)peripheral;
 
 /**
  *  Notify when the bluetooth manager is ready to scan
  */
 - (void)bluetoothManagerIsReadyToScan:(OSBluetoothManager *)bluetoothManager;
+
+/**
+ * Notify when the bluetooth manager fail to setup
+ */
+- (void)bluetoothManager:(OSBluetoothManager *)bluetoothManager didFailToSetupWithError:(OSError *)error;
 
 @end
