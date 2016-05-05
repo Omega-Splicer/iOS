@@ -42,9 +42,12 @@
 		56C7AE7D1CB2A3470022F64E /* OSFlyPortraitViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C7AE7C1CB2A3470022F64E /* OSFlyPortraitViewControllerTests.m */; };
 		56DA4B6E1BA0842300F44DC5 /* OSFlyLandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B6D1BA0842300F44DC5 /* OSFlyLandscapeViewController.m */; };
 		56DA4B721BA0843500F44DC5 /* OSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */; };
-		56DA4B751BA0844100F44DC5 /* OSPairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DA4B741BA0844100F44DC5 /* OSPairViewController.m */; };
 		56DC9F851CB7C5A200BD8792 /* OSActivityIndicatorViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DC9F841CB7C5A200BD8792 /* OSActivityIndicatorViewTests.m */; };
 		56FF29821BA379820093A31E /* OSJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FF29811BA379820093A31E /* OSJoystick.m */; };
+		FC0568CA1CD7939600788565 /* OSPairTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0568C91CD7939600788565 /* OSPairTableViewController.m */; };
+		FC0568CD1CD7AFBF00788565 /* OSBluetoothPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0568CC1CD7AFBF00788565 /* OSBluetoothPeripheral.m */; };
+		FCAB2E1A1CDB77B4006955FF /* OSAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAB2E191CDB77B4006955FF /* OSAlertViewController.m */; };
+		FCD23A2C1CD90C0500EB24E0 /* OSError.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD23A2B1CD90C0500EB24E0 /* OSError.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,11 +119,17 @@
 		56DA4B6D1BA0842300F44DC5 /* OSFlyLandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFlyLandscapeViewController.m; sourceTree = "<group>"; };
 		56DA4B701BA0843500F44DC5 /* OSSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSettingsViewController.h; sourceTree = "<group>"; };
 		56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSettingsViewController.m; sourceTree = "<group>"; };
-		56DA4B731BA0844100F44DC5 /* OSPairViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPairViewController.h; sourceTree = "<group>"; };
-		56DA4B741BA0844100F44DC5 /* OSPairViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPairViewController.m; sourceTree = "<group>"; };
 		56DC9F841CB7C5A200BD8792 /* OSActivityIndicatorViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSActivityIndicatorViewTests.m; sourceTree = "<group>"; };
 		56FF29801BA379820093A31E /* OSJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSJoystick.h; sourceTree = "<group>"; };
 		56FF29811BA379820093A31E /* OSJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSJoystick.m; sourceTree = "<group>"; };
+		FC0568C81CD7939600788565 /* OSPairTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPairTableViewController.h; sourceTree = "<group>"; };
+		FC0568C91CD7939600788565 /* OSPairTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPairTableViewController.m; sourceTree = "<group>"; };
+		FC0568CB1CD7AFBF00788565 /* OSBluetoothPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSBluetoothPeripheral.h; sourceTree = "<group>"; };
+		FC0568CC1CD7AFBF00788565 /* OSBluetoothPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSBluetoothPeripheral.m; sourceTree = "<group>"; };
+		FCAB2E181CDB77B4006955FF /* OSAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSAlertViewController.h; sourceTree = "<group>"; };
+		FCAB2E191CDB77B4006955FF /* OSAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSAlertViewController.m; sourceTree = "<group>"; };
+		FCD23A2A1CD90C0500EB24E0 /* OSError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSError.h; sourceTree = "<group>"; };
+		FCD23A2B1CD90C0500EB24E0 /* OSError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSError.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +162,10 @@
 			children = (
 				5638F0B41C249B73000E484D /* OSPlane.h */,
 				5638F0B51C249B73000E484D /* OSPlane.m */,
+				FC0568CB1CD7AFBF00788565 /* OSBluetoothPeripheral.h */,
+				FC0568CC1CD7AFBF00788565 /* OSBluetoothPeripheral.m */,
+				FCD23A2A1CD90C0500EB24E0 /* OSError.h */,
+				FCD23A2B1CD90C0500EB24E0 /* OSError.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,10 +308,10 @@
 				5698FAF51C12BA1700A9942D /* OSFlyPortraitViewController.m */,
 				56BDEF6D1BA055200049A6FE /* OSHomeViewController.h */,
 				56BDEF6E1BA055200049A6FE /* OSHomeViewController.m */,
-				56DA4B731BA0844100F44DC5 /* OSPairViewController.h */,
-				56DA4B741BA0844100F44DC5 /* OSPairViewController.m */,
 				56DA4B701BA0843500F44DC5 /* OSSettingsViewController.h */,
 				56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */,
+				FC0568C81CD7939600788565 /* OSPairTableViewController.h */,
+				FC0568C91CD7939600788565 /* OSPairTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,6 +325,8 @@
 				5698FAF81C12BA8200A9942D /* OSSliderView.m */,
 				56FF29801BA379820093A31E /* OSJoystick.h */,
 				56FF29811BA379820093A31E /* OSJoystick.m */,
+				FCAB2E181CDB77B4006955FF /* OSAlertViewController.h */,
+				FCAB2E191CDB77B4006955FF /* OSAlertViewController.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -502,14 +517,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD23A2C1CD90C0500EB24E0 /* OSError.m in Sources */,
+				FC0568CA1CD7939600788565 /* OSPairTableViewController.m in Sources */,
 				5608AED11CB55E4E000719E3 /* MONActivityIndicatorView.m in Sources */,
 				5638F0B61C249B73000E484D /* OSPlane.m in Sources */,
-				56DA4B751BA0844100F44DC5 /* OSPairViewController.m in Sources */,
 				56DA4B6E1BA0842300F44DC5 /* OSFlyLandscapeViewController.m in Sources */,
 				5698FAF91C12BA8200A9942D /* OSSliderView.m in Sources */,
 				56FF29821BA379820093A31E /* OSJoystick.m in Sources */,
 				56BDEF6F1BA055200049A6FE /* OSHomeViewController.m in Sources */,
+				FC0568CD1CD7AFBF00788565 /* OSBluetoothPeripheral.m in Sources */,
 				56DA4B721BA0843500F44DC5 /* OSSettingsViewController.m in Sources */,
+				FCAB2E1A1CDB77B4006955FF /* OSAlertViewController.m in Sources */,
 				5698FAF61C12BA1700A9942D /* OSFlyPortraitViewController.m in Sources */,
 				56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */,
 				56770FA61BBECC3900BAB4C2 /* OSBluetoothManager.m in Sources */,
