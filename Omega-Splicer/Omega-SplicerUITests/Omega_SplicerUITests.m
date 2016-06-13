@@ -56,23 +56,23 @@
     [[[[app.navigationBars[@"Settings"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
 }
 
-- (void)testPairView {
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app.buttons[@"Pair"] tap];
-    sleep(5);
-    [[[[app.navigationBars[@"Pair"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
-}
+//- (void)testPairView {
+//    XCUIApplication *app = [[XCUIApplication alloc] init];
+//    [app.buttons[@"Pair"] tap];
+//    sleep(5);
+//    [[[[app.navigationBars[@"Pair"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
+//}
 
-- (void)testExample {
+//- (void)testExample {
+
+//    XCUIApplication *app = [[XCUIApplication alloc] init];
+//    [app.buttons[@"Fly"] tap];
+//    [[[[[[[app.otherElements containingType:XCUIElementTypeNavigationBar identifier:@"Fly"] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:1].images[@"joy_thumb"] tap];
+//    [[[[app.navigationBars[@"Fly"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
+//    [app.buttons[@"Pair"] tap];
+//    [[[[app.navigationBars[@"Pair"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
     
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app.buttons[@"Fly"] tap];
-    [[[[[[[app.otherElements containingType:XCUIElementTypeNavigationBar identifier:@"Fly"] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:1].images[@"joy_thumb"] tap];
-    [[[[app.navigationBars[@"Fly"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
-    [app.buttons[@"Pair"] tap];
-    [[[[app.navigationBars[@"Pair"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
-    
-}
+//}
 
 - (void)testPortraitFlyView {
     XCUIApplication *app = [[XCUIApplication alloc] init];
@@ -82,6 +82,12 @@
     [[[[app.navigationBars[@"Settings"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
     
     [app.buttons[@"Fly"] tap];
+    
+//    [[[XCUIApplication alloc] init].scrollViews.otherElements.icons[@"Omega-Splicer"] swipeUp];
+    
+    [app.staticTexts[@"50%"] swipeLeft];
+    [app.staticTexts[@"23%"] swipeRight];
+    
     
     [[[[app.navigationBars[@"Fly"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
 }
@@ -93,8 +99,17 @@
     [app.segmentedControls.buttons[@"Landscape"] tap];
     [[[[app.navigationBars[@"Settings"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
     
-    
     [app.buttons[@"Fly"] tap];
+    
+    XCUIElement *element = [[[[[[XCUIApplication alloc] init].otherElements containingType:XCUIElementTypeNavigationBar identifier:@"Fly"] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element;
+    
+    [[[element childrenMatchingType:XCUIElementTypeAny] elementMatchingType:XCUIElementTypeAny identifier:@"rightJoystickView"] doubleTap];
+    [[[element childrenMatchingType:XCUIElementTypeAny] elementMatchingType:XCUIElementTypeAny identifier:@"rightJoystickView"] tap];
+
+    
+    XCUIElement *leftjoystickviewElement = app.otherElements[@"leftJoystickVIew"];
+    [leftjoystickviewElement swipeRight];
+    
     [[[[app.navigationBars[@"Fly"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LgY-B6-JPD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LgY-B6-JPD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -315,6 +315,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkM-CI-4zB" customClass="OSJoystick">
                                 <rect key="frame" x="50" y="422" width="128" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="leftJoystickVIew">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="AUs-XJ-xFG"/>
                                     <constraint firstAttribute="width" constant="128" id="Vsd-22-YkM"/>
@@ -323,6 +326,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqO-xM-wKJ" customClass="OSJoystick">
                                 <rect key="frame" x="422" y="422" width="128" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="rightJoystickView">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="gbF-L1-P02"/>
                                     <constraint firstAttribute="width" constant="128" id="tIn-vP-fyl"/>

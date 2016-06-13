@@ -31,6 +31,8 @@
 - (void)testSliderView {
     XCTAssertNotNil(self.sliderView, @"Slider view is nil");
     XCTAssertEqual(self.sliderView.getSliderValue, 69);
+    [self.sliderView setSliderValue:20];
+    
 }
 
 @end

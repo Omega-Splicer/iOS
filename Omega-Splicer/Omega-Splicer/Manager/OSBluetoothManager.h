@@ -35,6 +35,12 @@
  */
 - (void)stopScan;
 
+/**
+ * Try to connect to the given peripheral
+ */
+
+- (void)connectToPeripheral:(OSBluetoothPeripheral *)peripheral;
+
 @end
 
 @protocol OSBluetoothManagerDelegate <NSObject>

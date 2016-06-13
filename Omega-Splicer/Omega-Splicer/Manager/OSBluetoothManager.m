@@ -17,10 +17,8 @@
 @implementation OSBluetoothManager
 
 - (void)setupBluetoothManager {
-    
     self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:nil];
     NSLog(@"setup ble");
-    
 }
 
 - (void)scanForDevice {
@@ -32,10 +30,15 @@
     [self.centralManager stopScan];
 }
 
+- (void)connectToPeripheral:(OSBluetoothPeripheral *)peripheral {
+    [self.centralManager connectPeripheral:[peripheral getPeripheral] options:nil];
+}
+
 #pragma mark - CBCentralManagerDelagate
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     NSLog(@"Connected to %@ ", peripheral.name);
+    peripheral.delegate = self;
 }
 
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OSFlyLandscapeViewController : UIViewController
+#import "OSJoystick.h"
+
+@interface OSFlyLandscapeViewController : UIViewController <JoystickDelegate>
+
+- (void)displayJoystick;
+
+- (void)removeJoystick;
 
 @end

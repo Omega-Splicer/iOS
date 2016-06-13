@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface OSBluetoothPeripheral : NSObject
+@interface OSBluetoothPeripheral : NSObject  <CBPeripheralDelegate>
 
 @property (strong, nonatomic) NSString *name;
 
 - (instancetype)initWithPeripheral:(CBPeripheral *)peripheral;
+
+- (CBPeripheral *)getPeripheral;
 
 @end

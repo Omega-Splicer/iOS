@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OSBluetoothManager.h"
 
-@interface OSPairTableViewController : UITableViewController
+@interface OSPairTableViewController : UITableViewController <OSBluetoothManagerDelegate>
+
+- (void)customizeNavigationBar;
+
+- (void)refresh:(id)sender;
+
 
 @end

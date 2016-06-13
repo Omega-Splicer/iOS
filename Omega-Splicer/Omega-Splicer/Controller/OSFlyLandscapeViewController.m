@@ -8,9 +8,8 @@
 
 #import <CoreMotion/CoreMotion.h>
 #import "OSFlyLandscapeViewController.h"
-#import "OSJoystick.h"
 
-@interface OSFlyLandscapeViewController () <JoystickDelegate, UINavigationControllerDelegate>
+@interface OSFlyLandscapeViewController () <UINavigationControllerDelegate>
 
 @property (nonatomic) BOOL joystickControls;
 

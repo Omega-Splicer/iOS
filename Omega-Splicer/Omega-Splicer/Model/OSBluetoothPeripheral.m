@@ -22,8 +22,25 @@
     if (self) {
         self.peripheral = peripheral;
         self.name = peripheral.name;
+        self.peripheral.delegate = self;
     }
     return self;
+}
+
+- (CBPeripheral *)getPeripheral {
+    return self.peripheral;
+}
+
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+    NSLog(@"Discover peripheral service");
+}
+
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+    NSLog(@"Discover peripheral characteritics for service");
+}
+
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    NSLog(@"Update value for characteritics");
 }
 
 @end

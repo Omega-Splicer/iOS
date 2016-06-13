@@ -20,6 +20,9 @@
 - (void)setUp {
     [super setUp];
     self.flyLandscapeViewController = [[OSFlyLandscapeViewController alloc] init];
+    [self.flyLandscapeViewController displayJoystick];
+    [self.flyLandscapeViewController removeJoystick];
+    [self.flyLandscapeViewController joystick:nil didUpdate:CGPointMake(10, 10)];
 }
 
 - (void)tearDown {
