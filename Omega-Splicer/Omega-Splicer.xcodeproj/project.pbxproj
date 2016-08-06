@@ -46,10 +46,12 @@
 		56FF29821BA379820093A31E /* OSJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FF29811BA379820093A31E /* OSJoystick.m */; };
 		FC0568CA1CD7939600788565 /* OSPairTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0568C91CD7939600788565 /* OSPairTableViewController.m */; };
 		FC0568CD1CD7AFBF00788565 /* OSBluetoothPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0568CC1CD7AFBF00788565 /* OSBluetoothPeripheral.m */; };
+		FC077FA21D3CBED5002E6850 /* OSBluetoothCharacteristic.m in Sources */ = {isa = PBXBuildFile; fileRef = FC077FA11D3CBED5002E6850 /* OSBluetoothCharacteristic.m */; };
 		FC300F9C1D046ECF0081C81F /* OSErrorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC300F9B1D046ECF0081C81F /* OSErrorTests.m */; };
 		FC300F9E1D0565730081C81F /* OSJoystickTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC300F9D1D0565730081C81F /* OSJoystickTests.m */; };
 		FC300FA01D0566660081C81F /* OSPairViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC300F9F1D0566660081C81F /* OSPairViewControllerUITests.m */; };
 		FC300FA21D0578630081C81F /* OSBluetoothPeripheralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC300FA11D0578630081C81F /* OSBluetoothPeripheralTests.m */; };
+		FC4281B21D36962800FC3E37 /* OSDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4281B11D36962800FC3E37 /* OSDeviceViewController.m */; };
 		FCAB2E1A1CDB77B4006955FF /* OSAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAB2E191CDB77B4006955FF /* OSAlertViewController.m */; };
 		FCD23A2C1CD90C0500EB24E0 /* OSError.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD23A2B1CD90C0500EB24E0 /* OSError.m */; };
 /* End PBXBuildFile section */
@@ -130,10 +132,14 @@
 		FC0568C91CD7939600788565 /* OSPairTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPairTableViewController.m; sourceTree = "<group>"; };
 		FC0568CB1CD7AFBF00788565 /* OSBluetoothPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSBluetoothPeripheral.h; sourceTree = "<group>"; };
 		FC0568CC1CD7AFBF00788565 /* OSBluetoothPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSBluetoothPeripheral.m; sourceTree = "<group>"; };
+		FC077FA01D3CBED5002E6850 /* OSBluetoothCharacteristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSBluetoothCharacteristic.h; sourceTree = "<group>"; };
+		FC077FA11D3CBED5002E6850 /* OSBluetoothCharacteristic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSBluetoothCharacteristic.m; sourceTree = "<group>"; };
 		FC300F9B1D046ECF0081C81F /* OSErrorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSErrorTests.m; sourceTree = "<group>"; };
 		FC300F9D1D0565730081C81F /* OSJoystickTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSJoystickTests.m; sourceTree = "<group>"; };
 		FC300F9F1D0566660081C81F /* OSPairViewControllerUITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPairViewControllerUITests.m; sourceTree = "<group>"; };
 		FC300FA11D0578630081C81F /* OSBluetoothPeripheralTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSBluetoothPeripheralTests.m; sourceTree = "<group>"; };
+		FC4281B01D36962800FC3E37 /* OSDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDeviceViewController.h; sourceTree = "<group>"; };
+		FC4281B11D36962800FC3E37 /* OSDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDeviceViewController.m; sourceTree = "<group>"; };
 		FCAB2E181CDB77B4006955FF /* OSAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSAlertViewController.h; sourceTree = "<group>"; };
 		FCAB2E191CDB77B4006955FF /* OSAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSAlertViewController.m; sourceTree = "<group>"; };
 		FCD23A2A1CD90C0500EB24E0 /* OSError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSError.h; sourceTree = "<group>"; };
@@ -172,6 +178,8 @@
 				5638F0B51C249B73000E484D /* OSPlane.m */,
 				FC0568CB1CD7AFBF00788565 /* OSBluetoothPeripheral.h */,
 				FC0568CC1CD7AFBF00788565 /* OSBluetoothPeripheral.m */,
+				FC077FA01D3CBED5002E6850 /* OSBluetoothCharacteristic.h */,
+				FC077FA11D3CBED5002E6850 /* OSBluetoothCharacteristic.m */,
 				FCD23A2A1CD90C0500EB24E0 /* OSError.h */,
 				FCD23A2B1CD90C0500EB24E0 /* OSError.m */,
 			);
@@ -324,6 +332,8 @@
 				56DA4B711BA0843500F44DC5 /* OSSettingsViewController.m */,
 				FC0568C81CD7939600788565 /* OSPairTableViewController.h */,
 				FC0568C91CD7939600788565 /* OSPairTableViewController.m */,
+				FC4281B01D36962800FC3E37 /* OSDeviceViewController.h */,
+				FC4281B11D36962800FC3E37 /* OSDeviceViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -534,6 +544,7 @@
 				FC0568CA1CD7939600788565 /* OSPairTableViewController.m in Sources */,
 				5608AED11CB55E4E000719E3 /* MONActivityIndicatorView.m in Sources */,
 				5638F0B61C249B73000E484D /* OSPlane.m in Sources */,
+				FC4281B21D36962800FC3E37 /* OSDeviceViewController.m in Sources */,
 				56DA4B6E1BA0842300F44DC5 /* OSFlyLandscapeViewController.m in Sources */,
 				5698FAF91C12BA8200A9942D /* OSSliderView.m in Sources */,
 				56FF29821BA379820093A31E /* OSJoystick.m in Sources */,
@@ -545,6 +556,7 @@
 				56BDEF6C1BA055200049A6FE /* AppDelegate.m in Sources */,
 				56770FA61BBECC3900BAB4C2 /* OSBluetoothManager.m in Sources */,
 				56BDEF691BA055200049A6FE /* main.m in Sources */,
+				FC077FA21D3CBED5002E6850 /* OSBluetoothCharacteristic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

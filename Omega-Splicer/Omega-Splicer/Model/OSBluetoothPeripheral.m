@@ -22,7 +22,7 @@
     if (self) {
         self.peripheral = peripheral;
         self.name = peripheral.name;
-        self.peripheral.delegate = self;
+//        self.peripheral.delegate = self;
     }
     return self;
 }

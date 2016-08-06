@@ -9,6 +9,7 @@
 #import "OSPairTableViewController.h"
 #import "MONActivityIndicatorView.h"
 #import "OSAlertViewController.h"
+#import "OSDeviceViewController.h"
 
 @interface OSPairTableViewController () <OSAlertViewControllerDelegate>
 
@@ -66,12 +67,12 @@
     [self.bluetoothManager scanForDevice];
 }
 
-- (void)bluetoothManager:(OSBluetoothManager *)bluetoothManager didDiscoverPeripheral:(OSBluetoothPeripheral *)peripheral {
+- (void)bluetoothManager:(OSBluetoothManager *)bluetoothManager didDiscoverPeripheral:(CBPeripheral *)peripheral {
     NSLog(@"DidDiscoverPeripheral : %@", peripheral.name);
     
     bool didExist = false;
     
-    for (OSBluetoothPeripheral *iPeripheral in self.peripheralArray) {
+    for (CBPeripheral *iPeripheral in self.peripheralArray) {
         if ([iPeripheral.name isEqualToString:peripheral.name])
             didExist = true;
     }
@@ -111,14 +112,20 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    OSBluetoothPeripheral *tmpPeripheral = [self.peripheralArray objectAtIndex:indexPath.row];
+    CBPeripheral *tmpPeripheral = [self.peripheralArray objectAtIndex:indexPath.row];
     cell.textLabel.text = tmpPeripheral.name;
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.bluetoothManager connectToPeripheral:[self.peripheralArray objectAtIndex:indexPath.row]];
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    OSDeviceViewController *deviceVC = [storyboard instantiateViewControllerWithIdentifier:@"deviceVC"];
+    deviceVC.bluetoothManager = self.bluetoothManager;
+    deviceVC.bluetoothManager.delegate = deviceVC;
+    deviceVC.peripheral = [self.peripheralArray objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:deviceVC animated:true];
 }
 
 @end
