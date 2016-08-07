@@ -8,8 +8,15 @@
 
 #import "OSHomeViewController.h"
 #import "OSFlyLandscapeViewController.h"
+#import "StyleKit.h"
 
 @interface OSHomeViewController () <UINavigationControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UIButton *flyButton;
+@property (weak, nonatomic) IBOutlet UIButton *settingButton;
+@property (weak, nonatomic) IBOutlet UIButton *newsButton;
+@property (weak, nonatomic) IBOutlet UIButton *tutorialButton;
+
 @end
 
 @implementation OSHomeViewController
@@ -30,8 +37,10 @@
 #pragma mark - Navigation Bar Customization
 
 - (void)customizeNavigationBar {
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.05 green:0.12 blue:0.21 alpha:1]];
-    [self.navigationController.navigationBar setTranslucent:FALSE];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    [self.navigationController.navigationBar setTranslucent:true];
+    
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];

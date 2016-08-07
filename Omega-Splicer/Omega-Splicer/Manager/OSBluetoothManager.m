@@ -44,12 +44,11 @@
 
 - (CBCharacteristic *)getCharacteristicForUUID:(CBUUID *)UUID {
 
-//    NSLog(@"get charac for uuid : %@", UUID);
+    NSLog(@"get charac for uuid : %@", UUID);
     
     if (self.connectedPeripheralService) {
-//        NSLog(@"LOOP");
         for (CBCharacteristic *charac in self.connectedPeripheralService.characteristics) {
-//            NSLog(@"CHARAC UUID : %@ ", charac.UUID);
+            NSLog(@"CHARAC UUID : %@ ", charac.UUID);
             if ([charac.UUID isEqual:UUID])
                 return charac;
         }
@@ -69,7 +68,8 @@
     NSLog(@"%@", peripheral);
     [self.delegate bluetoothManager:self didConnectToPeripheral:peripheral];
     [peripheral setDelegate:self];
-    [peripheral discoverServices:@[[CBUUID UUIDWithString:@"58409710-D5E2-4A7D-B439-10CF9C59E89F"]]];
+//    [peripheral discoverServices:@[[CBUUID UUIDWithString:@"58409710-D5E2-4A7D-B439-10CF9C59E89F"]]];
+    [peripheral discoverServices:nil];
     self.connectedPeripheral = peripheral;
 }
 
@@ -144,7 +144,7 @@
         NSLog(@"Discovered characteristic : %@", characteristic);
         
         
-        if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"67636659-E5E5-4A2A-92AE-BABDEC2C0E51"]]) {
+        if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"58409711-D5E2-4A7D-B439-10CF9C59E89F"]]) {
             [peripheral readValueForCharacteristic:characteristic];
             [peripheral setNotifyValue:true forCharacteristic:characteristic];
         }
@@ -177,11 +177,12 @@
     NSLog(@"Update value for characteritics");
     
     NSData *dataValue = characteristic.value;
+    unsigned char *bytePtr = (unsigned char *)[dataValue bytes];
     
-    NSUInteger index;
-    [dataValue getBytes:&index length:sizeof(index)];
+//    NSUInteger index;
+//    [dataValue getBytes:&index length:sizeof(index)];
     
-    NSLog(@"Value : %lu", (unsigned long)index);
+    NSLog(@"Value : %s", bytePtr);
 
     if ([self.delegate respondsToSelector:@selector(bluetoothManager:didUpdateValueForCharacteristic:)]) {
         [self.delegate bluetoothManager:self didUpdateValueForCharacteristic:characteristic];
