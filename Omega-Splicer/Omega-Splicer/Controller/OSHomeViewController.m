@@ -8,9 +8,10 @@
 
 #import "OSHomeViewController.h"
 #import "OSFlyLandscapeViewController.h"
-#import "StyleKit.h"
 
-@interface OSHomeViewController () <UINavigationControllerDelegate>
+@import SafariServices;
+
+@interface OSHomeViewController () <UINavigationControllerDelegate, SFSafariViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *flyButton;
 @property (weak, nonatomic) IBOutlet UIButton *settingButton;
@@ -23,15 +24,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self customizeNavigationBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     [self.navigationController setDelegate:self];
+    [self customizeNavigationBar];
     NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
     [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
     [super viewWillAppear:animated];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Navigation Bar Customization
@@ -40,7 +45,6 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     [self.navigationController.navigationBar setTranslucent:true];
-    
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
@@ -48,24 +52,22 @@
 
 #pragma mark - Actions
 
-- (IBAction)FlyButtonClicked:(id)sender {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSInteger flyMode = [userDefaults integerForKey:@"flyModeKey"];
-    
-    if (flyMode == 0) {
-        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyPortrait"];
-        [self.navigationController pushViewController:vc animated:true];
-    } else {
-        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"flyLandscape"];
-        [self.navigationController pushViewController:vc animated:true];
-    }
+- (IBAction)newsButtonClicked:(id)sender {
+    SFSafariViewController *svc = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:@"http://eip.epitech.eu/2017/omegasplicer"]];
+    svc.delegate = self;
+    [self.navigationController pushViewController:svc animated:true];
 }
 
 #pragma mark - Navigation Controller delegate
 
 - (UIInterfaceOrientationMask)navigationControllerSupportedInterfaceOrientations:(UINavigationController *)navigationController {
     return UIInterfaceOrientationMaskPortrait;
+}
+
+#pragma mark - SFSafariViewController delegate
+
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 #pragma mark - Memory management
