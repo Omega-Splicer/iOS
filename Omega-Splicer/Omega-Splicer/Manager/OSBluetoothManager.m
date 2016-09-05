@@ -66,10 +66,10 @@
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     NSLog(@"Connected to %@ ", peripheral.name);
     NSLog(@"%@", peripheral);
-    [self.delegate bluetoothManager:self didConnectToPeripheral:peripheral];
+//    [self.delegate bluetoothManager:self didConnectToPeripheral:peripheral];
     [peripheral setDelegate:self];
-//    [peripheral discoverServices:@[[CBUUID UUIDWithString:@"58409710-D5E2-4A7D-B439-10CF9C59E89F"]]];
-    [peripheral discoverServices:nil];
+    [peripheral discoverServices:@[[CBUUID UUIDWithString:@"58409710-D5E2-4A7D-B439-10CF9C59E89F"]]];
+//    [peripheral discoverServices:nil];
     self.connectedPeripheral = peripheral;
 }
 
@@ -119,11 +119,18 @@
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
     if (error) {
         NSLog(@"Error discovering services: %@", [error localizedDescription]);
+        [self.delegate bluetoothManager:self didFailToConnect:[[OSError alloc] initWithErrorCode:OSErrorDeviceConnection]];
         return;
     }
+    
+    NSLog(@"DidDiscoverservices");
+    
+    if ([peripheral.services count] == 0)
+        [self.delegate bluetoothManager:self didFailToConnect:[[OSError alloc] initWithErrorCode:OSErrorDeviceUnsupported]];
 
     for (CBService *service in peripheral.services) {
         NSLog(@"Discovered service %@", service);
+        [self.delegate bluetoothManager:self didConnectToPeripheral:peripheral];
         self.connectedPeripheralService = service;
         [peripheral discoverCharacteristics:nil forService:service];
     }

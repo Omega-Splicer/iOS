@@ -17,7 +17,10 @@ typedef NS_ENUM(NSInteger, OSErrorCode) {
     OSErrorBluetoothPoweredOff = 1,
     OSErrorBluetoothUnauthorized = 2,
     OSErrorBluetoothUnknown = 3,
-    OSErrorBluetoothUnsupported = 4
+    OSErrorBluetoothUnsupported = 4,
+    OSErrorDeviceUnsupported = 5,
+    OSErrorDeviceConnection = 6
+    
 };
 
 @interface OSError : NSObject

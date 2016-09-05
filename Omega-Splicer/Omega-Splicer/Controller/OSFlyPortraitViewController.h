@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OSBluetoothManager.h"
 
-@interface OSFlyPortraitViewController : UIViewController
+@interface OSFlyPortraitViewController : UIViewController <OSBluetoothManagerDelegate, CBPeripheralDelegate>
+
+@property (strong, nonatomic) CBPeripheral *peripheral;
+
+@property (strong, nonatomic) OSBluetoothManager *bluetoothManager;
 
 @end

@@ -11,9 +11,6 @@
 
 @interface OSPairTableViewController : UITableViewController <OSBluetoothManagerDelegate>
 
-- (void)customizeNavigationBar;
-
 - (void)refresh:(id)sender;
-
 
 @end

@@ -92,12 +92,12 @@
 
 - (void)setupDefaults {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    self.numberOfCircles = 5;
+    self.numberOfCircles = 4;
     self.internalSpacing = 5;
     self.radius = 10;
     self.delay = 0.2;
     self.duration = 0.8;
-    self.defaultColor = [UIColor lightGrayColor];
+    self.defaultColor = [UIColor whiteColor];
     self.backgroundColor = [UIColor clearColor];
 }
 

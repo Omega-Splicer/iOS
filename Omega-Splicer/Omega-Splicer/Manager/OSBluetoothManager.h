@@ -10,7 +10,7 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "OSError.h"
 
-#define UUID_TEST_SERVICE @"58409710-D5E2-4A7D-B439-10CF9C59E89F"
+#define UUID_OS_SERVICE @"58409710-D5E2-4A7D-B439-10CF9C59E89F"
 //#define UUID_READ_CHARACTERISTIC @"67636659-E5E5-4A2A-92AE-BABDEC2C0E51"
 #define UUID_READ_CHARACTERISTIC @"58409712-D5E2-4A7D-B439-10CF9C59E89F"
 //#define UUID_WRITE_CHARACTERISTIC @"7F88EC10-D269-446A-B26D-6BA9AB70861F"
@@ -63,7 +63,7 @@
 
 @protocol OSBluetoothManagerDelegate <NSObject>
 
-@required
+@optional
 
 /**
  *  Notify when the manager find a new peripheral

@@ -21,7 +21,6 @@
     [super setUp];
     self.pairViewController = [[OSPairTableViewController alloc] init];
     [self.pairViewController refresh:nil];
-    [self.pairViewController customizeNavigationBar];
 }
 
 - (void)tearDown {

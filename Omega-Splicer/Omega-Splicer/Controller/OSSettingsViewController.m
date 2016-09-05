@@ -44,6 +44,7 @@
     self.flyModeSegmentedControl.selectedSegmentIndex = self.flyMode;
     self.controlsSegmentedControl.selectedSegmentIndex = self.controlsType;
     self.speedUnitSegmentedControl.selectedSegmentIndex = self.speedUnit;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

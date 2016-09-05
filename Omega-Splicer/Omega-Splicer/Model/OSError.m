@@ -43,6 +43,18 @@
                 self.navigationState = OSNavigationBack;
                 break;
                 
+            case OSErrorDeviceUnsupported:
+                self.name = @"Unsupported device";
+                self.details = @"Be sure to use an official Omega-Splicer.";
+                self.navigationState = OSNavigationBack;
+                break;
+                
+            case OSErrorDeviceConnection:
+                self.name = @"Unable to connect";
+                self.details = @"Be sure the device is in range and not connected to other application.";
+                self.navigationState = OSNavigationBack;
+                break;
+
             default:
                 break;
         }
